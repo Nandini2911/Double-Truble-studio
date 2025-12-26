@@ -82,12 +82,12 @@ export default function TeamMembersAll() {
             transition: { duration: 0.45, ease: EASE },
           }
         : {})}
-      className="relative overflow-hidden w-full bg-[#050507]"
+      className="relative overflow-hidden w-full bg-dts-black"
       suppressHydrationWarning
     >
       {/* ================= BACKGROUND SYSTEM ================= */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[#050507]" />
+        <div className="absolute inset-0 bg-dts-black" />
 
         {/* glows */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(70,243,216,0.14),transparent_55%)]" />
@@ -100,8 +100,8 @@ export default function TeamMembersAll() {
         {/* subtle grid */}
         <div
           className="absolute inset-0 opacity-[0.06]
-          [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
-          [background-size:44px_44px]"
+          bg-[linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
+          bg-size-[44px_44px]"
         />
 
         {/* top divider */}
@@ -140,7 +140,7 @@ export default function TeamMembersAll() {
 
           <h2 className="mt-6 font-heading text-[30px] leading-tight tracking-[-0.02em] text-white md:text-[44px]">
             <span className="text-white">Meet the people</span>{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-dts-neon via-dts-neon-pink to-dts-gold drop-shadow-[0_0_18px_rgba(70,243,216,0.35)]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold drop-shadow-[0_0_18px_rgba(70,243,216,0.35)]">
               who make it happen.
             </span>
           </h2>
@@ -174,10 +174,10 @@ export default function TeamMembersAll() {
               {/* outer glow */}
               <div className="pointer-events-none absolute inset-0 rounded-[28px] opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(900px_circle_at_25%_0%,rgba(70,243,216,0.14),transparent_55%)]" />
 
-              <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl p-6 transition-all duration-300 group-hover:border-white/15 group-hover:bg-white/[0.06] group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_22px_70px_rgba(0,0,0,0.70)]">
+              <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/4 backdrop-blur-xl p-6 transition-all duration-300 group-hover:border-white/15 group-hover:bg-white/6 group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_22px_70px_rgba(0,0,0,0.70)]">
                 {/* hover gradient wash */}
                 <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[linear-gradient(120deg,rgba(70,243,216,0.16),rgba(255,63,164,0.12),rgba(216,184,115,0.10))]" />
-                <div className="pointer-events-none absolute inset-0 bg-[#050507]/50 group-hover:bg-[#050507]/35 transition" />
+                <div className="pointer-events-none absolute inset-0 bg-dts-black/50 group-hover:bg-dts-black/35 transition" />
 
                 <div className="relative flex flex-col items-center text-center">
                   {/* image */}

@@ -15,10 +15,10 @@ const fadeUp = {
 
 export default function TeamBehindTheScenes() {
   return (
-    <section className="relative overflow-hidden w-full bg-[#050507]">
+    <section className="relative overflow-hidden w-full bg-dts-black">
       {/* ================= BACKGROUND ================= */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[#050507]" />
+        <div className="absolute inset-0 bg-dts-black" />
 
         {/* DTS ambience */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(70,243,216,0.14),transparent_55%)]" />
@@ -31,8 +31,8 @@ export default function TeamBehindTheScenes() {
         {/* subtle grid */}
         <div
           className="absolute inset-0 opacity-[0.06]
-          [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
-          [background-size:44px_44px]"
+          bg-[linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
+          bg-size-[44px_44px]"
         />
 
         {/* top divider */}
@@ -67,7 +67,7 @@ export default function TeamBehindTheScenes() {
 
           <h2 className="mt-6 font-heading text-[30px] leading-tight tracking-[-0.02em] text-white md:text-[44px]">
             Our team works together to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-dts-neon via-dts-neon-pink to-dts-gold drop-shadow-[0_0_18px_rgba(70,243,216,0.35)]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold drop-shadow-[0_0_18px_rgba(70,243,216,0.35)]">
               make ideas come to life.
             </span>
           </h2>
@@ -94,10 +94,10 @@ export default function TeamBehindTheScenes() {
             <div className="absolute inset-0 rounded-[28px] opacity-60 blur-[0.6px] bg-linear-to-r from-white/12 via-white/6 to-transparent" />
             <div className="absolute inset-0 rounded-[28px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold blur-[1px]" />
 
-            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl">
+            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/3 backdrop-blur-xl">
               {/* hover wash */}
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[linear-gradient(120deg,rgba(70,243,216,0.12),rgba(255,63,164,0.10),rgba(216,184,115,0.08))]" />
-              <div className="pointer-events-none absolute inset-0 bg-[#050507]/25" />
+              <div className="pointer-events-none absolute inset-0 bg-dts-black/25" />
 
               <img
                 src="/group.jfif" // replace with your image
