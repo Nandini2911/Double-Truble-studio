@@ -47,7 +47,7 @@ const MEMBERS: Member[] = [
   {
     name: "Raj Umbarkar",
     role: "Video Editor",
-    image: "/raj.jpg",
+    image: "/Raj.jpg",
     linkedin: "https://linkedin.com",
   },
 ];

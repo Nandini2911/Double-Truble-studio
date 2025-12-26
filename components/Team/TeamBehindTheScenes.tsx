@@ -100,7 +100,7 @@ export default function TeamBehindTheScenes() {
               <div className="pointer-events-none absolute inset-0 bg-[#050507]/25" />
 
               <img
-                src="/nandini.webp" // replace with your image
+                src="/group.jfif" // replace with your image
                 alt="Team collaboration"
                 loading="lazy"
                 className="relative w-full h-[260px] sm:h-[360px] md:h-[460px] lg:h-[520px] object-cover"
