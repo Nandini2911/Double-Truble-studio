@@ -17,7 +17,7 @@ const MEMBERS: Member[] = [
   {
     name: "Ravish Verma",
     role: "SME — SEO",
-    image: "/ravish.PNG",
+    image: "/Ravish.PNG",
     linkedin: "https://linkedin.com",
   },
   {
@@ -29,13 +29,13 @@ const MEMBERS: Member[] = [
   {
     name: "Naman Gupta",
     role: "Video Editor",
-    image: "/naman.webp",
+    image: "/Naman.webp",
     linkedin: "https://linkedin.com",
   },
   {
     name: "Simran Salagre",
     role: "Head — PR & Communication",
-    image: "/simran.JPG",
+    image: "/Simran.JPG",
     linkedin: "https://linkedin.com",
   },
   {
