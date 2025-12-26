@@ -1,0 +1,181 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Star,
+  CalendarHeart,
+  Megaphone,
+  Route,
+  ArrowRight,
+} from "lucide-react";
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 14 },
+  show: (d = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: EASE, delay: d },
+  }),
+};
+
+const services = [
+  {
+    title: "Business Strategy",
+    desc: "Crafting clear, actionable business strategies that align with your long-term vision.",
+    href: "/services/business-strategy",
+    Icon: Star,
+  },
+  {
+    title: "Market Research & Insights",
+    desc: "Deep dive into market trends, consumer behavior, and competitor analysis to inform your strategy.",
+    href: "/services/market-research",
+    Icon: CalendarHeart,
+  },
+  {
+    title: "Brand Positioning & Messaging",
+    desc: "Establishing a compelling brand identity and messaging that resonates with your target audience.",
+    href: "/services/brand-positioning",
+    Icon: Megaphone,
+  },
+  {
+    title: "Growth Strategy & Scaling",
+    desc: "Planning for scalable growth with strategic initiatives and resource allocation.",
+    href: "/services/growth-strategy",
+    Icon: Route,
+  },
+];
+
+export default function RelatedServices() {
+  return (
+    <section className="relative overflow-hidden py-20 md:py-28 bg-[#050507]">
+      {/* ================= BACKGROUND ================= */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[#050507]" />
+
+        {/* ambient glows */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(70,243,216,0.14),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,63,164,0.10),transparent_55%)]" />
+
+        {/* vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.55)_55%,rgba(0,0,0,0.9)_100%)]" />
+
+        {/* grid */}
+        <div
+          className="absolute inset-0 opacity-[0.06]
+          [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
+          [background-size:44px_44px]"
+        />
+
+        {/* soft blobs */}
+        <div className="absolute -top-28 left-1/2 h-72 w-[560px] -translate-x-1/2 rounded-full bg-dts-neon/10 blur-3xl" />
+        <div className="absolute -bottom-32 right-[-120px] h-80 w-80 rounded-full bg-dts-neon-pink/8 blur-3xl" />
+
+        <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
+      </div>
+
+      {/* ================= CONTENT ================= */}
+      <div className="relative mx-auto w-full max-w-6xl 2xl:max-w-[1500px] px-4 md:px-6 lg:px-8 xl:px-0">
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={fadeUp}
+          className="mx-auto max-w-3xl text-center"
+        >
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-xl">
+            <span className="h-2 w-2 rounded-full bg-dts-neon shadow-[0_0_14px_rgba(70,243,216,0.8)]" />
+            <p className="text-[11px] uppercase tracking-[0.32em] text-neutral-300/80">
+              Related services
+            </p>
+          </div>
+
+          {/* ✅ FIX: Gradient heading (always visible) */}
+          <h2 className="mt-6 font-heading text-[30px] md:text-[40px] leading-tight tracking-[-0.02em]">
+            <span className="text-white">You may</span>{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold">
+              also need
+            </span>
+          </h2>
+
+          <div className="mx-auto mt-5 h-px w-24 bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold shadow-[0_0_18px_rgba(70,243,216,0.55)]" />
+
+          <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-relaxed text-neutral-300/80">
+            Strategic roadmaps work best when aligned with these services for seamless execution.
+          </p>
+        </motion.div>
+
+        {/* ================= CARDS ================= */}
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {services.map((s, i) => {
+            const Icon = s.Icon;
+
+            return (
+              <motion.div
+                key={s.title}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                variants={fadeUp}
+                custom={i * 0.06}
+                className="group relative rounded-2xl p-px"
+              >
+                {/* gradient border */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold blur-[1px]" />
+
+                <Link
+                  href={s.href}
+                  className="relative block h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-6 md:p-7 transition-all duration-300 group-hover:border-white/15 group-hover:-translate-y-0.5 group-hover:bg-white/[0.06] group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_22px_70px_rgba(0,0,0,0.70)]"
+                >
+                  {/* color wash */}
+                  <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[linear-gradient(120deg,rgba(70,243,216,0.18),rgba(255,63,164,0.16),rgba(212,175,55,0.12))]" />
+
+                  {/* dark veil */}
+                  <div className="pointer-events-none absolute inset-0 opacity-70 group-hover:opacity-55 transition-opacity duration-300 bg-[#050507]" />
+
+                  {/* bottom glow */}
+                  <div className="pointer-events-none absolute -bottom-10 left-1/2 h-16 w-[70%] -translate-x-1/2 rounded-full bg-dts-neon/10 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+                  {/* Content */}
+                  <div className="relative">
+                    {/* Icon */}
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all duration-300 group-hover:border-dts-neon/60 group-hover:bg-dts-neon/10 group-hover:shadow-[0_0_0_1px_rgba(70,243,216,0.18),0_10px_30px_rgba(70,243,216,0.16)] group-hover:-translate-y-0.5">
+                        <Icon className="h-5 w-5 text-white/90 transition-transform duration-300 group-hover:scale-105" />
+                      </div>
+
+                      <span className="mt-1 text-[11px] uppercase tracking-[0.26em] text-neutral-500">
+                        Service
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="mt-5 text-[15px] font-medium text-white transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-dts-neon group-hover:via-dts-neon-pink group-hover:to-dts-gold group-hover:drop-shadow-[0_0_18px_rgba(70,243,216,0.22)]">
+                      {s.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="mt-3 text-[14px] leading-relaxed text-neutral-300/70 transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-neutral-200 group-hover:via-dts-neon/80 group-hover:to-neutral-200">
+                      {s.desc}
+                    </p>
+
+                    {/* CTA */}
+                    <div className="mt-6 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.22em] transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-dts-neon group-hover:via-dts-neon-pink group-hover:to-dts-gold">
+                      <span>View service</span>
+                      <ArrowRight className="h-4 w-4 text-dts-neon transition-transform duration-300 group-hover:translate-x-1 group-hover:text-dts-gold" />
+                    </div>
+
+                    <div className="mt-5 h-px w-10 bg-white/10 group-hover:bg-dts-neon/60 transition" />
+                  </div>
+                </Link>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

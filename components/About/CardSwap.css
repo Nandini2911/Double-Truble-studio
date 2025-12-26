@@ -1,0 +1,46 @@
+/* components/about/CardSwap.css */
+
+.card-swap-container {
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  perspective: 1600px;
+}
+
+/* Base card – DTS colors */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+
+  border-radius: 24px;
+  padding: 1.5rem 1.75rem;
+
+  background:
+    radial-gradient(circle at top, rgba(70, 243, 216, 0.16), transparent 60%),
+    linear-gradient(to bottom, #111118, #050507);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.9);
+  color: var(--color-dts-fog);
+  backdrop-filter: blur(18px);
+
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: rgba(70, 243, 216, 0.8);
+  box-shadow: 0 28px 85px rgba(70, 243, 216, 0.5);
+}
+
+/* Optional text defaults – Tailwind will still apply */
+.card h3 {
+  font-family: var(--font-heading);
+}
+
+.card p {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 0.85rem;
+}
