@@ -13,12 +13,12 @@ const LEADERS = [
   },
   {
     name: "Sanjeev Seth",
-    role: "Chairman & Finance",
+    role: "Chair Person & Finance",
     image: "/sanjeev1.heic",
   },
   {
     name: "Hitesh Kukreja",
-    role: "Director, Finance",
+    role: "CEO, Finance",
     image: "/kukreja.heic",
   },
 ];
@@ -44,7 +44,7 @@ export default function Leadership() {
           2xl:max-w-384
         "
       >
-        {/* ===================== MOBILE + TABLET LAYOUT ===================== */}
+        {/* ===================== MOBILE + TABLET ===================== */}
         <div className="lg:hidden space-y-8">
           {/* Heading */}
           <motion.div
@@ -66,7 +66,7 @@ export default function Leadership() {
             </p>
           </motion.div>
 
-          {/* Stacked leader cards */}
+          {/* Stacked cards */}
           <div className="space-y-5">
             {LEADERS.map((leader, i) => (
               <motion.div
@@ -76,7 +76,7 @@ export default function Leadership() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.35, delay: i * 0.06 }}
                 className="
-                  relative flex items-center gap-4
+                  relative flex items-center gap-5
                   rounded-3xl border border-white/10
                   bg-linear-to-br from-white/6 via-black/80 to-black
                   p-4 sm:p-5
@@ -84,7 +84,7 @@ export default function Leadership() {
                   backdrop-blur-xl
                 "
               >
-                {/* subtle neon edge on mobile cards */}
+                {/* neon edge */}
                 <div
                   className="
                     pointer-events-none absolute inset-px rounded-3xl
@@ -94,16 +94,24 @@ export default function Leadership() {
                   "
                 />
 
-                <div className="relative z-10 flex items-center gap-4">
-                  <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-full overflow-hidden border border-white/20 shadow-[0_0_18px_rgba(0,0,0,0.7)]">
-                    <Image
-                      src={leader.image}
-                      alt={leader.name}
-                      width={72}
-                      height={72}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
+                <div className="relative z-10 flex items-center gap-5">
+                  <div className="
+  shrink-0
+  h-32 w-32
+  rounded-full
+  overflow-hidden
+  border border-white/20
+  shadow-[0_0_40px_rgba(0,0,0,0.9)]
+">
+  <Image
+    src={leader.image}
+    alt={leader.name}
+    width={180}
+    height={180}
+    className="h-full w-full object-cover object-center"
+  />
+</div>
+
 
                   <div className="flex-1">
                     <p className="text-[10px] uppercase tracking-[0.22em] text-neutral-400 mb-1">
@@ -122,7 +130,7 @@ export default function Leadership() {
           </div>
         </div>
 
-        {/* ===================== DESKTOP / 4K LAYOUT ===================== */}
+        {/* ===================== DESKTOP / 4K ===================== */}
         <div
           className="
             hidden lg:grid
@@ -131,64 +139,48 @@ export default function Leadership() {
             lg:grid-cols-2
           "
         >
-          {/* LEFT: TEXT */}
+          {/* LEFT TEXT */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="
-              space-y-5
-              max-w-lg 2xl:max-w-xl
-            "
+            className="space-y-5 max-w-lg 2xl:max-w-xl"
           >
-            <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-neutral-500">
+            <p className="text-[11px] uppercase tracking-[0.28em] text-neutral-500">
               The People Steering the Studio
             </p>
 
-            <h2
-              className="
-                font-heading text-dts-fog
-                text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] 2xl:text-[3rem]
-                leading-snug
-              "
-            >
+            <h2 className="font-heading text-dts-fog text-3xl 2xl:text-[3rem] leading-snug">
               Strategy, Finance & Direction —
-              <br className="hidden sm:block" />
+              <br />
               The Team Behind Every Decision.
             </h2>
 
-            <p
-              className="
-                text-neutral-300
-                text-[14px] sm:text-[15px] lg:text-[16px] 2xl:text-[17px]
-                leading-relaxed
-              "
-            >
+            <p className="text-neutral-300 text-[15px] 2xl:text-[17px] leading-relaxed">
               Every project, campaign and client journey is backed by these
               three minds — a balance of vision, discipline and precision.
               From high-level moves to last-mile execution, this leadership
               team keeps DTS sharp, relevant and unmistakably itself.
             </p>
 
-            <p className="text-neutral-400 text-[13px] sm:text-[14px] leading-relaxed">
+            <p className="text-neutral-400 text-[14px] leading-relaxed">
               The studio moves fast, but the principles come from here.
             </p>
           </motion.div>
 
-          {/* RIGHT: CARD STACK (CardSwap) */}
+          {/* RIGHT — CardSwap */}
           <div
             className="
               mt-10 lg:mt-0
               flex justify-center lg:justify-end
               lg:pl-4 xl:pl-10 2xl:pl-14
               scale-[0.95] xl:scale-[1.05] 2xl:scale-[1.25]
-              origin-center
             "
           >
             <CardSwap
               width={360}
-              height={280}
+              height={300}
               cardDistance={65}
               verticalDistance={60}
               delay={4800}
@@ -199,34 +191,34 @@ export default function Leadership() {
               {LEADERS.map((leader) => (
                 <Card key={leader.name}>
                   <div className="h-full flex flex-col justify-between">
-                    {/* Top: text + photo */}
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div className="space-y-2">
-                        <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.26em] text-neutral-400">
+                        <p className="text-[11px] uppercase tracking-[0.26em] text-neutral-400">
                           DTS • Leadership
                         </p>
-                        <h3 className="font-heading text-[1.15rem] sm:text-[1.25rem] lg:text-[1.3rem] text-dts-fog leading-snug">
+                        <h3 className="font-heading text-[1.3rem] text-dts-fog leading-snug">
                           {leader.name}
                         </h3>
-                        <p className="text-neutral-300 text-[12px] sm:text-[13px] leading-relaxed">
+                        <p className="text-neutral-300 text-[13px] leading-relaxed">
                           {leader.role}
                         </p>
                       </div>
 
-                      <div className="shrink-0 h-20 w-20 rounded-full overflow-hidden border border-white/20 shadow-[0_0_25px_rgba(0,0,0,0.8)]">
+                      {/* BIGGER IMAGE */}
+                      <div className="shrink-0 h-24 w-24 rounded-full overflow-hidden border border-white/20 shadow-[0_0_30px_rgba(0,0,0,0.85)]">
                         <Image
                           src={leader.image}
                           alt={leader.name}
-                          width={94}
-                          height={94}
-                          className="h-full w-full object-cover"
+                          width={130}
+                          height={130}
+                          className="h-full w-full object-cover object-center"
                         />
                       </div>
                     </div>
 
-                    <p className="text-neutral-400 text-[11px] sm:text-[12px] leading-relaxed">
-                      A key pillar in shaping the strategy, clarity and
-                      long-term direction of Double Trouble Studio.
+                    <p className="text-neutral-400 text-[12px] leading-relaxed">
+                      A key pillar in shaping the strategy, clarity and long-term
+                      direction of Double Trouble Studio.
                     </p>
                   </div>
                 </Card>

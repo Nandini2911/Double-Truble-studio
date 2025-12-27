@@ -58,6 +58,28 @@ export default function AboutStrip() {
               build reputation, scale communities and drive measurable growth
               across digital, PR, web, events and celebrity collaborations.
             </p>
+            <div className="pt-4">
+  <a
+    href="/about"
+    className="
+      inline-flex items-center justify-center
+      rounded-full
+      px-5 py-2.5
+      text-[11px] font-semibold uppercase tracking-[0.22em]
+      text-neutral-200
+      border border-white/15
+      bg-white/5 backdrop-blur-md
+      transition-all duration-300
+
+      hover:border-dts-neon
+      hover:text-dts-neon
+      hover:shadow-[0_0_22px_rgba(70,243,216,0.35)]
+    "
+  >
+    Explore
+  </a>
+</div>
+
           </div>
 
           {/* RIGHT :: 3D TILT CARD */}

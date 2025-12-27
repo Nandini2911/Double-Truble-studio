@@ -82,25 +82,7 @@ export default function EventsWeddingsCTA() {
             </Link>
           </motion.div>
 
-          {/* Secondary (teal + pink + gold ring on hover) */}
-          <Link
-            href="/book-a-call"
-            className="
-              inline-flex items-center justify-center
-              rounded-2xl
-              border border-white/12 bg-white/5
-              px-10 py-4
-              text-[12px] uppercase tracking-[0.26em] font-semibold
-              text-neutral-200
-              backdrop-blur-xl
-              transition-all duration-300
-              hover:border-white/18
-              hover:bg-white/6
-              hover:shadow-[0_0_0_1px_rgba(70,243,216,0.22),0_0_0_2px_rgba(255,63,164,0.12)]
-            "
-          >
-            Book a Strategy Call
-          </Link>
+         
         </div>
 
         {/* Gradient divider line (always-on subtle, stronger on hover) */}

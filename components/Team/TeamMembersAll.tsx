@@ -35,7 +35,7 @@ const MEMBERS: Member[] = [
   {
     name: "Simran Salagre",
     role: "Head — PR & Communication",
-    image: "/Simran.JPG",
+    image: "/simran1.png",
     linkedin: "https://linkedin.com",
   },
   {
@@ -184,11 +184,21 @@ export default function TeamMembersAll() {
                   <div className="relative mt-1">
                     <div className="pointer-events-none absolute inset-0 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(circle_at_30%_20%,rgba(70,243,216,0.22),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(255,63,164,0.14),transparent_60%)]" />
                     <img
-                      src={m.image}
-                      alt={m.name}
-                      loading="lazy"
-                      className="relative h-32 w-32 sm:h-36 sm:w-36 rounded-full object-cover border border-white/10"
-                    />
+  src={m.image}
+  alt={m.name}
+  loading="lazy"
+  className="
+    relative
+    h-52 w-52
+    sm:h-56 sm:w-56
+    md:h-60 md:w-60
+    rounded-full
+    object-cover
+    object-top
+    border border-white/12
+  "
+/>
+
                   </div>
 
                   {/* name */}

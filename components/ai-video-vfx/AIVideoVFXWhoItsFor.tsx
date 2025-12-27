@@ -167,10 +167,7 @@ export default function AIVideoVFXWhoItsFor() {
 
                     {/* Subtle CTA line */}
                     <div className="mt-5 flex items-center gap-2 text-[13px] text-neutral-300/70">
-                      <span className="transition-colors duration-300 group-hover:text-neutral-200">
-                        See the setup
-                      </span>
-                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      
                     </div>
 
                     {/* micro underline */}

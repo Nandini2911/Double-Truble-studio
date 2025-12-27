@@ -122,7 +122,6 @@ export default function CelebrityManagementHowItWorks() {
               custom={i * 0.06}
               className="group relative min-w-[84%] sm:min-w-[70%]"
             >
-              {/* glow ring */}
               <div
                 className="
                   pointer-events-none absolute inset-0 rounded-2xl
@@ -146,7 +145,6 @@ export default function CelebrityManagementHowItWorks() {
                   hover:shadow-[0_0_0_1px_rgba(70,243,216,0.22),0_18px_55px_rgba(0,0,0,0.70)]
                 "
               >
-                {/* top accent strip */}
                 <div
                   className="
                     pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl
@@ -187,7 +185,6 @@ export default function CelebrityManagementHowItWorks() {
                 <div className="absolute left-3.5 top-6 h-3 w-3 rounded-full bg-dts-neon/70 shadow-[0_0_22px_rgba(70,243,216,0.35)]" />
 
                 <div className="group relative rounded-2xl">
-                  {/* glow ring */}
                   <div
                     className="
                       pointer-events-none absolute inset-0 rounded-2xl
@@ -211,7 +208,6 @@ export default function CelebrityManagementHowItWorks() {
                       hover:shadow-[0_0_0_1px_rgba(70,243,216,0.22),0_18px_55px_rgba(0,0,0,0.70)]
                     "
                   >
-                    {/* top accent strip */}
                     <div
                       className="
                         pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl
@@ -249,22 +245,12 @@ export default function CelebrityManagementHowItWorks() {
             Want us to shortlist celebrity options for your brand or event?
           </p>
 
-          <div className="mt-6">
+          <div className="mt-6 flex justify-center">
             <Link
               href="/contact?service=celebrity-management"
-              className="
-                inline-flex rounded-2xl
-                border border-white/10 bg-white/5
-                px-6 py-3
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-              "
+              className="inline-flex scale-y-125 dts-animated-border"
             >
-              Discuss your requirements
+              <span>Discuss your requirements</span>
             </Link>
           </div>
 

@@ -91,16 +91,7 @@ export default function HomeHero() {
               <span>START A PROJECT</span>
             </Link>
 
-            <Link
-              href="/work"
-              className="
-                text-[11px] uppercase tracking-[0.22em] text-neutral-300
-                transition-colors hover:text-dts-neon
-                2xl:text-[12px]
-              "
-            >
-              View our work
-            </Link>
+            
           </div>
         </motion.div>
 

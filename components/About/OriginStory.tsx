@@ -146,13 +146,13 @@ export default function OriginStory() {
                 >
                   How the “Trouble” Began
                 </h2>
+<p className="max-w-xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-neutral-300/95">
+  Double Trouble was built on the idea that strong brands need alignment, not
+  fragmentation. Rather than treating digital, PR, web, events or celebrity
+  work as separate functions, we operate as one team — moving with a shared
+  taste level and a unified brand story.
+</p>
 
-                <p className="max-w-xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-neutral-300/95">
-                  Double Trouble started as two people who refused to pick a
-                  lane. Instead of choosing between digital, PR, web, events or
-                  celebrity work, we built a studio where everything moves
-                  together—with one taste level and one story.
-                </p>
               </div>
 
               {/* floating chips for 2D/3D feel */}

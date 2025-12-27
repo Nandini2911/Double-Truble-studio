@@ -87,16 +87,7 @@ export default function TeamHero() {
               <span>JOIN OUR TEAM</span>
             </Link>
 
-            <Link
-              href="/work"
-              className="
-                text-[11px] uppercase tracking-[0.22em] text-neutral-300
-                transition-colors hover:text-dts-neon
-                2xl:text-[12px]
-              "
-            >
-              View Our Work
-            </Link>
+            
           </div>
         </motion.div>
 

@@ -206,20 +206,12 @@ export default function StrategicRoadmapHowItWorks() {
 
           <div className="mt-6">
             <Link
-              href="/contact?service=strategic-roadmap"
-              className="
-                inline-flex rounded-full
-                border border-white/12 bg-white/5
-                px-6 py-3
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-              "
-            >
-              Discuss your strategy
-            </Link>
+  href="/contact?service=web-development"
+  className="inline-flex scale-y-125 dts-animated-border"
+>
+  <span>Get in touch</span>
+</Link>
+
           </div>
         </motion.div>
       </div>

@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+  Globe,
+  ClipboardList,
+  Sparkles,
   Star,
   CalendarHeart,
   Megaphone,
@@ -21,33 +24,45 @@ const fadeUp = {
   }),
 };
 
-const services = [
+export const services = [
   {
-    title: "AI-Powered Video Editing",
-    desc: "Automated video editing with AI tools, enabling faster turnarounds without compromising quality.",
-    href: "/services/ai-video-editing",
-    Icon: Megaphone,
+    title: "Guest Management",
+    desc: "RSVPs, segmentation, access logic, and calm, controlled entry for high-profile rooms.",
+    href: "/services/guest-management",
+    Icon: ClipboardList,
   },
   {
-    title: "Advanced VFX Creation",
-    desc: "Custom visual effects that enhance the story, from photorealistic compositing to surreal graphics.",
-    href: "/services/advanced-vfx",
+    title: "Celebrity Management",
+    desc: "End-to-end talent sourcing, commercials, coordination, and clean execution.",
+    href: "/services/celebrity-management",
     Icon: Star,
   },
   {
-    title: "AI-Driven Animation & Motion Graphics",
-    desc: "Seamless animation and motion graphics generated through AI, bringing your ideas to life with precision.",
-    href: "/services/ai-animation",
+    title: "Events & Weddings",
+    desc: "Luxury events and weddings with structured planning and seamless execution.",
+    href: "/services/events-weddings",
     Icon: CalendarHeart,
   },
   {
-    title: "Multilingual Voiceovers & Subtitles",
-    desc: "Automatic voiceovers and subtitles for videos in multiple languages, ensuring global reach.",
-    href: "/services/multilingual-video",
+    title: "PR, Media & Digital Marketing",
+    desc: "Visibility, narratives, and digital momentum that protect brand reputation.",
+    href: "/services/pr-media-digital-marketing",
+    Icon: Megaphone,
+  },
+  {
+    title: "Web Development & Marketing",
+    desc: "High-end websites and digital ecosystems built to convert, scale, and perform.",
+    href: "/services/web-development-marketing",
+    Icon: Globe,
+  },
+  
+  {
+    title: "Strategic Road Map",
+    desc: "Long-term brand, talent, and growth planning before scaling visibility.",
+    href: "/services/strategic-roadmap",
     Icon: Route,
   },
 ];
-
 export default function RelatedAIVideoVFXServices() {
   return (
     <section className="relative overflow-hidden py-20 md:py-28 bg-[#050507]">
@@ -101,7 +116,8 @@ export default function RelatedAIVideoVFXServices() {
         </motion.div>
 
         {/* ================= CARDS ================= */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+     <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
           {services.map((s, i) => {
             const Icon = s.Icon;
             return (

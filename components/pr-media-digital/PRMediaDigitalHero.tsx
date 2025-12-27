@@ -232,7 +232,7 @@ export default function PRMediaDigitalHero() {
             className="mt-14 flex flex-col justify-center gap-4 sm:flex-row"
           >
             {/* Primary = your DTS animated border */}
-            <Link href="/book-a-call" className="dts-animated-border inline-flex">
+            <Link href="/contact" className="dts-animated-border inline-flex">
               <span
                 className="
                   inline-flex items-center justify-center gap-2
@@ -243,35 +243,10 @@ export default function PRMediaDigitalHero() {
                 "
               >
                 Book a Strategy Call
-                <span className="inline-block h-[6px] w-[6px] rounded-full bg-dts-neon/80" />
+           
               </span>
             </Link>
 
-            {/* Secondary = glass + neon underline on hover */}
-            <Link
-              href="/contact?service=pr-media-digital"
-              className="
-                group relative inline-flex items-center justify-center
-                rounded-2xl px-10 py-5
-                text-[12px] sm:text-[13px] font-semibold
-                uppercase tracking-[0.22em]
-                text-white
-                border border-white/12 bg-white/5 backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/60 hover:bg-white/7
-              "
-            >
-              <span className="relative">Discuss Your Requirements</span>
-              <span
-                className="
-                  pointer-events-none absolute left-6 right-6 -bottom-1 h-px
-                  bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold
-                  shadow-[0_0_12px_rgba(70,243,216,0.55)]
-                  opacity-0 group-hover:opacity-100
-                  transition
-                "
-              />
-            </Link>
           </motion.div>
         </motion.div>
       </div>

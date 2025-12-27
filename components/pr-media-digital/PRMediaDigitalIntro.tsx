@@ -19,17 +19,17 @@ const chips = ["Placement", "Perception", "Credibility", "Momentum"];
 
 const pillars = [
   {
-    k: "01",
+
     t: "Positioning before promotion",
     d: "We lock voice, audience-fit, and narrative clarity—then we go live.",
   },
   {
-    k: "02",
+    
     t: "Earned trust, not loud reach",
     d: "Media and digital work together to build authority that lasts.",
   },
   {
-    k: "03",
+ 
     t: "Calm execution, sharp outcomes",
     d: "A measured rollout that looks effortless—because it’s structured.",
   },
@@ -161,7 +161,7 @@ export default function PRMediaDigitalIntro() {
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 {pillars.map((p, i) => (
                   <motion.div
-                    key={p.k}
+                   
                     initial={{ opacity: 0, y: 14 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
@@ -188,9 +188,7 @@ export default function PRMediaDigitalIntro() {
                     <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(520px_circle_at_18%_0%,rgba(70,243,216,0.18),transparent_60%)]" />
 
                     <div className="relative flex items-start justify-between gap-4">
-                      <span className="font-heading text-[14px] text-neutral-500">
-                        {p.k}
-                      </span>
+                     
                       <span className="h-1.5 w-1.5 rounded-full bg-white/40 group-hover:bg-dts-neon/80 transition-colors" />
                     </div>
 

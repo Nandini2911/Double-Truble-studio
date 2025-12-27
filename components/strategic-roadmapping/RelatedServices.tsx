@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+   Globe,
+  ClipboardList,
+  Sparkles,
   Star,
   CalendarHeart,
   Megaphone,
@@ -21,31 +24,44 @@ const fadeUp = {
   }),
 };
 
-const services = [
+export const services = [
   {
-    title: "Business Strategy",
-    desc: "Crafting clear, actionable business strategies that align with your long-term vision.",
-    href: "/services/business-strategy",
+    title: "Guest Management",
+    desc: "RSVPs, segmentation, access logic, and calm, controlled entry for high-profile rooms.",
+    href: "/services/guest-management",
+    Icon: ClipboardList,
+  },
+  {
+    title: "Celebrity Management",
+    desc: "End-to-end talent sourcing, commercials, coordination, and clean execution.",
+    href: "/services/celebrity-management",
     Icon: Star,
   },
   {
-    title: "Market Research & Insights",
-    desc: "Deep dive into market trends, consumer behavior, and competitor analysis to inform your strategy.",
-    href: "/services/market-research",
+    title: "Events & Weddings",
+    desc: "Luxury events and weddings with structured planning and seamless execution.",
+    href: "/services/events-weddings",
     Icon: CalendarHeart,
   },
   {
-    title: "Brand Positioning & Messaging",
-    desc: "Establishing a compelling brand identity and messaging that resonates with your target audience.",
-    href: "/services/brand-positioning",
+    title: "PR, Media & Digital Marketing",
+    desc: "Visibility, narratives, and digital momentum that protect brand reputation.",
+    href: "/services/pr-media-digital-marketing",
     Icon: Megaphone,
   },
   {
-    title: "Growth Strategy & Scaling",
-    desc: "Planning for scalable growth with strategic initiatives and resource allocation.",
-    href: "/services/growth-strategy",
-    Icon: Route,
+    title: "Web Development & Marketing",
+    desc: "High-end websites and digital ecosystems built to convert, scale, and perform.",
+    href: "/services/web-development-marketing",
+    Icon: Globe,
   },
+  {
+    title: "AI Video & VFX",
+    desc: "AI-powered video ads, cinematic visuals, and fast-turnaround creative tech.",
+    href: "/services/ai-video-vfx",
+    Icon: Sparkles,
+  },
+  
 ];
 
 export default function RelatedServices() {
@@ -109,7 +125,8 @@ export default function RelatedServices() {
         </motion.div>
 
         {/* ================= CARDS ================= */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
           {services.map((s, i) => {
             const Icon = s.Icon;
 

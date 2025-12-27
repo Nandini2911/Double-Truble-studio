@@ -83,21 +83,7 @@ export default function TeamCTA() {
             </Link>
           </motion.div>
 
-          <Link
-            href="/careers"
-            className="
-              inline-flex items-center justify-center rounded-full
-              border border-white/12 bg-white/5
-              px-10 py-4
-              text-[12px] uppercase tracking-[0.26em] font-semibold
-              text-neutral-200
-              transition-all duration-300
-              hover:border-dts-neon/70
-              hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-            "
-          >
-            Join Our Team
-          </Link>
+          
         </div>
       </div>
     </motion.section>

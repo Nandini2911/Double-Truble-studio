@@ -82,7 +82,7 @@ export default function PRMediaDigitalFinalCTA() {
             {/* Primary */}
             <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.94 }}>
               <Link
-                href="/book-a-call"
+                href="/contact"
                 className="dts-animated-border inline-block"
               >
                 <span
@@ -96,30 +96,13 @@ export default function PRMediaDigitalFinalCTA() {
                   "
                 >
                   Book a Strategy Call
-                  <ArrowUpRight className="h-4 w-4 opacity-80" />
+                  
                 </span>
               </Link>
             </motion.div>
 
             {/* Secondary */}
-            <Link
-              href="/contact?service=pr-media-digital"
-              className="
-                inline-flex items-center justify-center
-                rounded-2xl
-                border border-white/12
-                bg-white/5
-                px-10 py-4
-                text-[12px] uppercase tracking-[0.26em] font-semibold
-                text-neutral-200
-                backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:shadow-[0_0_0_1px_rgba(70,243,216,0.28),0_0_0_2px_rgba(255,63,164,0.12)]
-              "
-            >
-              Discuss Your Requirements
-            </Link>
+           
           </div>
 
           <p className="mt-7 text-[12px] uppercase tracking-[0.28em] text-neutral-500">

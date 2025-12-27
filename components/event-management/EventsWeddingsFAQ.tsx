@@ -241,38 +241,13 @@ export default function EventsWeddingsFAQs() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
-              href="/contact?service=events-weddings"
-              className="
-                inline-flex rounded-2xl
-                border border-white/10 bg-white/5
-                px-7 py-3.5
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-              "
+              href="/contact?service=guest-management"
+              className="inline-flex scale-y-125 dts-animated-border"
             >
-              Discuss Your Event
+              <span>Get a Quote</span>
             </Link>
 
-            <Link
-              href="/book-a-call"
-              className="
-                inline-flex rounded-2xl
-                border border-white/10 bg-white/0
-                px-7 py-3.5
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:bg-white/5
-              "
-            >
-              Book a Strategy Call
-            </Link>
+            
           </div>
 
           <p className="mt-10 text-[12px] uppercase tracking-[0.28em] text-neutral-500/80">

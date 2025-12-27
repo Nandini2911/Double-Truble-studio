@@ -4,10 +4,12 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+   CalendarHeart,
+   Globe,
   Star,
   ClipboardList,
   Route,
-  CalendarCheck,
+  Sparkles,
   ArrowRight,
 } from "lucide-react";
 
@@ -22,38 +24,42 @@ const fadeUp = {
   }),
 };
 
-const services = [
+export const services = [
+  {
+    title: "Guest Management",
+    desc: "RSVPs, segmentation, access logic, and calm, controlled entry for high-profile rooms.",
+    href: "/services/guest-management",
+    Icon: ClipboardList,
+  },
   {
     title: "Celebrity Management",
-    desc: "Talent coordination, protocol, and high-stakes handling for public-facing moments.",
+    desc: "End-to-end talent sourcing, commercials, coordination, and clean execution.",
     href: "/services/celebrity-management",
     Icon: Star,
-    accent: "from-amber-400/22 via-white/10 to-transparent",
-    glow: "bg-[radial-gradient(900px_circle_at_18%_12%,rgba(216,184,115,0.18),transparent_60%)]",
   },
   {
     title: "Events & Weddings",
-    desc: "Launches, brand moments, and large-format events planned with control and clarity.",
+    desc: "Luxury events and weddings with structured planning and seamless execution.",
     href: "/services/events-weddings",
-    Icon: CalendarCheck,
-    accent: "from-dts-neon/22 via-white/10 to-transparent",
-    glow: "bg-[radial-gradient(900px_circle_at_18%_12%,rgba(70,243,216,0.18),transparent_60%)]",
+    Icon: CalendarHeart,
   },
   {
-    title: "Guest Management",
-    desc: "RSVPs, guestlist control, entry flow, and on-ground check-in discipline.",
-    href: "/services/guest-management",
-    Icon: ClipboardList,
-    accent: "from-sky-400/22 via-white/10 to-transparent",
-    glow: "bg-[radial-gradient(900px_circle_at_18%_12%,rgba(56,189,248,0.16),transparent_60%)]",
+    title: "Web Development & Marketing",
+    desc: "High-end websites and digital ecosystems built to convert, scale, and perform.",
+    href: "/services/web-development-marketing",
+    Icon: Globe,
   },
   {
-    title: "Strategic Roadmap",
-    desc: "Long-term planning for brands that want clarity before scale.",
+    title: "AI Video & VFX",
+    desc: "AI-powered video ads, cinematic visuals, and fast-turnaround creative tech.",
+    href: "/services/ai-video-vfx",
+    Icon: Sparkles,
+  },
+  {
+    title: "Strategic Road Map",
+    desc: "Long-term brand, talent, and growth planning before scaling visibility.",
     href: "/services/strategic-roadmap",
     Icon: Route,
-    accent: "from-emerald-400/18 via-white/10 to-transparent",
-    glow: "bg-[radial-gradient(900px_circle_at_18%_12%,rgba(52,211,153,0.16),transparent_60%)]",
   },
 ];
 
@@ -102,7 +108,8 @@ export default function PRMediaDigitalRelatedServices() {
         </motion.div>
 
         {/* Tiles */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
           {services.map((s, i) => {
             const Icon = s.Icon;
 
@@ -136,14 +143,14 @@ export default function PRMediaDigitalRelatedServices() {
                   <div
                     className={[
                       "pointer-events-none absolute inset-0 opacity-[0.42] transition-opacity duration-500",
-                      s.glow,
+                    
                     ].join(" ")}
                   />
                   <div className="pointer-events-none absolute inset-0 opacity-[0.18] bg-[linear-gradient(135deg,rgba(255,255,255,0.10),transparent_45%)]" />
 
                   {/* top accent line */}
                   <div
-                    className={`pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r ${s.accent}`}
+                    className={`pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r `}
                   />
 
                   {/* hover ring */}

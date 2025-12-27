@@ -4,12 +4,15 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  CalendarHeart,
-  Megaphone,
-  Route,
   ClipboardList,
+  Star,
+  Megaphone,
+  Globe,
+  Sparkles,
+  Route,
   ArrowRight,
 } from "lucide-react";
+
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -24,26 +27,38 @@ const fadeUp = {
 
 const services = [
   {
-    title: "Events & Weddings",
-    desc: "Luxury events where celebrity presence meets flawless execution and protocol.",
-    href: "/services/events-weddings",
-    Icon: CalendarHeart,
-  },
-  {
     title: "Guest Management",
-    desc: "RSVPs, segmentation, access logic, and clean entry control for high-profile rooms.",
+    desc: "RSVPs, segmentation, access logic, and calm, controlled entry for high-profile rooms.",
     href: "/services/guest-management",
     Icon: ClipboardList,
   },
   {
-    title: "PR & Digital Marketing",
-    desc: "Visibility, media narratives, and digital momentum that protects reputation.",
+    title: "Celebrity Management",
+    desc: "End-to-end talent sourcing, commercials, coordination, and clean execution.",
+    href: "/services/celebrity-management",
+    Icon: Star,
+  },
+  {
+    title: "PR, Media & Digital Marketing",
+    desc: "Visibility, narratives, and digital momentum that protect brand reputation.",
     href: "/services/pr-media-digital-marketing",
     Icon: Megaphone,
   },
   {
-    title: "Strategic Roadmap",
-    desc: "Long-term brand and talent planning before scaling endorsements and associations.",
+    title: "Web Development & Marketing",
+    desc: "High-end websites and digital ecosystems built to convert, scale, and perform.",
+    href: "/services/web-development-marketing",
+    Icon: Globe,
+  },
+  {
+    title: "AI Video & VFX",
+    desc: "AI-powered video ads, cinematic visuals, and fast-turnaround creative tech.",
+    href: "/services/ai-video-vfx",
+    Icon: Sparkles,
+  },
+  {
+    title: "Strategic Road Map",
+    desc: "Long-term brand, talent, and growth planning before scaling visibility.",
     href: "/services/strategic-roadmap",
     Icon: Route,
   },
@@ -102,7 +117,8 @@ export default function RelatedServices() {
         </motion.div>
 
         {/* Tiles */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
           {services.map((s, i) => {
             const Icon = s.Icon;
 

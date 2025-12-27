@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Star, CalendarHeart, Megaphone, Route, ArrowRight } from "lucide-react";
+import { Sparkles, CalendarHeart, Megaphone, Route, ArrowRight, Globe, ClipboardList } from "lucide-react";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -17,34 +17,49 @@ const fadeUp = {
 
 const services = [
   {
-    title: "Celebrity Management",
-    desc: "Strategic celebrity representation, endorsements, and high-profile appearances.",
-    href: "/services/celebrity-management",
-    Icon: Star,
-    accent: "from-amber-400/22 via-white/10 to-transparent",
+    title: "Guest Management",
+    desc: "RSVPs, segmentation, access logic, and calm, controlled entry for high-profile rooms.",
+    href: "/services/guest-management",
+    Icon: ClipboardList,
+    accent: "from-dts-neon/22 via-white/10 to-transparent",
   },
   {
     title: "Events & Weddings",
-    desc: "Luxury events and weddings where celebrity presence meets flawless execution.",
+    desc: "Luxury events and weddings with structured planning and seamless on-ground execution.",
     href: "/services/events-weddings",
     Icon: CalendarHeart,
     accent: "from-rose-400/22 via-white/10 to-transparent",
   },
   {
-    title: "PR & Digital Marketing",
-    desc: "Media visibility and digital narratives that amplify celebrity and brand value.",
-    href: "/services/pr-digital",
+    title: "PR, Media & Digital Marketing",
+    desc: "Visibility, narratives, and digital momentum that protect brand reputation.",
+    href: "/services/pr-media-digital-marketing",
     Icon: Megaphone,
     accent: "from-sky-400/22 via-white/10 to-transparent",
   },
   {
-    title: "Strategic Roadmap",
-    desc: "Long-term brand and talent strategy before scaling visibility and associations.",
+    title: "Web Development & Marketing",
+    desc: "High-end websites and digital ecosystems built to convert, scale, and perform.",
+    href: "/services/web-development-marketing",
+    Icon: Globe,
+    accent: "from-emerald-400/22 via-white/10 to-transparent",
+  },
+  {
+    title: "AI Video & VFX",
+    desc: "AI-powered video ads, cinematic visuals, and fast-turnaround creative technology.",
+    href: "/services/ai-video-vfx",
+    Icon: Sparkles,
+    accent: "from-fuchsia-400/22 via-white/10 to-transparent",
+  },
+  {
+    title: "Strategic Road Map",
+    desc: "Long-term brand and growth planning before scaling visibility and associations.",
     href: "/services/strategic-roadmap",
     Icon: Route,
     accent: "from-dts-neon/22 via-white/10 to-transparent",
   },
 ];
+
 
 export default function RelatedServices() {
   return (
@@ -114,7 +129,8 @@ export default function RelatedServices() {
         </motion.div>
 
         {/* Tiles */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+    <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
           {services.map((s, i) => {
             const Icon = s.Icon;
 

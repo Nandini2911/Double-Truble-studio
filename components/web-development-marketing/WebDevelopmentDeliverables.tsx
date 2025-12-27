@@ -270,18 +270,12 @@ export default function WebDevelopmentDeliverables() {
         {/* Optional link */}
         <div className="mt-10 flex justify-center">
           <Link
-            href="/contact?service=web-development"
-            className="inline-flex items-center gap-2 rounded-full
-              border border-white/12 bg-white/5
-              px-7 py-3.5
-              text-[12px] font-bold uppercase tracking-[0.22em]
-              text-neutral-200
-              transition-all duration-300
-              hover:border-dts-neon/70
-              hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]"
-          >
-            Start a Project <ArrowRight className="h-4 w-4" />
-          </Link>
+  href="/contact?service=web-development"
+  className="inline-flex scale-y-125 dts-animated-border"
+>
+  <span>Get in touch</span>
+</Link>
+
         </div>
       </div>
     </section>

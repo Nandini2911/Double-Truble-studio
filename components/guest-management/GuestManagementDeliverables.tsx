@@ -267,17 +267,6 @@ export default function GuestManagementDeliverables() {
                     ))}
                   </ul>
 
-                  <div className="mt-7 flex items-center justify-between">
-                    <span className="text-[11px] uppercase tracking-[0.26em] text-neutral-500">
-                      Included
-                    </span>
-
-                    <span className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.18em] text-dts-neon/80 transition-all duration-300 group-hover:text-dts-neon">
-                      Details{" "}
-                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </span>
-                  </div>
-
                   <div className="pointer-events-none absolute -bottom-10 left-1/2 h-16 w-[70%] -translate-x-1/2 rounded-full bg-dts-neon/10 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
               </motion.div>
@@ -301,23 +290,15 @@ export default function GuestManagementDeliverables() {
           </p>
         </motion.div>
 
-        {/* Link */}
+        {/* CTA — NAVBAR STYLE */}
         <div className="mt-10 flex justify-center">
           <Link
             href="/contact?service=guest-management"
-            className="
-              inline-flex items-center gap-2 rounded-2xl
-              border border-white/10 bg-white/5
-              px-7 py-3.5
-              text-[12px] font-bold uppercase tracking-[0.22em]
-              text-neutral-200
-              backdrop-blur-xl
-              transition-all duration-300
-              hover:border-dts-neon/70
-              hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-            "
+            className="inline-flex items-center gap-2 scale-y-125 dts-animated-border"
           >
-            Start a Project <ArrowRight className="h-4 w-4" />
+            <span className="inline-flex items-center gap-2">
+              Start a Project <ArrowRight className="h-4 w-4" />
+            </span>
           </Link>
         </div>
       </div>

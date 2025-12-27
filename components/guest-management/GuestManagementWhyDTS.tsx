@@ -138,7 +138,7 @@ export default function GuestManagementWhyDTS() {
 
         {/* Layout */}
         <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-16 xl:gap-20">
-          {/* LEFT: Anchor statement (now with same card color effect) */}
+          {/* LEFT */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -147,7 +147,6 @@ export default function GuestManagementWhyDTS() {
             className="lg:col-span-5 xl:col-span-4"
           >
             <div className="group relative">
-              {/* glow ring */}
               <div
                 className="
                   pointer-events-none absolute inset-0 rounded-3xl
@@ -170,7 +169,6 @@ export default function GuestManagementWhyDTS() {
                   group-hover:shadow-[0_0_0_1px_rgba(70,243,216,0.20),0_22px_70px_rgba(0,0,0,0.72)]
                 "
               >
-                {/* sheen */}
                 <div
                   className="
                     pointer-events-none absolute inset-0 rounded-3xl
@@ -179,7 +177,6 @@ export default function GuestManagementWhyDTS() {
                     bg-[radial-gradient(700px_circle_at_20%_-10%,rgba(255,255,255,0.08),transparent_55%)]
                   "
                 />
-                {/* top accent */}
                 <div
                   className="
                     absolute inset-x-0 top-0 h-px rounded-3xl
@@ -221,7 +218,7 @@ export default function GuestManagementWhyDTS() {
             </div>
           </motion.div>
 
-          {/* RIGHT: Pillars (add subtle hover color) */}
+          {/* RIGHT */}
           <div className="lg:col-span-7 xl:col-span-8">
             <div className="grid gap-x-12 gap-y-10 lg:grid-cols-2">
               {pillars.map((p, i) => (
@@ -234,7 +231,6 @@ export default function GuestManagementWhyDTS() {
                   custom={i * 0.05}
                   className="group flex gap-5"
                 >
-                  {/* icon chip */}
                   <div
                     className="
                       mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center
@@ -250,7 +246,6 @@ export default function GuestManagementWhyDTS() {
                     <p.Icon className="h-5 w-5 text-white/90 transition-transform duration-300 group-hover:scale-105" />
                   </div>
 
-                  {/* text */}
                   <div className="min-w-0 text-left">
                     <h4 className="text-[15px] font-medium text-white transition-colors duration-300 group-hover:text-neutral-200">
                       {p.title}
@@ -259,7 +254,6 @@ export default function GuestManagementWhyDTS() {
                       {p.desc}
                     </p>
 
-                    {/* micro underline */}
                     <div
                       className="
                         mt-4 h-px w-24 bg-white/10
@@ -292,19 +286,9 @@ export default function GuestManagementWhyDTS() {
           <div className="mt-8 flex items-center justify-center">
             <Link
               href="/contact?service=guest-management"
-              className="
-                inline-flex rounded-2xl
-                border border-white/10 bg-white/5
-                px-7 py-3.5
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-              "
+              className="inline-flex scale-y-125 dts-animated-border"
             >
-              Start a Project
+              <span>Start a Project</span>
             </Link>
           </div>
         </motion.div>

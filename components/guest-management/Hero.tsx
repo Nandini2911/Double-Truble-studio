@@ -19,7 +19,7 @@ export default function GuestManagementHero() {
       {/* Subtle grid + noise (premium texture) */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]
         bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]
-        bg-[size:160px_160px]"
+        bg-size-[160px_160px]"
       />
       <div className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_20%_10%,rgba(255,63,164,0.18),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_80%_80%,rgba(216,184,115,0.14),transparent_60%)]" />
@@ -89,27 +89,28 @@ export default function GuestManagementHero() {
 
           {/* Heading */}
           <h1
-            className="
-              font-heading
-              text-[2.05rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.6rem] xl:text-[4rem] 2xl:text-[4.6rem]
-              leading-[1.06]
-              max-w-4xl mx-auto
-              text-white
-            "
-          >
-            Guest entry,
-            <span className="relative inline-block">
-              <span
-                className="
-                  bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold
-                  bg-clip-text text-transparent
-                  drop-shadow-[0_0_18px_rgba(70,243,216,0.22)]
-                "
-              >
-                done like a system.
-              </span>
-            </span>
-          </h1>
+  className="
+    font-heading
+    text-[2.05rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.6rem] xl:text-[4rem] 2xl:text-[4.6rem]
+    leading-[1.06]
+    max-w-4xl mx-auto
+    text-white
+  "
+>
+  Guest entry,{` `}
+  <span className="relative inline-block">
+    <span
+      className="
+        bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold
+        bg-clip-text text-transparent
+        drop-shadow-[0_0_18px_rgba(70,243,216,0.22)]
+      "
+    >
+      done like a system.
+    </span>
+  </span>
+</h1>
+
 
           {/* Subcopy */}
           <p

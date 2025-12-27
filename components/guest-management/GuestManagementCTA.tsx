@@ -125,23 +125,7 @@ export default function GuestManagementCTA() {
             </Link>
           </motion.div>
 
-          <Link
-            href="/contact?service=guest-management"
-            className="
-              inline-flex items-center justify-center
-              rounded-2xl
-              border border-white/10 bg-white/5
-              px-10 py-5
-              text-[12px] uppercase tracking-[0.26em] font-semibold
-              text-neutral-200
-              backdrop-blur-xl
-              transition-all duration-300
-              hover:border-dts-neon/70
-              hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-            "
-          >
-            Book a Strategy Call
-          </Link>
+          
         </div>
 
         {/* micro-line */}

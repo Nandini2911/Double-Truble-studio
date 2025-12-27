@@ -121,10 +121,8 @@ export default function GuestManagementFAQs() {
                 custom={i * 0.06}
                 className="group relative py-7 sm:py-8"
               >
-                {/* subtle hover glow behind row */}
                 <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(900px_circle_at_20%_0%,rgba(70,243,216,0.12),transparent_60%)]" />
 
-                {/* Row (glass) */}
                 <div
                   className="
                     relative rounded-3xl
@@ -143,7 +141,6 @@ export default function GuestManagementFAQs() {
                     className="flex w-full items-start justify-between gap-6 text-left"
                   >
                     <div className="flex min-w-0 gap-5 sm:gap-6">
-                      {/* Number */}
                       <span
                         className="
                           font-heading text-[18px]
@@ -155,13 +152,11 @@ export default function GuestManagementFAQs() {
                         {String(i + 1).padStart(2, "0")}
                       </span>
 
-                      {/* Question */}
                       <h3 className="min-w-0 text-[15px] font-medium text-white transition-colors duration-300 group-hover:text-neutral-200">
                         {f.q}
                       </h3>
                     </div>
 
-                    {/* Chevron */}
                     <span
                       className="
                         mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center
@@ -184,7 +179,6 @@ export default function GuestManagementFAQs() {
                     </span>
                   </button>
 
-                  {/* Answer */}
                   <motion.div
                     initial={false}
                     animate={{
@@ -199,7 +193,6 @@ export default function GuestManagementFAQs() {
                     </p>
                   </motion.div>
 
-                  {/* color divider (inside card) */}
                   <div
                     className="
                       mt-6 h-px w-full
@@ -209,8 +202,6 @@ export default function GuestManagementFAQs() {
                     "
                   />
                 </div>
-
-                {/* old full-width divider removed (card already has its own) */}
               </motion.div>
             );
           })}
@@ -229,22 +220,12 @@ export default function GuestManagementFAQs() {
             Still unsure? Let’s walk through your event and map the right setup.
           </p>
 
-          <div className="mt-8">
+          <div className="mt-8 flex justify-center">
             <Link
               href="/contact?service=guest-management"
-              className="
-                inline-flex rounded-2xl
-                border border-white/10 bg-white/5
-                px-7 py-3.5
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-              "
+              className="inline-flex scale-y-125 dts-animated-border"
             >
-              Get a Quote
+              <span>Get a Quote</span>
             </Link>
           </div>
         </motion.div>

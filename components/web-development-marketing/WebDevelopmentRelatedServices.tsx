@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Star, CalendarHeart, Megaphone, Route, ArrowRight } from "lucide-react";
+import { ClipboardList,Sparkles,Star, CalendarHeart, Megaphone, Route, ArrowRight } from "lucide-react";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -15,42 +15,43 @@ const fadeUp = {
   }),
 };
 
-const services = [
+export const services = [
   {
-    title: "Custom Web Development",
-    desc: "End-to-end custom development for websites, web apps, and complex systems.",
-    href: "/services/web-development",
+    title: "Guest Management",
+    desc: "RSVPs, segmentation, access logic, and calm, controlled entry for high-profile rooms.",
+    href: "/services/guest-management",
+    Icon: ClipboardList,
+  },
+  {
+    title: "Celebrity Management",
+    desc: "End-to-end talent sourcing, commercials, coordination, and clean execution.",
+    href: "/services/celebrity-management",
     Icon: Star,
-    accent: "from-amber-400/22 via-white/10 to-transparent",
-    bloom: "rgba(245,158,11,0.20)", // amber
-    orb: "rgba(245,158,11,0.18)",
   },
   {
-    title: "E-commerce Solutions",
-    desc: "Build scalable e-commerce platforms with secure payment systems and a seamless shopping experience.",
-    href: "/services/e-commerce",
+    title: "Events & Weddings",
+    desc: "Luxury events and weddings with structured planning and seamless execution.",
+    href: "/services/events-weddings",
     Icon: CalendarHeart,
-    accent: "from-rose-400/22 via-white/10 to-transparent",
-    bloom: "rgba(251,113,133,0.18)", // rose
-    orb: "rgba(251,113,133,0.16)",
   },
   {
-    title: "SEO & Digital Marketing",
-    desc: "SEO, content strategy, and digital campaigns to boost your site’s visibility and user engagement.",
-    href: "/services/seo-digital-marketing",
+    title: "PR, Media & Digital Marketing",
+    desc: "Visibility, narratives, and digital momentum that protect brand reputation.",
+    href: "/services/pr-media-digital-marketing",
     Icon: Megaphone,
-    accent: "from-sky-400/22 via-white/10 to-transparent",
-    bloom: "rgba(56,189,248,0.18)", // sky
-    orb: "rgba(56,189,248,0.16)",
+  },
+ 
+  {
+    title: "AI Video & VFX",
+    desc: "AI-powered video ads, cinematic visuals, and fast-turnaround creative tech.",
+    href: "/services/ai-video-vfx",
+    Icon: Sparkles,
   },
   {
-    title: "Brand Strategy & Consulting",
-    desc: "Strategic planning for brands looking to grow, with clarity and precision before scaling.",
-    href: "/services/brand-strategy",
+    title: "Strategic Road Map",
+    desc: "Long-term brand, talent, and growth planning before scaling visibility.",
+    href: "/services/strategic-roadmap",
     Icon: Route,
-    accent: "from-dts-neon/22 via-white/10 to-transparent",
-    bloom: "rgba(70,243,216,0.20)", // dts neon
-    orb: "rgba(70,243,216,0.18)",
   },
 ];
 
@@ -93,7 +94,8 @@ export default function WebDevelopmentRelatedServices() {
         </motion.div>
 
         {/* Tiles */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
           {services.map((s, i) => {
             const Icon = s.Icon;
 
@@ -112,13 +114,13 @@ export default function WebDevelopmentRelatedServices() {
                 <div
                   className="pointer-events-none absolute -inset-2 rounded-3xl opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
                   style={{
-                    background: `radial-gradient(900px circle at 88% 30%, ${s.bloom}, transparent 58%)`,
+                    background: `radial-gradient(900px circle at 88% 30%, , transparent 58%)`,
                   }}
                 />
 
                 {/* TOP ACCENT LINE (rich on hover) */}
                 <div
-                  className={`pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl bg-linear-to-r ${s.accent} opacity-60 transition-opacity duration-500 group-hover:opacity-100`}
+                  className={`pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl bg-linear-to-r opacity-60 transition-opacity duration-500 group-hover:opacity-100`}
                 />
 
                 <Link
@@ -135,10 +137,7 @@ export default function WebDevelopmentRelatedServices() {
                   "
                 >
                   {/* INNER COLOR ORB (slight even on idle) */}
-                  <div
-                    className="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full blur-3xl opacity-20 transition-opacity duration-500 group-hover:opacity-45"
-                    style={{ background: s.orb }}
-                  />
+                 
                   {/* Corner sheen */}
                   <div className="pointer-events-none absolute right-0 top-0 h-28 w-28 rounded-2xl bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.10),transparent_62%)]" />
 

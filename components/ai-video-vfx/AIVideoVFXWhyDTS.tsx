@@ -209,31 +209,12 @@ export default function AIVideoVFXWhyDTS() {
 
           <div className="mt-8 flex items-center justify-center">
             <Link
-              href="/contact?service=ai-video-vfx"
-              className="
-                group relative inline-flex items-center justify-center
-                rounded-full px-7 py-3.5
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                border border-white/12 bg-white/5
-                transition-all duration-300
-                hover:border-white/15
-                hover:shadow-[0_0_0_1px_rgba(255,255,255,0.10),0_20px_70px_rgba(0,0,0,0.70)]
-                overflow-hidden
-              "
-            >
-              {/* animated underline glow (navbar vibe) */}
-              <span className="relative z-10">Start a Project</span>
+  href="/contact?service=web-development"
+  className="inline-flex scale-y-125 dts-animated-border"
+>
+  <span>Get in touch</span>
+</Link>
 
-              <span
-                className="
-                  pointer-events-none absolute inset-x-10 -bottom-1 h-px
-                  bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold
-                  opacity-60
-                  shadow-[0_0_18px_rgba(70,243,216,0.55)]
-                "
-              />
-            </Link>
           </div>
         </motion.div>
       </div>

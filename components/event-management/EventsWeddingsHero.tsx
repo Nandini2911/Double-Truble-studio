@@ -95,7 +95,7 @@ export default function EventsWeddingsHero() {
                 Events &amp; Weddings
               </motion.p>
 
-              {/* Heading (MATCHING GUEST MANAGEMENT HERO COLOR STYLE) */}
+              {/* Heading */}
               <motion.h1
                 initial={{ opacity: 0, y: 14 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -167,25 +167,12 @@ export default function EventsWeddingsHero() {
                 transition={{ duration: 0.8, ease: EASE, delay: 0.14 }}
                 className="mt-10 flex flex-wrap gap-3"
               >
-                {/* Primary */}
-                <Link
-                  href="/contact"
-                  className="
-                    group relative inline-flex items-center justify-center
-                    rounded-full px-6 py-3 text-sm font-medium
-                    bg-white text-black
-                    transition
-                    shadow-[0_18px_60px_-34px_rgba(255,255,255,0.35)]
-                    hover:-translate-y-0.5
-                    active:translate-y-0
-                  "
-                >
-                  {/* subtle highlight */}
-                  <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(900px_circle_at_30%_0%,rgba(70,243,216,0.16),transparent_60%)]" />
-                  <span className="relative">Plan My Event</span>
+                {/* Primary — NAVBAR CTA STYLE */}
+                <Link href="/contact" className="inline-flex scale-y-125 dts-animated-border">
+                  <span>Plan My Event</span>
                 </Link>
 
-                {/* Secondary */}
+                {/* Secondary — soft glass button */}
                 <Link
                   href="/book-a-call"
                   className="

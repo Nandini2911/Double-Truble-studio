@@ -229,22 +229,12 @@ export default function CelebrityManagementFAQs() {
           </p>
 
           <div className="mt-8">
-            <Link
-              href="/contact?service=celebrity-management"
-              className="
-                inline-flex rounded-2xl
-                border border-white/10 bg-white/5
-                px-7 py-3.5
-                text-[12px] font-bold uppercase tracking-[0.22em]
-                text-neutral-200
-                backdrop-blur-xl
-                transition-all duration-300
-                hover:border-dts-neon/70
-                hover:shadow-[0_0_0_1px_rgba(70,243,216,0.30)]
-              "
-            >
-              Discuss your requirements
-            </Link>
+           <Link
+  href="/contact?service=guest-management"
+  className="inline-flex scale-y-125 dts-animated-border"
+>
+  <span>Get a Quote</span>
+</Link>
           </div>
         </motion.div>
       </div>
