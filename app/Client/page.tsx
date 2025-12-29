@@ -74,7 +74,7 @@ export default function ClientPage() {
               "
             >
               <img
-                src={`/logos/${index + 1}.png`}
+                src={`/logos/${index + 1}.webp`}
                 alt={`Client ${index + 1}`}
                 loading="lazy"
                 decoding="async"
