@@ -1,3 +1,6 @@
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
@@ -5,7 +8,6 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, company, service, message } = body ?? {};
 
-    // basic validation
     if (!name || !email || !message) {
       return Response.json(
         { ok: false, error: "Name, email, and message are required." },
@@ -13,17 +15,32 @@ export async function POST(req: Request) {
       );
     }
 
+    const host = process.env.SMTP_HOST;
+    const port = Number(process.env.SMTP_PORT || 465);
+    const user = process.env.SMTP_USER;
+    const pass = process.env.SMTP_PASS;
+
+    if (!host || !user || !pass) {
+      console.error("Missing SMTP env", {
+        SMTP_HOST: !!host,
+        SMTP_PORT: process.env.SMTP_PORT,
+        SMTP_USER: !!user,
+        SMTP_PASS: !!pass,
+      });
+      return Response.json(
+        { ok: false, error: "Server email configuration missing." },
+        { status: 500 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 465),
-      secure: true, // 465 = true
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
+      host,
+      port,
+      secure: port === 465,
+      auth: { user, pass },
     });
 
-    const toEmail = process.env.CONTACT_TO || process.env.SMTP_USER;
+    const toEmail = process.env.CONTACT_TO || user;
 
     const subject = `New Enquiry: ${service || "Contact Form"} — ${name}`;
 
@@ -39,23 +56,27 @@ Message:
 ${message}
     `.trim();
 
-    // IMPORTANT:
-    // From = aapka SMTP_USER (fixed)
-    // To = aapka CONTACT_TO (aap)
-    // Reply-To = user ka email (taaki aap reply dabao toh user ko chala jaye)
-    await transporter.sendMail({
-      from: `"Double Trouble Studio" <${process.env.SMTP_USER}>`,
+    const info = await transporter.sendMail({
+      from: `"Double Trouble Studio" <${user}>`,
       to: toEmail,
       replyTo: email,
       subject,
       text,
     });
 
+    console.log("MAIL SENT:", {
+      to: toEmail,
+      messageId: info.messageId,
+      accepted: info.accepted,
+      rejected: info.rejected,
+      response: info.response,
+    });
+
     return Response.json({ ok: true });
   } catch (err: any) {
-    console.error(err);
+    console.error("CONTACT API ERROR:", err?.message || err, err);
     return Response.json(
-      { ok: false, error: "Failed to send email." },
+      { ok: false, error: err?.message || "Failed to send email." },
       { status: 500 }
     );
   }
