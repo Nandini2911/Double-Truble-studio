@@ -48,7 +48,7 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="relative overflow-hidden w-full bg-[#050507]">
+    <section className="relative overflow-hidden w-full bg-dts-black">
       {/* BACKGROUND */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(70,243,216,0.18),transparent_55%)]" />
@@ -153,7 +153,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-8"
+            className="rounded-3xl border border-white/10 bg-white/4 backdrop-blur-xl p-8"
           >
             <h3 className="font-heading text-[22px] text-white">
               Start the conversation
@@ -189,28 +189,28 @@ export default function ContactPage() {
                 onChange={(e) => setForm({ ...form, service: e.target.value })}
                 className="
                   w-full rounded-xl
-                  bg-[#050507] text-white
+                  bg-dts-black text-white
                   border border-white/10
                   px-4 py-3 text-sm
                   focus:outline-none focus:border-dts-neon/60
                 "
               >
-                <option value="" className="bg-[#050507] text-neutral-400">
+                <option value="" className="bg-dts-black text-neutral-400">
                   Service you’re enquiring for
                 </option>
-                <option value="Strategic Roadmap" className="bg-[#050507] text-white">
+                <option value="Strategic Roadmap" className="bg-dts-black text-white">
                   Strategic Roadmap
                 </option>
-                <option value="PR & Media" className="bg-[#050507] text-white">
+                <option value="PR & Media" className="bg-dts-black text-white">
                   PR & Media
                 </option>
-                <option value="Digital & Marketing" className="bg-[#050507] text-white">
+                <option value="Digital & Marketing" className="bg-dts-black text-white">
                   Digital & Marketing
                 </option>
-                <option value="AI Video & VFX" className="bg-[#050507] text-white">
+                <option value="AI Video & VFX" className="bg-dts-black text-white">
                   AI Video & VFX
                 </option>
-                <option value="Celebrity Management" className="bg-[#050507] text-white">
+                <option value="Celebrity Management" className="bg-dts-black text-white">
                   Celebrity Management
                 </option>
                 <option value="Events & Experiences" className="bg-[#050507] text-white">
