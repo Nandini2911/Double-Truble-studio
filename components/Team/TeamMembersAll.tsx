@@ -85,8 +85,8 @@ export default function TeamMembersAll() {
         <div
           className="
             absolute inset-0 opacity-[0.06]
-            [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
-            [background-size:44px_44px]
+            bg-[linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
+            bg-size-[44px_44px]
           "
         />
 
@@ -166,11 +166,11 @@ export default function TeamMembersAll() {
               className="group relative"
             >
               {/* outer glow */}
-              <div className="pointer-events-none absolute inset-0 rounded-[24px] sm:rounded-[28px] opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(900px_circle_at_25%_0%,rgba(70,243,216,0.14),transparent_55%)]" />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl sm:rounded-[28px] opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(900px_circle_at_25%_0%,rgba(70,243,216,0.14),transparent_55%)]" />
 
               <div
                 className="
-                  relative overflow-hidden rounded-[24px] sm:rounded-[28px]
+                  relative overflow-hidden rounded-3xl sm:rounded-[28px]
                   border border-white/10 bg-white/4 backdrop-blur-xl
                   p-5 sm:p-6
                   transition-all duration-300
@@ -188,7 +188,7 @@ export default function TeamMembersAll() {
                     <div className="pointer-events-none absolute inset-0 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(circle_at_30%_20%,rgba(70,243,216,0.22),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(255,63,164,0.14),transparent_60%)]" />
 
                     {/* Responsive avatar wrapper (prevents layout shift) */}
-                    <div className="relative overflow-hidden rounded-full border border-white/12 bg-white/5 [width:clamp(9.5rem,26vw,15rem)] [height:clamp(9.5rem,26vw,15rem)]">
+                    <div className="relative overflow-hidden rounded-full border border-white/12 bg-white/5 w-[clamp(9.5rem,26vw,15rem)] h-[clamp(9.5rem,26vw,15rem)]">
                       <Image
                         src={m.image}
                         alt={m.name}
