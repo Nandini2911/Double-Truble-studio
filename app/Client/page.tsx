@@ -84,17 +84,19 @@ export default function ClientPage() {
         >
           {LOGOS.map((logo, index) => (
             <div
-              key={logo.src}
-              className="
-                group relative
-                rounded-2xl border border-white/10
-                bg-white/[0.06] backdrop-blur-xl
-                px-4 py-4 sm:px-5 sm:py-5
-                transition
-                hover:border-white/15 hover:bg-white/[0.08]
-                hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_18px_50px_rgba(0,0,0,0.65)]
-              "
-            >
+  key={logo.src}
+  className="
+    group relative
+    rounded-2xl
+    border border-black/10
+    bg-white
+    px-4 py-4 sm:px-5 sm:py-5
+    transition
+    hover:border-black/15
+    hover:shadow-[0_10px_30px_rgba(0,0,0,0.18)]
+  "
+>
+
               {/* subtle hover wash */}
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[linear-gradient(120deg,rgba(70,243,216,0.10),rgba(255,63,164,0.08),rgba(216,184,115,0.06))]" />
 
