@@ -20,7 +20,6 @@ export default function ContactPage() {
     message: "",
   });
 
-  // Unique ids for accessible labels
   const uid = useId();
   const idName = `name-${uid}`;
   const idEmail = `email-${uid}`;
@@ -36,7 +35,7 @@ export default function ContactPage() {
 
     try {
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 12000);
+      const timeout = setTimeout(() => controller.abort(), 15000);
 
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -55,7 +54,6 @@ export default function ContactPage() {
 
       const data = await res.json().catch(() => null);
 
-      // ✅ Strong success check (works reliably in production)
       if (!res.ok || !data?.ok) {
         console.error("CONTACT API ERROR:", res.status, data);
         throw new Error(data?.error || `Request failed (${res.status})`);
@@ -188,12 +186,8 @@ export default function ContactPage() {
             </p>
 
             <form onSubmit={onSubmit} className="mt-8 space-y-5">
-              {/* Name */}
               <div className="space-y-2">
-                <label
-                  htmlFor={idName}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
+                <label htmlFor={idName} className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300">
                   Full Name
                 </label>
                 <input
@@ -208,12 +202,8 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Email */}
               <div className="space-y-2">
-                <label
-                  htmlFor={idEmail}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
+                <label htmlFor={idEmail} className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300">
                   Email Address
                 </label>
                 <input
@@ -229,12 +219,8 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Company */}
               <div className="space-y-2">
-                <label
-                  htmlFor={idCompany}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
+                <label htmlFor={idCompany} className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300">
                   Company / Brand (optional)
                 </label>
                 <input
@@ -248,12 +234,8 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Service */}
               <div className="space-y-2">
-                <label
-                  htmlFor={idService}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
+                <label htmlFor={idService} className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300">
                   Service you’re enquiring for
                 </label>
 
@@ -264,42 +246,24 @@ export default function ContactPage() {
                   value={form.service}
                   onChange={(e) => setForm({ ...form, service: e.target.value })}
                   aria-describedby={idServiceHelp}
-                  className="
-                    w-full rounded-xl
-                    bg-dts-black text-white
-                    border border-white/10
-                    px-4 py-3 text-sm
-                    focus:outline-none focus:border-dts-neon/60
-                  "
+                  className="w-full rounded-xl bg-dts-black text-white border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-dts-neon/60"
                 >
-                  <option
-                    value=""
-                    disabled
-                    className="bg-dts-black text-neutral-400"
-                  >
+                  <option value="" disabled className="bg-dts-black text-neutral-400">
                     Select a service
                   </option>
-                  <option value="Strategic Roadmap" className="bg-dts-black text-white">
-                    Strategic Roadmap
-                  </option>
-                  <option value="PR & Media" className="bg-dts-black text-white">
-                    PR & Media
-                  </option>
-                  <option value="Digital & Marketing" className="bg-dts-black text-white">
-                    Digital & Marketing
-                  </option>
-                  <option value="AI Video & VFX" className="bg-dts-black text-white">
-                    AI Video & VFX
-                  </option>
-                  <option value="Celebrity Management" className="bg-dts-black text-white">
-                    Celebrity Management
-                  </option>
-                  <option value="Events & Experiences" className="bg-[#050507] text-white">
-                    Events & Experiences
-                  </option>
-                  <option value="Not sure yet" className="bg-[#050507] text-white">
-                    Not sure yet
-                  </option>
+                  {[
+                    "Strategic Roadmap",
+                    "PR & Media",
+                    "Digital & Marketing",
+                    "AI Video & VFX",
+                    "Celebrity Management",
+                    "Events & Experiences",
+                    "Not sure yet",
+                  ].map((v) => (
+                    <option key={v} value={v} className="bg-dts-black text-white">
+                      {v}
+                    </option>
+                  ))}
                 </select>
 
                 <p id={idServiceHelp} className="text-[12px] text-neutral-400">
@@ -307,12 +271,8 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* Message */}
               <div className="space-y-2">
-                <label
-                  htmlFor={idMessage}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
+                <label htmlFor={idMessage} className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300">
                   Your Requirement
                 </label>
                 <textarea
@@ -330,10 +290,17 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="dts-animated-border w-full disabled:opacity-60"
+                className="dts-animated-border w-full disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <span className="inline-flex w-full items-center justify-center py-4 text-[13px] uppercase tracking-[0.22em] font-semibold text-dts-fog">
-                  {loading ? "Submitting..." : "Submit Enquiry"}
+                <span className="inline-flex w-full items-center justify-center gap-2 py-4 text-[13px] uppercase tracking-[0.22em] font-semibold text-dts-fog">
+                  {loading ? (
+                    <>
+                      <span className="h-4 w-4 rounded-full border border-white/30 border-t-white/80 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    "Submit Enquiry"
+                  )}
                 </span>
               </button>
 
