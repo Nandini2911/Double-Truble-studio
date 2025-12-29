@@ -1,14 +1,12 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { useId, useState } from "react";
+import { useState } from "react";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export default function ContactPage() {
-  const reduceMotion = useReducedMotion();
-
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState<null | "ok" | "err">(null);
 
@@ -19,15 +17,6 @@ export default function ContactPage() {
     service: "",
     message: "",
   });
-
-  // Unique IDs (avoid collisions if component is reused)
-  const uid = useId();
-  const idName = `name-${uid}`;
-  const idEmail = `email-${uid}`;
-  const idCompany = `company-${uid}`;
-  const idService = `service-${uid}`;
-  const idServiceHelp = `service-help-${uid}`;
-  const idMessage = `message-${uid}`;
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -72,8 +61,8 @@ export default function ContactPage() {
       {/* HERO */}
       <div className="relative min-h-[85vh] grid place-items-center px-4">
         <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 28 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: EASE }}
           className="max-w-4xl text-center space-y-6"
         >
@@ -124,8 +113,8 @@ export default function ContactPage() {
         <div className="grid gap-14 lg:grid-cols-2 items-start">
           {/* LEFT */}
           <motion.div
-            initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-            whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
             className="space-y-10"
@@ -148,7 +137,7 @@ export default function ContactPage() {
             </ul>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="text-[13px] uppercase tracking-[0.26em] text-neutral-300/85">
+              <p className="text-[13px] uppercase tracking-[0.26em] text-neutral-400">
                 Ideal for
               </p>
               <p className="mt-3 text-[14px] text-neutral-300/85 leading-relaxed">
@@ -160,8 +149,8 @@ export default function ContactPage() {
 
           {/* RIGHT FORM */}
           <motion.div
-            initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-            whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
             className="rounded-3xl border border-white/10 bg-white/4 backdrop-blur-xl p-8"
@@ -175,150 +164,70 @@ export default function ContactPage() {
             </p>
 
             <form onSubmit={onSubmit} className="mt-8 space-y-5">
-              {/* Name */}
-              <div className="space-y-2">
-                <label
-                  htmlFor={idName}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
-                  Full Name
-                </label>
-                <input
-                  id={idName}
-                  name="name"
-                  autoComplete="name"
-                  required
-                  value={form.name}
-                  onChange={(e) =>
-                    setForm({ ...form, name: e.target.value })
-                  }
-                  placeholder="Full Name"
-                  className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
-                />
-              </div>
+              <input
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                placeholder="Full Name"
+                className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
+              />
+              <input
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                placeholder="Email Address"
+                className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
+              />
+              <input
+                value={form.company}
+                onChange={(e) => setForm({ ...form, company: e.target.value })}
+                placeholder="Company / Brand (optional)"
+                className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
+              />
 
-              {/* Email */}
-              <div className="space-y-2">
-                <label
-                  htmlFor={idEmail}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
-                  Email Address
-                </label>
-                <input
-                  id={idEmail}
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  value={form.email}
-                  onChange={(e) =>
-                    setForm({ ...form, email: e.target.value })
-                  }
-                  placeholder="Email Address"
-                  className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
-                />
-              </div>
-
-              {/* Company */}
-              <div className="space-y-2">
-                <label
-                  htmlFor={idCompany}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
-                  Company / Brand (optional)
-                </label>
-                <input
-                  id={idCompany}
-                  name="company"
-                  autoComplete="organization"
-                  value={form.company}
-                  onChange={(e) =>
-                    setForm({ ...form, company: e.target.value })
-                  }
-                  placeholder="Company / Brand (optional)"
-                  className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
-                />
-              </div>
-
-              {/* Service */}
-              <div className="space-y-2">
-                <label
-                  htmlFor={idService}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
+              {/* ✅ FIXED: select NOT WHITE + defaultValue */}
+              <select
+                value={form.service}
+                onChange={(e) => setForm({ ...form, service: e.target.value })}
+                className="
+                  w-full rounded-xl
+                  bg-dts-black text-white
+                  border border-white/10
+                  px-4 py-3 text-sm
+                  focus:outline-none focus:border-dts-neon/60
+                "
+              >
+                <option value="" className="bg-dts-black text-neutral-400">
                   Service you’re enquiring for
-                </label>
+                </option>
+                <option value="Strategic Roadmap" className="bg-dts-black text-white">
+                  Strategic Roadmap
+                </option>
+                <option value="PR & Media" className="bg-dts-black text-white">
+                  PR & Media
+                </option>
+                <option value="Digital & Marketing" className="bg-dts-black text-white">
+                  Digital & Marketing
+                </option>
+                <option value="AI Video & VFX" className="bg-dts-black text-white">
+                  AI Video & VFX
+                </option>
+                <option value="Celebrity Management" className="bg-dts-black text-white">
+                  Celebrity Management
+                </option>
+                <option value="Events & Experiences" className="bg-[#050507] text-white">
+                  Events & Experiences
+                </option>
+                <option value="Not sure yet" className="bg-[#050507] text-white">
+                  Not sure yet
+                </option>
+              </select>
 
-                <select
-                  id={idService}
-                  name="service"
-                  required
-                  value={form.service}
-                  onChange={(e) =>
-                    setForm({ ...form, service: e.target.value })
-                  }
-                  aria-describedby={idServiceHelp}
-                  className="
-                    w-full rounded-xl
-                    bg-dts-black text-white
-                    border border-white/10
-                    px-4 py-3 text-sm
-                    focus:outline-none focus:border-dts-neon/60
-                  "
-                >
-                  <option value="" disabled className="bg-dts-black text-neutral-400">
-                    Select a service
-                  </option>
-                  <option value="Strategic Roadmap" className="bg-dts-black text-white">
-                    Strategic Roadmap
-                  </option>
-                  <option value="PR & Media" className="bg-dts-black text-white">
-                    PR & Media
-                  </option>
-                  <option value="Digital & Marketing" className="bg-dts-black text-white">
-                    Digital & Marketing
-                  </option>
-                  <option value="AI Video & VFX" className="bg-dts-black text-white">
-                    AI Video & VFX
-                  </option>
-                  <option value="Celebrity Management" className="bg-dts-black text-white">
-                    Celebrity Management
-                  </option>
-                  <option value="Events & Experiences" className="bg-[#050507] text-white">
-                    Events & Experiences
-                  </option>
-                  <option value="Not sure yet" className="bg-[#050507] text-white">
-                    Not sure yet
-                  </option>
-                </select>
-
-                <p id={idServiceHelp} className="text-[12px] text-neutral-400">
-                  Pick the closest match — we’ll refine it after understanding your goal.
-                </p>
-              </div>
-
-              {/* Message */}
-              <div className="space-y-2">
-                <label
-                  htmlFor={idMessage}
-                  className="block text-[12px] uppercase tracking-[0.24em] text-neutral-300"
-                >
-                  Your Requirement
-                </label>
-                <textarea
-                  id={idMessage}
-                  name="message"
-                  rows={4}
-                  required
-                  value={form.message}
-                  onChange={(e) =>
-                    setForm({ ...form, message: e.target.value })
-                  }
-                  placeholder="Briefly describe what you’re trying to achieve"
-                  className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
-                />
-              </div>
+              <textarea
+                rows={4}
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                placeholder="Briefly describe what you’re trying to achieve"
+                className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-dts-neon/60"
+              />
 
               <button
                 type="submit"
@@ -331,13 +240,13 @@ export default function ContactPage() {
               </button>
 
               {done === "ok" ? (
-                <p role="status" className="text-[12px] text-dts-neon text-center">
+                <p className="text-[12px] text-dts-neon text-center">
                   Enquiry sent. We’ll get back to you soon.
                 </p>
               ) : null}
 
               {done === "err" ? (
-                <p role="alert" className="text-[12px] text-red-400 text-center">
+                <p className="text-[12px] text-red-400 text-center">
                   Something went wrong. Please try again.
                 </p>
               ) : null}
@@ -354,27 +263,12 @@ export default function ContactPage() {
       <div className="relative py-20 text-center border-t border-white/10">
         <p className="text-[14px] text-neutral-300/80">Not ready to fill a form?</p>
 
-        <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-          <Link
-            href="/contact"
-            className={`dts-animated-border inline-flex justify-center ${
-              reduceMotion ? "" : "transition-transform hover:scale-[1.02] active:scale-[0.98]"
-            }`}
-            aria-label="Get in touch with Double Trouble Studio"
-          >
-            <span className="px-8 py-3 text-[12px] uppercase tracking-[0.22em] font-semibold text-dts-fog">
-              Get in touch
-            </span>
+        <div className="mt-6 flex justify-center gap-4">
+          <Link href="/contact" className="inline-flex scale-y-125 dts-animated-border">
+            <span>Get in touch</span>
           </Link>
-
-          <Link
-            href="/contact?intent=book-call"
-            className={`inline-flex justify-center rounded-full border border-white/12 bg-white/5 px-8 py-3 text-[12px] uppercase tracking-[0.22em] font-semibold text-neutral-200 transition hover:bg-white/10 hover:border-white/18 ${
-              reduceMotion ? "" : "hover:scale-[1.02] active:scale-[0.98]"
-            }`}
-            aria-label="Book a call with Double Trouble Studio"
-          >
-            Book a Call
+          <Link href="/contact" className="inline-flex scale-y-125 dts-animated-border">
+            <span>Book a Call</span>
           </Link>
         </div>
       </div>
