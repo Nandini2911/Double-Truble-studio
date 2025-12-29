@@ -118,7 +118,7 @@ export default function TeamBehindTheScenes() {
               {/* Responsive fixed-height wrapper (prevents CLS) */}
               <div className="relative w-full [height:clamp(16rem,45vw,34rem)]">
                 <Image
-                  src="/group.jfif"
+                  src="/allgroup.webp"
                   alt="Team collaboration"
                   fill
                   className="object-cover"
