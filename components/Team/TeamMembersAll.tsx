@@ -18,13 +18,13 @@ const MEMBERS: Member[] = [
     name: "Ravish Verma",
     role: "SME — SEO",
     image: "/Ravish.PNG",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/ravish-kumar02/",
   },
   {
     name: "Nandini Yadav",
     role: "Web Developer",
-    image: "/nandini.webp",
-    linkedin: "https://linkedin.com",
+    image: "/nandini2.jpeg",
+    linkedin: "https://www.linkedin.com/in/nandini-yadav-xx/",
   },
   {
     name: "Naman Gupta",
@@ -36,7 +36,7 @@ const MEMBERS: Member[] = [
     name: "Simran Salagre",
     role: "Head — PR & Communication",
     image: "/simran1.png",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/simran-salagre-863b58266/",
   },
   {
     name: "Abhishek Singh",
@@ -48,7 +48,7 @@ const MEMBERS: Member[] = [
     name: "Raj Umbarkar",
     role: "Video Editor",
     image: "/Raj.jpg",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/raj-umbarkar-83174624b/",
   },
 ];
 
