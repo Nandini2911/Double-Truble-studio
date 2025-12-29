@@ -53,7 +53,6 @@ const MEMBERS: Member[] = [
 ];
 
 export default function TeamMembersAll() {
-  // Prevent hydration mismatch + reduce “late load” feel
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -63,7 +62,7 @@ export default function TeamMembersAll() {
       show: (d = 0) => ({
         opacity: 1,
         y: 0,
-        transition: { duration: 0.45, ease: EASE, delay: d },
+        transition: { duration: 0.5, ease: EASE, delay: d },
       }),
     }),
     []
@@ -79,10 +78,10 @@ export default function TeamMembersAll() {
             initial: { opacity: 0, y: 18 },
             whileInView: { opacity: 1, y: 0 },
             viewport: { once: true, amount: 0.18 },
-            transition: { duration: 0.45, ease: EASE },
+            transition: { duration: 0.5, ease: EASE },
           }
         : {})}
-      className="relative overflow-hidden w-full bg-dts-black"
+      className="relative w-full overflow-hidden bg-dts-black"
       suppressHydrationWarning
     >
       {/* ================= BACKGROUND SYSTEM ================= */}
@@ -99,25 +98,32 @@ export default function TeamMembersAll() {
 
         {/* subtle grid */}
         <div
-          className="absolute inset-0 opacity-[0.06]
-          bg-[linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
-          bg-size-[44px_44px]"
+          className="
+            absolute inset-0 opacity-[0.06]
+            [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
+            [background-size:44px_44px]
+          "
         />
 
-        {/* top divider */}
+        {/* dividers */}
         <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
-
-        {/* bottom divider */}
-        <div className="absolute inset-x-12 bottom-0 h-px bg-linear-to-r from-transparent via-dts-neon/40 to-transparent opacity-80" />
+        <div className="absolute inset-x-6 sm:inset-x-12 bottom-0 h-px bg-linear-to-r from-transparent via-dts-neon/40 to-transparent opacity-80" />
 
         {/* soft blobs */}
-        <div className="absolute -top-24 left-1/2 h-72 w-[560px] -translate-x-1/2 rounded-full bg-dts-neon/10 blur-3xl" />
+        <div className="absolute -top-24 left-1/2 h-72 w-[520px] sm:w-[560px] -translate-x-1/2 rounded-full bg-dts-neon/10 blur-3xl" />
         <div className="absolute -bottom-28 right-[-120px] h-80 w-80 rounded-full bg-dts-neon-pink/8 blur-3xl" />
       </div>
 
       {/* ================= CONTENT ================= */}
-      <div className="relative mx-auto w-full max-w-6xl 2xl:max-w-[1500px] px-4 py-16 sm:py-20 md:py-24 lg:py-32 xl:py-36 2xl:py-40">
-        {/* Header (TOP CENTER + gradient heading) */}
+      <div
+        className="
+          relative mx-auto w-full
+          max-w-6xl 2xl:max-w-[1500px]
+          px-4 sm:px-6 lg:px-8 2xl:px-32
+          py-14 sm:py-18 md:py-22 lg:py-28 xl:py-32 2xl:py-36
+        "
+      >
+        {/* Header */}
         <Div
           {...(mounted
             ? {
@@ -130,31 +136,44 @@ export default function TeamMembersAll() {
           className="mx-auto max-w-3xl text-center"
         >
           <div className="flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 sm:px-4 backdrop-blur-xl">
               <span className="h-2 w-2 rounded-full bg-dts-neon shadow-[0_0_14px_rgba(70,243,216,0.8)]" />
-              <p className="text-[11px] uppercase tracking-[0.30em] text-neutral-300/80">
+              <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.26em] sm:tracking-[0.30em] text-neutral-300/80">
                 Our Team
               </p>
             </div>
           </div>
 
-          <h2 className="mt-6 font-heading text-[30px] leading-tight tracking-[-0.02em] text-white md:text-[44px]">
+          <h2
+            className="
+              mt-5 sm:mt-6 font-heading leading-tight tracking-[-0.02em] text-white
+              text-[26px] sm:text-[30px]
+              md:text-[40px] lg:text-[44px]
+              2xl:text-[54px]
+            "
+          >
             <span className="text-white">Meet the people</span>{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold drop-shadow-[0_0_18px_rgba(70,243,216,0.35)]">
               who make it happen.
             </span>
           </h2>
 
-          <div className="mx-auto mt-5 h-px w-24 bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold shadow-[0_0_18px_rgba(70,243,216,0.55)]" />
+          <div className="mx-auto mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold shadow-[0_0_18px_rgba(70,243,216,0.55)]" />
 
-          <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-relaxed text-neutral-300/80">
+          <p className="mx-auto mt-4 sm:mt-5 max-w-2xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-neutral-300/80">
             Specialists across SEO, web, video, PR, and AI content — aligned to
             deliver premium outcomes with calm execution.
           </p>
         </Div>
 
-        {/* Grid (no fixed width/height, responsive, centered last row automatically) */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        {/* Grid */}
+        <div
+          className="
+            mt-10 sm:mt-12 lg:mt-14
+            grid gap-4 sm:gap-6 lg:gap-8
+            grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4
+          "
+        >
           {MEMBERS.map((m, i) => (
             <Div
               key={m.name}
@@ -172,54 +191,69 @@ export default function TeamMembersAll() {
               className="group relative"
             >
               {/* outer glow */}
-              <div className="pointer-events-none absolute inset-0 rounded-[28px] opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(900px_circle_at_25%_0%,rgba(70,243,216,0.14),transparent_55%)]" />
+              <div className="pointer-events-none absolute inset-0 rounded-[24px] sm:rounded-[28px] opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(900px_circle_at_25%_0%,rgba(70,243,216,0.14),transparent_55%)]" />
 
-              <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/4 backdrop-blur-xl p-6 transition-all duration-300 group-hover:border-white/15 group-hover:bg-white/6 group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_22px_70px_rgba(0,0,0,0.70)]">
-                {/* hover gradient wash */}
+              <div
+                className="
+                  relative overflow-hidden rounded-[24px] sm:rounded-[28px]
+                  border border-white/10 bg-white/4 backdrop-blur-xl
+                  p-5 sm:p-6
+                  transition-all duration-300
+                  group-hover:border-white/15 group-hover:bg-white/6
+                  group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_22px_70px_rgba(0,0,0,0.70)]
+                "
+              >
+                {/* hover gradient wash + veil */}
                 <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[linear-gradient(120deg,rgba(70,243,216,0.16),rgba(255,63,164,0.12),rgba(216,184,115,0.10))]" />
-                <div className="pointer-events-none absolute inset-0 bg-dts-black/50 group-hover:bg-dts-black/35 transition" />
+                <div className="pointer-events-none absolute inset-0 bg-dts-black/55 group-hover:bg-dts-black/35 transition" />
 
                 <div className="relative flex flex-col items-center text-center">
-                  {/* image */}
+                  {/* Image (fluid sizing) */}
                   <div className="relative mt-1">
                     <div className="pointer-events-none absolute inset-0 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(circle_at_30%_20%,rgba(70,243,216,0.22),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(255,63,164,0.14),transparent_60%)]" />
-                    <img
-  src={m.image}
-  alt={m.name}
-  loading="lazy"
-  className="
-    relative
-    h-52 w-52
-    sm:h-56 sm:w-56
-    md:h-60 md:w-60
-    rounded-full
-    object-cover
-    object-top
-    border border-white/12
-  "
-/>
 
+                    <img
+                      src={m.image}
+                      alt={m.name}
+                      loading="lazy"
+                      className="
+                        relative rounded-full object-cover object-top
+                        border border-white/12
+                        [width:clamp(9.5rem,26vw,15rem)]
+                        [height:clamp(9.5rem,26vw,15rem)]
+                      "
+                    />
                   </div>
 
-                  {/* name */}
-                  <h3 className="mt-5 text-[18px] font-semibold text-white">
+                  {/* Name */}
+                  <h3 className="mt-4 sm:mt-5 text-[16px] sm:text-[18px] font-semibold text-white">
                     {m.name}
                   </h3>
 
-                  {/* role (gradient text on hover) */}
-                  <p className="mt-1 text-[13px] font-medium text-dts-neon/90 transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-dts-neon group-hover:via-dts-neon-pink group-hover:to-dts-gold">
+                  {/* Role */}
+                  <p className="mt-1 text-[12px] sm:text-[13px] font-medium text-dts-neon/90 transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-dts-neon group-hover:via-dts-neon-pink group-hover:to-dts-gold">
                     {m.role}
                   </p>
 
-                  <div className="mt-5 h-px w-10 bg-white/10 group-hover:bg-dts-neon/60 transition" />
+                  <div className="mt-4 sm:mt-5 h-px w-10 bg-white/10 group-hover:bg-dts-neon/60 transition" />
 
-                  {/* linkedin */}
+                  {/* LinkedIn */}
                   {m.linkedin && (
                     <a
                       href={m.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-200 transition-all duration-300 hover:border-dts-neon/70 hover:shadow-[0_0_0_1px_rgba(70,243,216,0.28)]"
+                      className="
+                        mt-4 sm:mt-5 inline-flex items-center gap-2
+                        rounded-full border border-white/10 bg-white/5
+                        px-4 py-2
+                        text-[10px] sm:text-[11px]
+                        font-semibold uppercase tracking-[0.22em]
+                        text-neutral-200
+                        transition-all duration-300
+                        hover:border-dts-neon/70
+                        hover:shadow-[0_0_0_1px_rgba(70,243,216,0.28)]
+                      "
                     >
                       <Linkedin className="h-4 w-4 text-dts-neon" />
                       LinkedIn
@@ -234,7 +268,7 @@ export default function TeamMembersAll() {
           ))}
         </div>
 
-        {/* small closing line */}
+        {/* Closing line */}
         <Div
           {...(mounted
             ? {
@@ -245,9 +279,9 @@ export default function TeamMembersAll() {
                 custom: 0.18,
               }
             : {})}
-          className="mx-auto mt-14 max-w-2xl text-center"
+          className="mx-auto mt-10 sm:mt-12 lg:mt-14 max-w-2xl text-center"
         >
-          <p className="text-[14px] leading-relaxed text-neutral-300/75">
+          <p className="text-[13px] sm:text-[14px] leading-relaxed text-neutral-300/75">
             One team. Multiple skill-sets. One execution standard.
           </p>
         </Div>
