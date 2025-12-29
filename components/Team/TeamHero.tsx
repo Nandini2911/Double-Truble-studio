@@ -1,10 +1,14 @@
 // components/team/TeamHero.tsx
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export default function TeamHero() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <section
       className="
@@ -54,12 +58,11 @@ export default function TeamHero() {
             2xl:gap-24
           "
         >
-          {/* LEFT :: TEXT BLOCK */}
+          {/* LEFT :: TEXT BLOCK (avoid whileInView for LCP) */}
           <motion.div
-            initial={{ opacity: 0, y: 26 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+            animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: EASE }}
             className="max-w-xl space-y-6 sm:space-y-7 lg:space-y-8 2xl:max-w-2xl"
           >
             {/* TAGLINE LINE */}
@@ -87,7 +90,8 @@ export default function TeamHero() {
 
             {/* SUBTEXT */}
             <p className="text-[13px] sm:text-sm lg:text-[15px] 2xl:text-base text-neutral-300/90 leading-relaxed max-w-prose">
-              Get to know the passionate individuals who are shaping our vision, from strategy to execution.
+              Get to know the passionate individuals who are shaping our vision,
+              from strategy to execution.
             </p>
 
             {/* CTAS */}
@@ -103,31 +107,14 @@ export default function TeamHero() {
               >
                 <span>JOIN OUR TEAM</span>
               </Link>
-
-              {/* Optional secondary CTA (uncomment if you want)
-              <Link
-                href="/work"
-                className="
-                  w-full sm:w-auto text-center
-                  rounded-full border border-white/10
-                  bg-white/5 px-5 py-3
-                  text-[12px] sm:text-[13px]
-                  text-neutral-200 hover:bg-white/10
-                  transition
-                "
-              >
-                View our culture
-              </Link>
-              */}
             </div>
           </motion.div>
 
-          {/* RIGHT :: CARD */}
+          {/* RIGHT :: CARD (can be animated, but not whileInView for above fold) */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.08 }}
+            initial={reduceMotion ? false : { opacity: 0, x: 26 }}
+            animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
+            transition={{ duration: 0.65, ease: EASE, delay: 0.05 }}
             className="w-full max-w-md justify-self-center lg:justify-self-end 2xl:max-w-xl"
           >
             <div className="relative">
@@ -166,7 +153,8 @@ export default function TeamHero() {
 
                 {/* Description */}
                 <p className="text-[13px] sm:text-sm 2xl:text-[15px] leading-relaxed text-neutral-200/92">
-                  A dedicated group of visionaries who are constantly innovating and driving your brand forward.
+                  A dedicated group of visionaries who are constantly innovating
+                  and driving your brand forward.
                 </p>
 
                 {/* Specialties */}
@@ -174,7 +162,9 @@ export default function TeamHero() {
                   <div className="flex items-start gap-3">
                     <span className="mt-[4px] h-2 w-2 sm:h-2.5 sm:w-2.5 2xl:h-3 2xl:w-3 rounded-full bg-dts-neon shadow-[0_0_10px_rgba(70,243,216,0.9)]" />
                     <div>
-                      <p className="font-semibold text-dts-neon">Strategy &amp; Vision</p>
+                      <p className="font-semibold text-dts-neon">
+                        Strategy &amp; Vision
+                      </p>
                       <p className="leading-snug text-neutral-300/90">
                         Crafting innovative strategies for brand growth.
                       </p>
@@ -184,7 +174,9 @@ export default function TeamHero() {
                   <div className="flex items-start gap-3">
                     <span className="mt-[4px] h-2 w-2 sm:h-2.5 sm:w-2.5 2xl:h-3 2xl:w-3 rounded-full bg-dts-gold" />
                     <div>
-                      <p className="font-semibold text-dts-gold">Creative Direction</p>
+                      <p className="font-semibold text-dts-gold">
+                        Creative Direction
+                      </p>
                       <p className="leading-snug text-neutral-300/90">
                         Bringing bold creative visions to life.
                       </p>
@@ -194,9 +186,12 @@ export default function TeamHero() {
                   <div className="flex items-start gap-3">
                     <span className="mt-[4px] h-2 w-2 sm:h-2.5 sm:w-2.5 2xl:h-3 2xl:w-3 rounded-full bg-dts-neon-pink" />
                     <div>
-                      <p className="font-semibold text-dts-neon-pink">Execution &amp; Innovation</p>
+                      <p className="font-semibold text-dts-neon-pink">
+                        Execution &amp; Innovation
+                      </p>
                       <p className="leading-snug text-neutral-300/90">
-                        Delivering seamless experiences that redefine industry standards.
+                        Delivering seamless experiences that redefine industry
+                        standards.
                       </p>
                     </div>
                   </div>

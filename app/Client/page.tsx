@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { motion } from "framer-motion";
 
@@ -73,13 +74,15 @@ export default function ClientPage() {
                 hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)]
               "
             >
-              <img
-                src={`/logos/${index + 1}.webp`}
-                alt={`Client ${index + 1}`}
-                loading="lazy"
-                decoding="async"
-                className="h-20 w-auto max-w-full object-contain opacity-85 hover:opacity-100 transition-opacity"
-              />
+              <Image
+  src="/logos/32.webp"
+  alt="Client 32"
+  width={140}
+  height={140}
+  sizes="(max-width: 640px) 100px, 140px"
+  className="h-20 w-auto object-contain opacity-85 hover:opacity-100"
+  loading="lazy"
+/>
             </div>
           ))}
         </div>

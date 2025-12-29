@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -14,21 +15,26 @@ const fadeUp = {
 };
 
 export default function TeamBehindTheScenes() {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <section className="relative w-full overflow-hidden bg-dts-black">
+    <motion.section
+      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.55, ease: EASE }}
+      className="relative w-full overflow-hidden bg-dts-black"
+    >
       {/* ================= BACKGROUND ================= */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-dts-black" />
 
-        {/* ambience glows */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(70,243,216,0.14),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(255,63,164,0.10),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_85%,rgba(216,184,115,0.08),transparent_60%)]" />
 
-        {/* vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.55)_55%,rgba(0,0,0,0.9)_100%)]" />
 
-        {/* subtle grid (fixed syntax) */}
         <div
           className="
             absolute inset-0 opacity-[0.06]
@@ -37,11 +43,9 @@ export default function TeamBehindTheScenes() {
           "
         />
 
-        {/* dividers */}
         <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
         <div className="absolute inset-x-6 sm:inset-x-12 bottom-0 h-px bg-linear-to-r from-transparent via-dts-neon/40 to-transparent opacity-80" />
 
-        {/* soft blobs */}
         <div className="absolute -top-24 left-1/2 h-72 w-[520px] sm:w-[560px] -translate-x-1/2 rounded-full bg-dts-neon/10 blur-3xl" />
         <div className="absolute -bottom-28 right-[-120px] h-80 w-80 rounded-full bg-dts-neon-pink/8 blur-3xl" />
       </div>
@@ -57,10 +61,10 @@ export default function TeamBehindTheScenes() {
       >
         {/* Header */}
         <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
           variants={fadeUp}
+          initial={reduceMotion ? false : "hidden"}
+          whileInView={reduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.25 }}
           className="mx-auto max-w-3xl text-center"
         >
           <div className="flex justify-center">
@@ -96,34 +100,35 @@ export default function TeamBehindTheScenes() {
 
         {/* Image */}
         <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.22 }}
           variants={fadeUp}
           custom={0.08}
+          initial={reduceMotion ? false : "hidden"}
+          whileInView={reduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.22 }}
           className="mt-10 sm:mt-12 lg:mt-14"
         >
           <div className="group relative rounded-[24px] sm:rounded-[28px] p-px">
-            {/* subtle frame + hover frame */}
             <div className="absolute inset-0 rounded-[24px] sm:rounded-[28px] opacity-60 blur-[0.6px] bg-linear-to-r from-white/12 via-white/6 to-transparent" />
             <div className="absolute inset-0 rounded-[24px] sm:rounded-[28px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold blur-[1px]" />
 
             <div className="relative overflow-hidden rounded-[24px] sm:rounded-[28px] border border-white/10 bg-white/3 backdrop-blur-xl">
-              {/* hover wash + veil */}
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[linear-gradient(120deg,rgba(70,243,216,0.12),rgba(255,63,164,0.10),rgba(216,184,115,0.08))]" />
               <div className="pointer-events-none absolute inset-0 bg-dts-black/25" />
 
-              <img
-                src="/group.jfif"
-                alt="Team collaboration"
-                loading="lazy"
-                className="
-                  relative w-full object-cover
-                  [height:clamp(16rem,45vw,34rem)]
-                "
-              />
+              {/* Responsive fixed-height wrapper (prevents CLS) */}
+              <div className="relative w-full [height:clamp(16rem,45vw,34rem)]">
+                <Image
+                  src="/group.jfif"
+                  alt="Team collaboration"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+                  quality={80}
+                  // set to true ONLY if this section is above-the-fold
+                  priority={false}
+                />
+              </div>
 
-              {/* bottom glow */}
               <div className="pointer-events-none absolute -bottom-10 left-1/2 h-16 w-[70%] -translate-x-1/2 rounded-full bg-dts-neon/12 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </div>
           </div>
@@ -133,6 +138,6 @@ export default function TeamBehindTheScenes() {
           </p>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

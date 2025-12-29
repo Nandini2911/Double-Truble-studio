@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
-// Optional but recommended:
-// import Image from "next/image";
+import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -20,7 +18,7 @@ const MEMBERS: Member[] = [
   {
     name: "Sanjeev Seth",
     role: "Chairman",
-    img: "/sanjeev1.heic",
+    img: "/sanjeev.webp", // ✅ change from .heic to .jpg/.webp
     desc: "With over 35 years of experience, Sanjeev guides the strategic vision and long-term business direction — strengthening trust, stability, and growth.",
     cta: "Reach out to Sanjeev",
   },
@@ -41,36 +39,24 @@ const MEMBERS: Member[] = [
 ];
 
 export default function TeamMembers() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const reduceMotion = useReducedMotion();
 
-  const fadeUp = useMemo(
-    () => ({
-      hidden: { opacity: 0, y: 14 },
-      show: (d = 0) => ({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: EASE, delay: d },
-      }),
+  const fadeUp = {
+    hidden: { opacity: 0, y: 14 },
+    show: (d = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: EASE, delay: d },
     }),
-    []
-  );
-
-  const Section: any = mounted ? motion.section : "section";
-  const Div: any = mounted ? motion.div : "div";
+  };
 
   return (
-    <Section
-      {...(mounted
-        ? {
-            initial: { opacity: 0, y: 18 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true, amount: 0.18 },
-            transition: { duration: 0.6, ease: EASE },
-          }
-        : {})}
+    <motion.section
+      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.6, ease: EASE }}
       className="relative w-full overflow-hidden bg-[#050507]"
-      suppressHydrationWarning
     >
       {/* ================= BACKGROUND (DTS) ================= */}
       <div className="pointer-events-none absolute inset-0">
@@ -102,15 +88,11 @@ export default function TeamMembers() {
         "
       >
         {/* ================= HEADER ================= */}
-        <Div
-          {...(mounted
-            ? {
-                initial: "hidden",
-                whileInView: "show",
-                viewport: { once: true, amount: 0.2 },
-                variants: fadeUp,
-              }
-            : {})}
+        <motion.div
+          variants={fadeUp}
+          initial={reduceMotion ? false : "hidden"}
+          whileInView={reduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.2 }}
           className="mx-auto max-w-3xl text-center"
         >
           <div className="flex justify-center">
@@ -143,22 +125,18 @@ export default function TeamMembers() {
             A tight leadership team guiding vision, growth, and execution — with clear ownership across
             strategy, sales, marketing, and finance.
           </p>
-        </Div>
+        </motion.div>
 
         {/* ================= TEAM CARDS ================= */}
         <div className="mt-10 sm:mt-12 lg:mt-14 space-y-5 sm:space-y-6 lg:space-y-8">
           {MEMBERS.map((m, i) => (
-            <Div
+            <motion.div
               key={m.name}
-              {...(mounted
-                ? {
-                    initial: "hidden",
-                    whileInView: "show",
-                    viewport: { once: true, amount: 0.18 },
-                    variants: fadeUp,
-                    custom: i * 0.06,
-                  }
-                : {})}
+              variants={fadeUp}
+              custom={i * 0.06}
+              initial={reduceMotion ? false : "hidden"}
+              whileInView={reduceMotion ? undefined : "show"}
+              viewport={{ once: true, amount: 0.18 }}
               className="group relative rounded-[24px] sm:rounded-[28px] p-px"
             >
               {/* gradient border on hover */}
@@ -184,16 +162,17 @@ export default function TeamMembers() {
                 <div className="relative grid gap-5 md:grid-cols-[auto_1fr] md:items-start md:gap-8">
                   {/* Left: avatar + name */}
                   <div className="flex items-center gap-4 sm:gap-5 min-w-0">
-                    {/* If you want Next/Image, replace with <Image ... /> */}
-                    <img
-                      src={m.img}
-                      alt={m.name}
-                      className="
-                        h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28
-                        shrink-0 rounded-full object-cover
-                        border border-white/10 bg-white/5
-                      "
-                    />
+                    <div className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5">
+                      <Image
+                        src={m.img}
+                        alt={m.name}
+                        width={112}
+                        height={112}
+                        sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
+                        className="h-full w-full object-cover"
+                        quality={80}
+                      />
+                    </div>
 
                     <div className="min-w-0">
                       <h3 className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-white truncate">
@@ -220,6 +199,8 @@ export default function TeamMembers() {
                         text-dts-neon/85 transition-colors duration-300
                         group-hover:text-dts-neon
                       "
+                      aria-label={m.cta}
+                      title={m.cta}
                     >
                       {m.cta}
                       <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -229,10 +210,10 @@ export default function TeamMembers() {
                   </div>
                 </div>
               </div>
-            </Div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </Section>
+    </motion.section>
   );
 }
