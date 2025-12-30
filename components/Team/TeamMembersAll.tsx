@@ -35,7 +35,7 @@ const MEMBERS: Member[] = [
   {
     name: "Simran Salagre",
     role: "Head — PR & Communication",
-    image: "/ssimran.JPG",
+    image: "/Simran.JPG",
     linkedin: "https://www.linkedin.com/in/simran-salagre-863b58266/",
   },
   {
