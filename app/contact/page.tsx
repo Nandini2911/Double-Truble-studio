@@ -317,7 +317,7 @@ export default function ContactPage() {
               ) : null}
 
               <p className="text-[12px] text-neutral-400 text-center">
-                 response time: 24–48 working hours
+                response time: 24–48 working hours
               </p>
             </form>
           </motion.div>
