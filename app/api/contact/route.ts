@@ -13,9 +13,18 @@ function escHtml(s: string) {
     .replace(/'/g, "&#039;");
 }
 
+function errToString(err: any) {
+  return (
+    err?.message ||
+    err?.response ||
+    err?.code ||
+    (typeof err === "string" ? err : JSON.stringify(err))
+  );
+}
+
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    const body = await req.json().catch(() => null);
     const { name, email, company, service, message } = body ?? {};
 
     if (!name || !email || !message) {
@@ -25,19 +34,22 @@ export async function POST(req: Request) {
       );
     }
 
-    const host = process.env.SMTP_HOST;
+    const host = process.env.SMTP_HOST || "smtp.gmail.com";
+
+    // Default to 587 for Vercel
     const port = Number(process.env.SMTP_PORT || 587);
+
     const user = process.env.SMTP_USER;
 
-    // ✅ Remove hidden whitespace + remove internal spaces (common with Gmail app passwords)
+    // ✅ remove hidden whitespace + internal spaces (Gmail app password)
     const pass = (process.env.SMTP_PASS || "").trim().replace(/\s+/g, "");
 
     const toEmail = process.env.CONTACT_TO || user;
 
-    if (!host || !user || !pass || !toEmail) {
+    if (!user || !pass || !toEmail) {
       console.error("Missing SMTP env", {
-        SMTP_HOST: !!host,
-        SMTP_PORT: process.env.SMTP_PORT,
+        SMTP_HOST: host,
+        SMTP_PORT: port,
         SMTP_USER: !!user,
         SMTP_PASS: !!pass,
         CONTACT_TO: !!process.env.CONTACT_TO,
@@ -49,27 +61,59 @@ export async function POST(req: Request) {
       );
     }
 
-    // ✅ Recommended for Vercel: 587 + STARTTLS
-    const transporter = nodemailer.createTransport({
+    // Try STARTTLS (587) first. If your env is 465, it still works via secure flag below.
+    const primary = nodemailer.createTransport({
       host,
       port,
-      secure: false, // ✅ MUST be false for 587 (STARTTLS)
+      secure: port === 465, // 465 => true, 587 => false
       auth: { user, pass },
       tls: {
         minVersion: "TLSv1.2",
       },
     });
 
-    // ✅ Verify SMTP connection before sending (helps debug on Vercel)
-    try {
-      await transporter.verify();
-    } catch (e) {
-      console.error("SMTP VERIFY FAILED:", e);
+    // Optional fallback (helps if port is blocked/unsupported)
+    const fallback = nodemailer.createTransport({
+      host,
+      port: 465,
+      secure: true,
+      auth: { user, pass },
+      tls: {
+        minVersion: "TLSv1.2",
+      },
+    });
+
+    // ✅ verify with better error
+    const tryVerify = async (t: nodemailer.Transporter, label: string) => {
+      try {
+        await t.verify();
+        return { ok: true as const, transporter: t, label };
+      } catch (e) {
+        console.error(`SMTP VERIFY FAILED (${label}):`, e);
+        return { ok: false as const, error: e };
+      }
+    };
+
+    const v1 = await tryVerify(primary, `primary:${host}:${port}`);
+    const v2 = v1.ok ? null : await tryVerify(fallback, `fallback:${host}:465`);
+
+    const chosen = v1.ok ? v1 : v2;
+
+    if (!chosen || !chosen.ok) {
+      const msg = errToString((chosen as any)?.error);
+      // ✅ Surface real reason to client for debugging
       return Response.json(
-        { ok: false, error: "SMTP verification failed." },
+        {
+          ok: false,
+          error: `SMTP verification failed: ${msg}`,
+          hint:
+            "Check Gmail App Password (no spaces), 2FA enabled, and try SMTP_PORT=587 on Vercel.",
+        },
         { status: 500 }
       );
     }
+
+    const transporter = chosen.transporter;
 
     const safeName = String(name).trim();
     const safeEmail = String(email).trim();
@@ -120,6 +164,7 @@ ${safeMessage}
     });
 
     console.log("MAIL SENT:", {
+      via: chosen.label,
       to: toEmail,
       messageId: info.messageId,
       accepted: info.accepted,
@@ -131,7 +176,7 @@ ${safeMessage}
   } catch (err: any) {
     console.error("CONTACT API ERROR:", err?.message || err, err);
     return Response.json(
-      { ok: false, error: err?.message || "Failed to send email." },
+      { ok: false, error: errToString(err) || "Failed to send email." },
       { status: 500 }
     );
   }
