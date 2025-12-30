@@ -1,9 +1,7 @@
-
-
 import CoreValuesSection from "@/components/Team/CoreValuesSection";
 import TeamBehindTheScenes from "@/components/Team/TeamBehindTheScenes";
 import TeamCTA from "@/components/Team/TeamCTA";
-import TeamHero from "@/components/Team/TeamHero"; // Import the TeamHero component
+import TeamHero from "@/components/Team/TeamHero"; 
 import TeamMembers from "@/components/Team/TeamMembers";
 import TeamMembersAll from "@/components/Team/TeamMembersAll";
 import TeamPhilosophy from "@/components/Team/TeamPhilosophy";
