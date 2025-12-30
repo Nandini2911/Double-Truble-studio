@@ -1,10 +1,11 @@
+// app/api/contact/route.ts
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 import nodemailer from "nodemailer";
 
 function escHtml(s: string) {
-  return s
+  return String(s)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -25,10 +26,12 @@ export async function POST(req: Request) {
     }
 
     const host = process.env.SMTP_HOST;
-    const port = Number(process.env.SMTP_PORT || 465);
+    const port = Number(process.env.SMTP_PORT || 587);
     const user = process.env.SMTP_USER;
-    // ✅ Trim to avoid hidden whitespace issues in production env
-    const pass = (process.env.SMTP_PASS || "").trim();
+
+    // ✅ Remove hidden whitespace + remove internal spaces (common with Gmail app passwords)
+    const pass = (process.env.SMTP_PASS || "").trim().replace(/\s+/g, "");
+
     const toEmail = process.env.CONTACT_TO || user;
 
     if (!host || !user || !pass || !toEmail) {
@@ -39,18 +42,34 @@ export async function POST(req: Request) {
         SMTP_PASS: !!pass,
         CONTACT_TO: !!process.env.CONTACT_TO,
       });
+
       return Response.json(
         { ok: false, error: "Server email configuration missing." },
         { status: 500 }
       );
     }
 
+    // ✅ Recommended for Vercel: 587 + STARTTLS
     const transporter = nodemailer.createTransport({
       host,
       port,
-      secure: port === 465, // 465 true, 587 false
+      secure: false, // ✅ MUST be false for 587 (STARTTLS)
       auth: { user, pass },
+      tls: {
+        minVersion: "TLSv1.2",
+      },
     });
+
+    // ✅ Verify SMTP connection before sending (helps debug on Vercel)
+    try {
+      await transporter.verify();
+    } catch (e) {
+      console.error("SMTP VERIFY FAILED:", e);
+      return Response.json(
+        { ok: false, error: "SMTP verification failed." },
+        { status: 500 }
+      );
+    }
 
     const safeName = String(name).trim();
     const safeEmail = String(email).trim();
