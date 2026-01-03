@@ -14,7 +14,7 @@ const LEADERS = [
   {
     name: "Sanjeev Seth",
     role: "Chair Person & Finance",
-    image: "/sanjeev.JPG",
+    image: "/sanjeev.jpg",
   },
   {
     name: "Hitesh Kukreja",
