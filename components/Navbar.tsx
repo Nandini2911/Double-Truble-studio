@@ -86,7 +86,7 @@ export default function Navbar() {
                     aria-expanded="false"
                   >
                     <span className="text-neutral-300 transition-all group-hover:text-dts-neon-pink">
-                      Services
+                      SERVICES
                     </span>
 
                     <span
