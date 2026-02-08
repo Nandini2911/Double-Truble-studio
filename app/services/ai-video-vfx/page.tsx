@@ -1,5 +1,4 @@
 // app/services/event-management/page.tsx
-"use client";
 
 
 import AIVideoAdsVFXHero from "@/components/ai-video-vfx/AIVideoAdsVFXHero";
@@ -11,14 +10,7 @@ import AIVideoVFXSolves from "@/components/ai-video-vfx/AIVideoVFXSolves";
 import AIVideoVFXWhoItsFor from "@/components/ai-video-vfx/AIVideoVFXWhoItsFor";
 import AIVideoVFXWhyDTS from "@/components/ai-video-vfx/AIVideoVFXWhyDTS";
 import RelatedAIVideoVFXServices from "@/components/ai-video-vfx/RelatedAIVideoVFXServices";
-import WebDevelopmentDeliverables from "@/components/web-development-marketing/WebDevelopmentDeliverables";
-import WebDevelopmentFAQs from "@/components/web-development-marketing/WebDevelopmentFAQs";
-import WebDevelopmentHero from "@/components/web-development-marketing/WebDevelopmentHero";
-import WebDevelopmentHowItWorks from "@/components/web-development-marketing/WebDevelopmentHowItWorks";
-import WebDevelopmentRelatedServices from "@/components/web-development-marketing/WebDevelopmentRelatedServices";
-import WebDevelopmentSolves from "@/components/web-development-marketing/WebDevelopmentSolves";
-import WebDevelopmentWhoItsFor from "@/components/web-development-marketing/WebDevelopmentWhoItsFor";
-import WebDevelopmentWhyDTS from "@/components/web-development-marketing/WebDevelopmentWhyDTS";
+
 import { Metadata } from "next";
 
 
@@ -55,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/ai-video-vfx-og.jpg",
+        url: "/og-ai-vfx.webp",
         width: 1200,
         height: 630,
         alt: "AI Video Ads & VFX Services – Double Trouble Studio",
@@ -69,7 +61,7 @@ export const metadata: Metadata = {
     title: "AI Video Ads & VFX Services | Double Trouble Studio",
     description:
       "AI-powered video ads, cinematic VFX, and motion graphics designed for speed, scale, and premium storytelling.",
-    images: ["https://dtsworld.in/og/ai-video-vfx-og.jpg"],
+    images: ["/twitter-ai-vfx.webp"],
   },
 };
 const aivideovfx=

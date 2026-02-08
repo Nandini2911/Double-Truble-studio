@@ -1,4 +1,4 @@
-"use client";
+
 
 import CelebrityManagementCTA from "@/components/celebrity-management/CelebrityManagementCTA";
 import CelebrityManagementDeliverables from "@/components/celebrity-management/CelebrityManagementDeliverables";
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/celebrity-management-og.jpg",
+        url: "/og-celebrity.webp",
         width: 1200,
         height: 630,
         alt: "Celebrity Management Services – Double Trouble Studio",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Celebrity Management Services | Double Trouble Studio",
     description:
       "Celebrity endorsements, appearances, and associations—managed end-to-end with discretion, alignment, and clean execution.",
-    images: ["https://dtsworld.in/og/celebrity-management-og.jpg"],
+    images: ["/twitter-celebrity.webp"],
   },
 };
 

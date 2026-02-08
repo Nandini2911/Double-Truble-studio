@@ -1,4 +1,4 @@
-"use client";
+
 
 import GuestManagementCTA from "@/components/guest-management/GuestManagementCTA";
 import GuestManagementDeliverables from "@/components/guest-management/GuestManagementDeliverables";
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/guest-management-og.jpg",
+        url: "/og-guest-page.webp",
         width: 1200,
         height: 630,
         alt: "Guest Management Services – Double Trouble Studio",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Guest Management Services | Double Trouble Studio",
     description:
       "Structured guest entry, VIP access control, and calm on-ground execution for premium events.",
-    images: ["https://dtsworld.in/og/guest-management-og.jpg"],
+    images: ["/twitter-guest-page.webp"],
   },
 };
 

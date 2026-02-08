@@ -1,5 +1,5 @@
 // app/services/event-management/page.tsx
-"use client";
+
 
 import EventsWeddingsCTA from "@/components/event-management/EventsWeddingsCTA";
 import EventsWeddingsEndToEnd from "@/components/event-management/EventsWeddingsEndToEnd";
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/events-weddings-og.jpg",
+        url: "/og-event-weddding.webp",
         width: 1200,
         height: 630,
         alt: "Events & Weddings – Double Trouble Studio",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Events & Weddings | Double Trouble Studio",
     description:
       "Luxury weddings and premium brand events with design-led planning, vendor sync, and seamless on-ground execution.",
-    images: ["https://dtsworld.in/og/events-weddings-og.jpg"],
+    images: ["/twitter-event-wedding.webp"],
   },
 };
 const eventweddings=

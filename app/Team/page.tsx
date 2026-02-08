@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/team-og.jpg",
+        url: "/og-team.webp",
         width: 1200,
         height: 630,
         alt: "Team at Double Trouble Studio",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Our Team | Double Trouble Studio",
     description:
       "Built by experience. Driven by clarity. Executed with precision.",
-    images: ["https://dtsworld.in/og/team-og.jpg"],
+    images: ["/twitter-team.webp"],
   },
 };
 

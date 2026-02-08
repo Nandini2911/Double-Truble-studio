@@ -1,5 +1,4 @@
 // app/services/event-management/page.tsx
-"use client";
 
 
 import WebDevelopmentCTA from "@/components/web-development-marketing/WebDevelopmentCTA";
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/web-development-og.jpg",
+        url: "/og-web-development.webp",
         width: 1200,
         height: 630,
         alt: "Web Development & Management – Double Trouble Studio",
@@ -60,7 +59,7 @@ export const metadata: Metadata = {
     title: "Web Development & Management | Double Trouble Studio",
     description:
       "Fast, scalable, premium websites designed for performance, SEO, and conversion—built clean, managed smart.",
-    images: ["https://dtsworld.in/og/web-development-og.jpg"],
+    images: ["/twitter-web-development.webp"],
   },
 };
 const webdevelopmentmarketing=

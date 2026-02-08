@@ -1,5 +1,4 @@
 // app/services/event-management/page.tsx
-"use client";
 
 import PRMediaDigitalFAQs from "@/components/pr-media-digital/PRMediaDigitalFAQs";
 import PRMediaDigitalFinalCTA from "@/components/pr-media-digital/PRMediaDigitalFinalCTA";
@@ -47,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/pr-media-digital-og.jpg",
+        url: "/og-pr-media (1).webp",
         width: 1200,
         height: 630,
         alt: "PR, Media & Digital Marketing – Double Trouble Studio",
@@ -61,7 +60,7 @@ export const metadata: Metadata = {
     title: "PR, Media & Digital Marketing | Double Trouble Studio",
     description:
       "Strategic PR, media positioning, and digital marketing that builds authority, credibility, and momentum—without short-lived attention.",
-    images: ["https://dtsworld.in/og/pr-media-digital-og.jpg"],
+    images: ["/twitter-pr-media.webp"],
   },
 };
 

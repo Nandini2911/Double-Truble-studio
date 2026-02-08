@@ -1,5 +1,4 @@
 // app/services/event-management/page.tsx
-"use client";
 
 import RelatedServices from "@/components/strategic-roadmapping/RelatedServices";
 import StrategicRoadmapCTA from "@/components/strategic-roadmapping/StrategicRoadmapCTA";
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "https://dtsworld.in/og/strategic-roadmap-og.jpg",
+        url: "/og-strategic-map.webp",
         width: 1200,
         height: 630,
         alt: "Strategic Roadmap & Growth Strategy – Double Trouble Studio",
@@ -60,7 +59,7 @@ export const metadata: Metadata = {
     title: "Strategic Roadmap & Growth Strategy | Double Trouble Studio",
     description:
       "From vision to execution. Structured strategic roadmaps built for leadership teams that need clarity, alignment, and results.",
-    images: ["https://dtsworld.in/og/strategic-roadmap-og.jpg"],
+    images: ["/twitter-strategic-map.webp"],
   },
 };
 
