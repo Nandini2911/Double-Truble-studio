@@ -340,3 +340,30 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* ================= BLOG MARKDOWN STYLE ================= */
+
+.blog-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.blog-content p {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.blog-content ul {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.blog-content li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

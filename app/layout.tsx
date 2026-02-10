@@ -5,10 +5,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "Double Trouble Studio",
-  description: "Digital, PR, web & experiences.",
+export const metadata = {
+  metadataBase: new URL("https://dtsworld.in"),
 };
+
 
 export default function RootLayout({
   children,

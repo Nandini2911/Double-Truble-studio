@@ -8,12 +8,16 @@ import { useState } from "react";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  // Services is a DROPDOWN only (no page)
   { href: "#", label: "SERVICES", dropdown: true },
   { href: "/Team", label: "Team" },
   { href: "/Client", label: "Client" },
+
+  // ✅ Add this
+  { href: "/blog", label: "Blog" },
+
   { href: "/contact", label: "Contact" },
 ];
+
 
 const serviceItems = [
   {
