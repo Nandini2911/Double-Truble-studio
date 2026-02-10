@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-home-page.webp",
+        url: "/og-home-mgmt.webp",
         width: 1200,
         height: 630,
         alt: "Double Trouble Studio – Branding, PR & Digital Agency",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Double Trouble Studio",
     description: "Where ideas go to grow, glow, and get noticed.",
-    images: ["/twitter-home-page.webp"],
+    images: ["/twitter-home-mgmt.webp"],
   },
 };
 

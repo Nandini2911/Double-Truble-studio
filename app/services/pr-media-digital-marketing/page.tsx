@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-pr-media (1).webp",
+        url: "/og-pr-media-page.webp",
         width: 1200,
         height: 630,
         alt: "PR, Media & Digital Marketing – Double Trouble Studio",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "PR, Media & Digital Marketing | Double Trouble Studio",
     description:
       "Strategic PR, media positioning, and digital marketing that builds authority, credibility, and momentum—without short-lived attention.",
-    images: ["/twitter-pr-media.webp"],
+    images: ["/twitter-pr-media-page.webp"],
   },
 };
 

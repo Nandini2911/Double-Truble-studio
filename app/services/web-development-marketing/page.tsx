@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-web-development.webp",
+        url: "/og-web-development-page.webp",
         width: 1200,
         height: 630,
         alt: "Web Development & Management – Double Trouble Studio",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Web Development & Management | Double Trouble Studio",
     description:
       "Fast, scalable, premium websites designed for performance, SEO, and conversion—built clean, managed smart.",
-    images: ["/twitter-web-development.webp"],
+    images: ["/twitter-web-development-page.webp"],
   },
 };
 const webdevelopmentmarketing=

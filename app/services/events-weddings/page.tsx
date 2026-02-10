@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-event-weddding.webp",
+        url: "/og-event-weddding-page.webp",
         width: 1200,
         height: 630,
         alt: "Events & Weddings – Double Trouble Studio",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Events & Weddings | Double Trouble Studio",
     description:
       "Luxury weddings and premium brand events with design-led planning, vendor sync, and seamless on-ground execution.",
-    images: ["/twitter-event-wedding.webp"],
+    images: ["/twitter-event-wedding-page.webp"],
   },
 };
 const eventweddings=

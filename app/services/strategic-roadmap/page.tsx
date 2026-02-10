@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-strategic-map.webp",
+        url: "/og-strategic-map (1).webp",
         width: 1200,
         height: 630,
         alt: "Strategic Roadmap & Growth Strategy – Double Trouble Studio",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Strategic Roadmap & Growth Strategy | Double Trouble Studio",
     description:
       "From vision to execution. Structured strategic roadmaps built for leadership teams that need clarity, alignment, and results.",
-    images: ["/twitter-strategic-map.webp"],
+    images: ["/twitter-strategic-map-page.webp"],
   },
 };
 
