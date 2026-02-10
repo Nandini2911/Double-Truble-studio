@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-client.webp",
+        url: "/og-client-page.webp",
         width: 1200,
         height: 630,
         alt: "Clients of Double Trouble Studio",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Our Clients | Double Trouble Studio",
     description:
       "Trusted by brands that value strategy-led execution.",
-    images: ["/twitter-client.webp"],
+    images: ["/twitter-client-page.webp"],
   },
 };
 const Client=

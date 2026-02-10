@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-guest-page.webp",
+        url: "/og-guest-mgmt.webp",
         width: 1200,
         height: 630,
         alt: "Guest Management Services – Double Trouble Studio",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Guest Management Services | Double Trouble Studio",
     description:
       "Structured guest entry, VIP access control, and calm on-ground execution for premium events.",
-    images: ["/twitter-guest-page.webp"],
+    images: ["/twitter-guest-mgmt.webp"],
   },
 };
 

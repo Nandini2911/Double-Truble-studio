@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Double Trouble Studio",
     images: [
       {
-        url: "/og-ai-vfx.webp",
+        url: "/og-ai-vfx-page.webp",
         width: 1200,
         height: 630,
         alt: "AI Video Ads & VFX Services – Double Trouble Studio",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "AI Video Ads & VFX Services | Double Trouble Studio",
     description:
       "AI-powered video ads, cinematic VFX, and motion graphics designed for speed, scale, and premium storytelling.",
-    images: ["/twitter-ai-vfx.webp"],
+    images: ["/twitter-ai-vfx-page.webp"],
   },
 };
 const aivideovfx=
