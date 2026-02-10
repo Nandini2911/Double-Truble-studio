@@ -6,7 +6,7 @@ category: "PR, Media & Digital Marketing"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-page.webp"
+image: "/og-home-mgmt.webp"
 ---
 
 ## Introduction
