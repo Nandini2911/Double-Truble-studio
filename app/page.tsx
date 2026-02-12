@@ -70,7 +70,7 @@ export default function Home() {
       <main className="min-h-screen bg-dts-black text-dts-fog">
         <HomeHero />
        
-         <AboutStrip />
+          <AboutStrip />
           <WhyDTS />
           <ServicesGrid />
           <MethodSteps />
@@ -79,7 +79,7 @@ export default function Home() {
           <ImpactStats />
           <DNABlock />
           <PromiseBlock />
-       <LogoStrip />
+          <LogoStrip />
           <FinalCTA />
           
           
