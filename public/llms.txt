@@ -1,0 +1,27 @@
+# DTS World - AI Content Guide
+
+site: https://www.dtsworld.in
+
+about: DTS World is a creative agency offering celebrity management, event management, PR, digital marketing, web development, and AI video/VFX services.
+
+focus:
+- celebrity management
+- event and wedding management
+- PR and digital marketing
+- AI video production
+- web development services
+
+important_pages:
+https://www.dtsworld.in/
+https://www.dtsworld.in/about/
+https://www.dtsworld.in/services/guest-management/
+https://www.dtsworld.in/services/celebrity-management/
+https://www.dtsworld.in/services/events-weddings/
+https://www.dtsworld.in/services/pr-media-digital-marketing/
+https://www.dtsworld.in/services/web-development-marketing/
+https://www.dtsworld.in/services/ai-video-vfx/
+https://www.dtsworld.in/services/strategic-roadmap/
+https://www.dtsworld.in/contact/
+
+language: en
+region: India
