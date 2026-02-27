@@ -11,10 +11,11 @@ export default function BlogNewsletter() {
       </p>
 
       <div className="flex justify-center gap-4">
-        <input
-          placeholder="Enter your email"
-          className="px-4 py-3 bg-black border border-gray-700 rounded w-72"
-        />
+       <input
+  suppressHydrationWarning
+  placeholder="Enter your email"
+  className="px-4 py-3 bg-black border border-gray-700 rounded w-72"
+/>
         <button className="dts-animated-border">
           <span>Get Free Guide</span>
         </button>
