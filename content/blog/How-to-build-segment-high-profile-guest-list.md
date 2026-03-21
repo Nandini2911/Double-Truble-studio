@@ -1,6 +1,6 @@
 ---
 title: "How to Build & Segment a High-Profile Guest List (VIP tiers, blacklists, plus-ones)"
-date: "2026-02-20"
+date: "2026-03-22"
 description: "Learn how to build and segment a high-profile guest list for luxury events in India. Discover VIP tier structuring, blacklist protocols, plus-one control, and PR-aligned guest strategy for premium brand positioning."
 category: "Guest Management"
 featured: true

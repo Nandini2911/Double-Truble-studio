@@ -24,14 +24,14 @@ export default function BlogCard({
 }: Props) {
   return (
     <Link href={`/blog/${slug}`} className="group block">
-      <div className="dts-card-3d overflow-hidden h-full flex flex-col">
+      <div className="dts-card-3d  h-full flex flex-col">
 
         {/* Image */}
-        <div className="relative h-52 overflow-hidden rounded-xl mb-6">
+        <div className="relative h-60 w-full overflow-hidden rounded-xl mb-6">
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            className="w-full h-full object-cover  duration-700 "
           />
 
           <div className="absolute top-4 left-4 dts-pill">
@@ -45,9 +45,6 @@ export default function BlogCard({
             {title}
           </h3>
 
-          <p className="text-gray-400 text-sm leading-relaxed flex-1">
-            {description}
-          </p>
 
           {/* Author & Date */}
           <div className="mt-6 flex justify-between text-xs text-white border-t border-gray-700 pt-4">
