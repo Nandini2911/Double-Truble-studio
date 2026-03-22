@@ -44,6 +44,10 @@ const serviceItems = [
     label: "Strategic Road Map",
     href: "/services/strategic-roadmap",
   },
+  {
+    label: "Crisis Management",
+    href: "/services/crisis-management",
+  },
 ];
 
 export default function Navbar() {
