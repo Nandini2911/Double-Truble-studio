@@ -2,7 +2,7 @@
 title: "Complete Guide to PR, Media & Digital Marketing Strategies for Luxury Brands in India"
 date: "2026-02-12"
 description: "PR, media & digital marketing guide for luxury brands in India (2026). Learn narrative strategy, influencer alignment & performance growth."
-category: "Celebrity Management"
+category: "PR, Media & Digital Marketing"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"

@@ -2,7 +2,7 @@
 title: "Event Guest Analytics: How to Measure Behavior, Engagement & Satisfaction in Luxury Events"
 date: "2026-03-23"
 description: "Learn how to measure guest behavior, engagement, and satisfaction in luxury events using data analytics. Optimize event performance with strategic insights."
-category: "Events & Weddings"
+category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"

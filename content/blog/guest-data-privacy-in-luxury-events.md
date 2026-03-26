@@ -2,7 +2,7 @@
 title: "Guest Data & Privacy in Luxury Events: Compliance, Security & Ethical Use Explained"
 date: "2026-03-23"
 description: "Learn how to manage guest data securely in luxury events with compliance, privacy laws, and ethical strategies. Protect guest information while enhancing experience."
-category: "Events & Weddings"
+category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"

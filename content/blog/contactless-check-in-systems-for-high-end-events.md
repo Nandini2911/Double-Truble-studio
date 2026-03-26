@@ -2,7 +2,7 @@
 title: "Contactless Check-In Systems for Luxury Events: QR, RFID & Facial Recognition Explained"
 date: "2026-03-23"
 description: "Explore contactless check-in systems for luxury events using QR codes, RFID, and facial recognition. Learn how to enhance guest experience with seamless, tech-driven entry solutions."
-category: "Events & Weddings"
+category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"

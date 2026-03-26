@@ -2,7 +2,7 @@
 title: "Seamless Guest Journey Design for Luxury Events: From Invitation to Exit Experience"
 date: "2026-03-23"
 description: "Design a flawless guest journey for luxury weddings and corporate events. Learn how to create seamless experiences from invitation to exit with expert strategies."
-category: "Events & Weddings"
+category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"

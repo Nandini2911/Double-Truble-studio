@@ -2,7 +2,7 @@
 title: "Guest Personalization Strategies for Luxury Events: Data, Preferences & VIP Mapping Guide"
 date: "2026-03-23"
 description: "Learn how to personalize guest experiences in luxury events using data, preferences, and VIP mapping. Enhance engagement, comfort, and exclusivity with expert strategies."
-category: "Events & Weddings"
+category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"

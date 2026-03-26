@@ -2,7 +2,7 @@
 title: "On-Site Guest Flow: Registration, Entry, Seating & Experience Mapping"
 date: "2026-02-09"
 description: "On-site guest flow strategy for luxury events in India. Master VIP registration, tier-based entry, seating psychology & seamless event movement."
-category: "PR, Media & Digital Marketing"
+category: "Guest Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"

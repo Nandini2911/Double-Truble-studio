@@ -2,7 +2,7 @@
 title: "Managing Complex Guest Lists for Luxury Events: Segmentation, Prioritization & Control Strategies"
 date: "2026-03-23"
 description: "Learn how to manage complex guest lists for luxury weddings and corporate events using segmentation, prioritization, and control strategies for seamless execution."
-category: "Events & Weddings"
+category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"

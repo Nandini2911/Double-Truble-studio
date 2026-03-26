@@ -2,7 +2,7 @@
 title: "Common Guest Management Mistakes Luxury Brands Make (and how to avoid them)"
 date: "2026-02-12"
 description: "Discover the most common guest management mistakes luxury brands make in India and how to avoid them. Learn strategic RSVP systems, VIP handling, flow mapping, and post-event follow-up frameworks."
-category: "Celebrity Management"
+category: "Guest Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
