@@ -197,7 +197,7 @@ Multi-day weddings involve multiple functions, each with its own requirements. P
 
 ---
 
-## Contact Us
+# Contact Us
 
 If you are planning a luxury wedding in India, achieving excellence requires more than creativity. It requires structured planning, strategic execution, and attention to detail.
 
