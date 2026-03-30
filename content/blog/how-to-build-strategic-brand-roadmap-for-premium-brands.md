@@ -2,7 +2,7 @@
 title: "How to Build a Strategic Brand Roadmap for Premium Brands in India (90–365 Days)"
 date: "2026-02-09"
 description: "Brand strategy roadmap India (2026). Learn positioning, 90-day launch plans, annual frameworks & integrated growth systems for luxury brands."
-category: "PR, Media & Digital Marketing"
+category: "Strategic Road Map"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"

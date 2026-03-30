@@ -3,7 +3,7 @@ import { marked } from "marked";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-
+  
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -51,7 +51,25 @@ export default async function BlogPost({ params }: Props) {
   try {
     const { frontmatter, content } = getPostBySlug(slug);
     const posts = getAllPosts();
-    const html = marked(content);
+
+
+const renderer = new marked.Renderer();
+
+renderer.heading = ({ tokens, depth }) => {
+  const text = tokens
+    .map((t: any) => t.text || "")
+    .join("");
+
+  const id = text.toLowerCase().replace(/[^\w]+/g, "-");
+
+ const level = depth === 1 ? 2 : depth;
+
+return `<h${level} id="${id}">${text}</h${level}>`;
+};
+
+marked.setOptions({ renderer });
+
+const html = marked.parse(content);
 
     /* 🔥 SMART RELATED */
     const relatedPosts = posts
@@ -71,10 +89,14 @@ export default async function BlogPost({ params }: Props) {
       .slice(0, 6);
 
     /* 🔥 TABLE OF CONTENTS */
-    const headings = content
-      .split("\n")
-      .filter((line) => line.startsWith("##"))
-      .map((line) => line.replace("##", "").trim());
+const headings = content
+  .split("\n")
+  .filter((line) => line.startsWith("##"))
+  .map((line) => {
+    const text = line.replace("##", "").trim();
+    const id = text.toLowerCase().replace(/[^\w]+/g, "-");
+    return { text, id };
+  });
 
     return (
       <div className="dts-page-shell py-24">
@@ -141,12 +163,17 @@ export default async function BlogPost({ params }: Props) {
                 </h3>
 
                 <ul className="space-y-2 text-sm text-gray-400">
-                  {headings.map((h, i) => (
-                    <li key={i} className="hover:text-dts-neon cursor-pointer">
-                      → {h}
-                    </li>
-                  ))}
-                </ul>
+  {headings.map((h, i) => (
+    <li key={i}>
+      <a
+        href={`#${h.id}`}
+        className="hover:text-dts-neon transition"
+      >
+        → {h.text}
+      </a>
+    </li>
+  ))}
+</ul>
               </div>
             )}
 

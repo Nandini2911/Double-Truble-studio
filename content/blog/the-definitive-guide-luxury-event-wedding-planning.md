@@ -2,7 +2,7 @@
 title: "The Definitive Guide to Luxury Event & Wedding Planning in Mumbai & India (2026)"
 date: "2026-02-12"
 description: "The definitive guide to luxury event & wedding planning in Mumbai (2026). Discover venues, design trends, budgeting & premium execution."
-category: "Celebrity Management"
+category: "Events & Weddings"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"

@@ -2,7 +2,7 @@
 title: "Post-Event Guest Follow-Up: Thank-You Strategies That Build Loyalty"
 date: "2026-02-12"
 description: "Discover how luxury brands, weddings, and corporate events in India can use structured post-event guest follow-up to build loyalty, strengthen relationships, and enhance long-term brand authority."
-category: "Celebrity Management"
+category: "Guest Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"

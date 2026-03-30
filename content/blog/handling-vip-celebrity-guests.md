@@ -2,7 +2,7 @@
 title: "Handling VIP & Celebrity Guests: Protocols, Security & Personal Touches"
 date: "2026-02-12"
 description: "Learn how to handle VIP and celebrity guests at luxury events in India with structured protocols, layered security, media coordination, and personalized experiences that protect brand reputation."
-category: "Celebrity Management"
+category: "Guest Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"

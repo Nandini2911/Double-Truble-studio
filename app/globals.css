@@ -367,3 +367,14 @@ body {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+.blog-content h2 {
+  scroll-margin-top: 120px;
+}
+.blog-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blog-content::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 10px;
+}

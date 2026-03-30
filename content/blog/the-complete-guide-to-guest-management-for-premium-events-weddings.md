@@ -2,7 +2,7 @@
 title: "The Complete Guide to Guest Management for Premium Events & Weddings"
 date: "2026-02-12"
 description: "The complete Guest Management Guide for premium events & weddings in India. Learn RSVP systems, VIP flow, entry control & flawless execution."
-category: "Celebrity Management"
+category: "Guest Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
