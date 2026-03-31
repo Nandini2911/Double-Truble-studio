@@ -260,6 +260,16 @@ const eventweddings=
 
 export default function EventManagementPage() {
   return (
+
+     <>
+      {/* ✅ CRITICAL: Schema injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventweddings),
+        }}
+      />
+
     <main className="bg-dts-black text-white">
       <EventManagementHero />
       <EventsWeddingsIntro />
@@ -273,5 +283,6 @@ export default function EventManagementPage() {
       <EventsWeddingsCTA />
        
     </main>
+    </>
   );
 }
