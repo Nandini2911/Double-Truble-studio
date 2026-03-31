@@ -61,36 +61,27 @@ export const metadata: Metadata = {
   },
 };
 
-const celebritymanagement=
-{
+const celebritymanagement = {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "Organization",
       "@id": "https://www.dtsworld.in/#organization",
       "name": "Double Trouble Studio",
       "alternateName": "DTS",
       "url": "https://www.dtsworld.in/",
-      "description": "A digital, PR and creative studio building ecosystems across social media, web, media, events and celebrity collaborations. We help brands grow, glow & get noticed.",
+      "logo": "https://www.dtsworld.in/logo.png",
+      "description": "A digital, PR and creative studio building ecosystems across social media, web, media, events and celebrity collaborations.",
       "email": "hello@dtsworld.in",
       "telephone": "+91 80000 06021",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Gamdevi, Marol, Andheri East",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400059",
-        "addressCountry": "IN"
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "sales",
-          "telephone": "+91 80000 06021",
-          "email": "hello@dtsworld.in",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi"]
-        }
+      "sameAs": [
+        "https://www.instagram.com/doubletroublestudio",
+        "https://www.linkedin.com/company/double-trouble-studio"
       ]
     },
 
@@ -99,6 +90,7 @@ const celebritymanagement=
       "@id": "https://www.dtsworld.in/#website",
       "url": "https://www.dtsworld.in/",
       "name": "Double Trouble Studio",
+      "inLanguage": "en",
       "publisher": { "@id": "https://www.dtsworld.in/#organization" }
     },
 
@@ -106,11 +98,16 @@ const celebritymanagement=
       "@type": "WebPage",
       "@id": "https://www.dtsworld.in/services/celebrity-management/#webpage",
       "url": "https://www.dtsworld.in/services/celebrity-management",
-      "name": "Celebrity Management | Double Trouble Studio",
-      "description": "We manage celebrity associations end-to-end — shortlisting, fees, availability, contracts, and on-ground coordination — so every appearance feels premium, aligned, and effortless.",
+      "name": "Celebrity Management Services",
+      "description": "End-to-end celebrity management including shortlisting, commercials, contracts and on-ground coordination for premium brand and event associations.",
+      "inLanguage": "en",
       "isPartOf": { "@id": "https://www.dtsworld.in/#website" },
       "about": { "@id": "https://www.dtsworld.in/services/celebrity-management/#service" },
-      "mainEntity": { "@id": "https://www.dtsworld.in/services/celebrity-management/#service" }
+      "mainEntity": { "@id": "https://www.dtsworld.in/services/celebrity-management/#service" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dtsworld.in/og-celebrity-page.webp"
+      }
     },
 
     {
@@ -126,138 +123,123 @@ const celebritymanagement=
     {
       "@type": "Service",
       "@id": "https://www.dtsworld.in/services/celebrity-management/#service",
-      "name": "Celebrity Management",
-      "serviceType": [
-        "Celebrity Associations",
-        "Brand Endorsements",
-        "Event Appearances",
-        "Campaign & Launch Collaborations",
-        "Reputation-Sensitive Talent Coordination"
-      ],
-      "description": "Celebrity management focused on alignment, discretion, and clean execution — from objective setting and fit-first shortlists to commercials, contracting, on-ground coordination, and post-delivery closure.",
+      "name": "Celebrity Management Services",
+      "image": "https://www.dtsworld.in/og-celebrity-page.webp",
+
+      "description": "Celebrity management services including celebrity shortlisting, brand alignment, fee negotiations, contracts, and event coordination for premium brand collaborations.",
+
       "provider": { "@id": "https://www.dtsworld.in/#organization" },
-      "areaServed": { "@type": "Country", "name": "India" },
-      "mainEntityOfPage": { "@id": "https://www.dtsworld.in/services/celebrity-management/#webpage" },
+
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+
+      "mainEntityOfPage": {
+        "@id": "https://www.dtsworld.in/services/celebrity-management/#webpage"
+      },
+
+      "serviceType": [
+        "Celebrity Endorsements",
+        "Celebrity Appearances",
+        "Brand Collaborations",
+        "Influencer & Talent Management",
+        "Event Celebrity Coordination"
+      ],
 
       "audience": [
         { "@type": "Audience", "name": "Brands & Marketers" },
-        { "@type": "Audience", "name": "Corporate & Luxury Events" },
-        { "@type": "Audience", "name": "Celebrities & Public Figures" },
-        { "@type": "Audience", "name": "Founders & HNIs" },
-        { "@type": "Audience", "name": "Agencies & Production Houses" },
-        { "@type": "Audience", "name": "IP Owners & Platforms" }
+        { "@type": "Audience", "name": "Corporate Events" },
+        { "@type": "Audience", "name": "Luxury Events" },
+        { "@type": "Audience", "name": "Founders & HNIs" }
       ],
 
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Celebrity Management Deliverables",
+        "name": "Celebrity Management Process",
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Objective & Requirements",
             "itemOffered": {
               "@type": "Service",
-              "name": "Objective & Requirements",
-              "description": "We understand your brand goal, audience, budget range, timelines, and the kind of celebrity presence you’re aiming for."
+              "name": "Celebrity Shortlisting & Fit Check"
             }
           },
           {
             "@type": "Offer",
-            "name": "Shortlisting & Fit Check",
             "itemOffered": {
               "@type": "Service",
-              "name": "Shortlisting & Fit Check",
-              "description": "We curate options based on relevance, image alignment, and audience match — not just popularity."
+              "name": "Commercials & Contract Management"
             }
           },
           {
             "@type": "Offer",
-            "name": "Availability, Fees & Commercials",
             "itemOffered": {
               "@type": "Service",
-              "name": "Availability, Fees & Commercials",
-              "description": "We run availability checks, share fee ranges, and lock clear commercials: deliverables, usage, timelines, and approvals."
+              "name": "Availability & Scheduling"
             }
           },
           {
             "@type": "Offer",
-            "name": "Contracting & Coordination",
             "itemOffered": {
               "@type": "Service",
-              "name": "Contracting & Coordination",
-              "description": "Paperwork, schedules, logistics, brief sharing, brand requirements, and stakeholder alignment handled end-to-end."
+              "name": "On-ground Event Coordination"
             }
           },
           {
             "@type": "Offer",
-            "name": "Execution & Closure",
             "itemOffered": {
               "@type": "Service",
-              "name": "Execution & Closure",
-              "description": "On-ground coordination for events/shoots and clean closure post-delivery — with professionalism throughout."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Dedicated Point of Contact",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Dedicated Point of Contact",
-              "description": "One clear lead managing the entire coordination flow with fast turnaround and a clean escalation chain."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Commercials & Documentation",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercials & Documentation",
-              "description": "Clear deliverables, usage rights, timelines, approvals, and exclusions documented upfront."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Shoot / Event Coordination",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Shoot / Event Coordination",
-              "description": "Coordination with the brand team, venue/production, and talent team for a smooth execution day."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Real-Time Issue Handling",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Real-Time Issue Handling",
-              "description": "Quick fixes for last-minute changes, delays, brief updates, and on-ground adjustments."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Post-Delivery Closure",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Post-Delivery Closure",
-              "description": "Final delivery tracking and clean closure ensuring agreed outputs are completed professionally."
+              "name": "Post-Delivery Closure"
             }
           }
         ]
       }
+    },
+
+    {
+      "@type": "FAQPage",
+      "name": "Celebrity Management FAQs",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How are celebrity fees decided?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Celebrity fees depend on popularity, campaign scope, deliverables, usage rights, and duration of association."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much lead time is required?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically 2–6 weeks depending on celebrity availability and campaign requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can celebrity collaborations be customised?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all celebrity associations are customised based on brand goals, audience, and campaign objectives."
+          }
+        }
+      ]
     }
+
   ]
-}
+};
 
 export default function CelebrityManagementPage() {
   return (
     <>
-      {/* ✅ CRITICAL: Schema injection (THIS WAS MISSING) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(celebritymanagement),
-        }}
-      />
+     <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(celebritymanagement),
+  }}
+/>
 
       <main className="min-h-screen">
         <CelebrityManagementHero />
