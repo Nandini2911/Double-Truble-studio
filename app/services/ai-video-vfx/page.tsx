@@ -64,6 +64,7 @@ export const metadata: Metadata = {
     images: ["/twitter-ai-vfx-page.webp"],
   },
 };
+
 const aivideovfx=
 {
   "@context": "https://schema.org",
@@ -238,6 +239,15 @@ const aivideovfx=
 
 export default function AiVideandVFX() {
   return (
+
+    <>
+      {/* ✅ CRITICAL: Schema injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aivideovfx),
+        }}
+      />
     <main className="bg-dts-black text-white">
        
       <AIVideoAdsVFXHero />
@@ -251,5 +261,6 @@ export default function AiVideandVFX() {
       <AIVideoVFXCTA /> 
 
     </main>
+       </>
   );
 }
