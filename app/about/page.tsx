@@ -52,110 +52,167 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@graph": [
+ const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
 
-      {
-        "@type": "Organization",
-        "@id": "https://www.dtsworld.in/#organization",
-        "name": "Double Trouble Studio",
-        "alternateName": "DTS World",
-        "url": "https://www.dtsworld.in/",
-        "logo": "https://www.dtsworld.in/logo.png",
-        "email": "hello@dtsworld.in",
-        "telephone": "+918000006021",
-        "foundingDate": "2020",
-        "description":
-          "Double Trouble Studio is a digital, PR, and creative agency specializing in branding, digital marketing, events, and web execution.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress":
-            "Unit 42, Apurva Industrial Estate, Makwana Rd, Gamdevi, Marol, Andheri East",
-          "addressLocality": "Mumbai",
-          "addressRegion": "Maharashtra",
-          "postalCode": "400059",
-          "addressCountry": "IN"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/double-trouble-studio",
-          "https://www.instagram.com/doubletroublestudio"
-        ]
+    {
+      "@type": "Organization",
+      "@id": "https://www.dtsworld.in/#organization",
+      "name": "Double Trouble Studio",
+      "alternateName": "DTS World",
+      "url": "https://www.dtsworld.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.dtsworld.in/logo.png"
+      },
+      "email": "hello@dtsworld.in",
+      "telephone": "+918000006021",
+      "foundingDate": "2020",
+      "description":
+        "Double Trouble Studio is a Mumbai-based branding, PR, digital marketing, events, and web development agency helping brands grow and get noticed.",
+      
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
       },
 
-      {
-        "@type": "WebSite",
-        "@id": "https://www.dtsworld.in/#website",
-        "url": "https://www.dtsworld.in/",
-        "name": "Double Trouble Studio",
-        "publisher": {
-          "@id": "https://www.dtsworld.in/#organization"
-        }
-      },
+      "sameAs": [
+        "https://www.linkedin.com/company/double-trouble-studio",
+        "https://www.instagram.com/doubletroublestudio"
+      ],
 
-      {
-        "@type": "WebPage",
-        "@id": "https://www.dtsworld.in/about/#webpage",
-        "url": "https://www.dtsworld.in/about",
-        "name": "About Double Trouble Studio",
-        "description":
-          "Learn about Double Trouble Studio, a Mumbai-based branding, PR, digital marketing, and event agency.",
-        "isPartOf": {
-          "@id": "https://www.dtsworld.in/#website"
-        },
-        "about": {
-          "@id": "https://www.dtsworld.in/#organization"
-        }
-      },
-
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.dtsworld.in/#localbusiness",
-        "name": "Double Trouble Studio",
-        "url": "https://www.dtsworld.in/",
-        "telephone": "+918000006021",
-        "email": "hello@dtsworld.in",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress":
-            "Unit 42, Apurva Industrial Estate, Makwana Rd, Gamdevi, Marol, Andheri East",
-          "addressLocality": "Mumbai",
-          "addressRegion": "Maharashtra",
-          "postalCode": "400059",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "19.1176",
-          "longitude": "72.8634"
-        },
-        "hasMap":
-          "https://www.google.com/maps/search/?api=1&query=Double+Trouble+Studio+Mumbai",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "10:00",
-          "closes": "19:00"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+918000006021",
-          "contactType": "customer service",
-          "email": "hello@dtsworld.in",
-          "availableLanguage": ["English", "Hindi"]
-        }
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "Unit 42, Apurva Industrial Estate, Makwana Rd, Marol, Andheri East",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400059",
+        "addressCountry": "IN"
       }
+    },
 
-    ]
-  };
+    {
+      "@type": "WebSite",
+      "@id": "https://www.dtsworld.in/#website",
+      "url": "https://www.dtsworld.in/",
+      "name": "Double Trouble Studio",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.dtsworld.in/#organization"
+      }
+    },
 
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dtsworld.in/about/#webpage",
+      "url": "https://www.dtsworld.in/about",
+      "name": "About Double Trouble Studio",
+      "description":
+        "About Double Trouble Studio – a strategy-first branding, PR, digital marketing and events agency in Mumbai.",
+      
+      "inLanguage": "en",
+
+      "isPartOf": {
+        "@id": "https://www.dtsworld.in/#website"
+      },
+
+      "about": {
+        "@id": "https://www.dtsworld.in/#organization"
+      },
+
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dtsworld.in/og-about-page.webp"
+      }
+    },
+
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.dtsworld.in/#localbusiness",
+      "name": "Double Trouble Studio",
+      "image": "https://www.dtsworld.in/og-home-mgmt.webp",
+      "url": "https://www.dtsworld.in/",
+      "telephone": "+918000006021",
+      "email": "hello@dtsworld.in",
+
+      "priceRange": "₹₹₹",
+
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "Unit 42, Apurva Industrial Estate, Makwana Rd, Marol, Andheri East",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400059",
+        "addressCountry": "IN"
+      },
+
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "19.1176",
+        "longitude": "72.8634"
+      },
+
+      "hasMap":
+        "https://www.google.com/maps/search/?api=1&query=Double+Trouble+Studio+Mumbai",
+
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+918000006021",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Hindi"]
+      }
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://www.dtsworld.in/#services",
+      "serviceType": "Branding, PR, Digital Marketing, Events, Web Development",
+      "provider": {
+        "@id": "https://www.dtsworld.in/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+
+    {
+      "@type": "FAQPage",
+      "name": "About Double Trouble Studio FAQs",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Double Trouble Studio do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Double Trouble Studio provides branding, PR, digital marketing, web development, event execution and celebrity collaborations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Double Trouble Studio located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Double Trouble Studio is located in Mumbai, India and serves clients across India."
+          }
+        }
+      ]
+    }
+
+  ]
+};
   return (
     <>
       {/* ✅ CRITICAL: Schema injection */}
