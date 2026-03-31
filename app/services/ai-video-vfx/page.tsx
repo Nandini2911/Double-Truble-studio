@@ -128,6 +128,31 @@ const aivideovfx = {
     },
 
     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dtsworld.in/services/ai-video-vfx/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dtsworld.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.dtsworld.in/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Video & VFX",
+          "item": "https://www.dtsworld.in/services/ai-video-vfx"
+        }
+      ]
+    },
+
+    {
       "@type": "Service",
       "@id": "https://www.dtsworld.in/services/ai-video-vfx/#service",
       "name": "AI Video Ads & VFX",
@@ -150,46 +175,15 @@ const aivideovfx = {
       "mainEntityOfPage": {
         "@id": "https://www.dtsworld.in/services/ai-video-vfx/#webpage"
       },
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "AI Video & VFX Deliverables",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Creative Strategy & Concept Development"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Video Editing & Automation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "VFX Design & Motion Graphics"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Multilingual Video Production"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Post-Production Optimization"
-            }
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creative Strategy & Concept Development" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Video Editing & Automation" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VFX Design & Motion Graphics" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Multilingual Video Production" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Post-Production Optimization" }}
         ]
       }
     },
@@ -249,7 +243,6 @@ const aivideovfx = {
 
   ]
 };
-
 export default function AiVideandVFX() {
   return (
 
