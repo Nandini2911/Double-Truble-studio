@@ -250,15 +250,25 @@ const celebritymanagement=
 
 export default function CelebrityManagementPage() {
   return (
-    <main className="min-h-screen">
-      <CelebrityManagementHero/>
-      <CelebrityManagementSolves/>
-      <CelebrityManagementHowItWorks/>  
-      <CelebrityManagementDeliverables/>
-      <CelebrityManagementWhoItsFor/>
-      <RelatedServices/>
-      <CelebrityManagementFAQs/>
-      <CelebrityManagementCTA/>
+    <>
+      {/* ✅ CRITICAL: Schema injection (THIS WAS MISSING) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(celebritymanagement),
+        }}
+      />
+
+      <main className="min-h-screen">
+        <CelebrityManagementHero />
+        <CelebrityManagementSolves />
+        <CelebrityManagementHowItWorks />  
+        <CelebrityManagementDeliverables />
+        <CelebrityManagementWhoItsFor />
+        <RelatedServices />
+        <CelebrityManagementFAQs />
+        <CelebrityManagementCTA />
       </main>
+    </>
   );
 }
