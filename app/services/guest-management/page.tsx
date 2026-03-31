@@ -64,19 +64,28 @@ export const metadata: Metadata = {
   },
 };
 
-const guestmanagement=
-{
+const guestmanagement = {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "Organization",
       "@id": "https://www.dtsworld.in/#organization",
       "name": "Double Trouble Studio",
       "alternateName": "DTS",
       "url": "https://www.dtsworld.in/",
-      "description": "A digital, PR and creative studio building ecosystems across social media, web, media, events and celebrity collaborations. We help brands grow, glow & get noticed.",
+      "logo": "https://www.dtsworld.in/logo.png",
+      "description": "A digital, PR and creative studio building ecosystems across social media, web, media, events and celebrity collaborations.",
       "email": "hello@dtsworld.in",
       "telephone": "+91 80000 06021",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "sameAs": [
+        "https://www.instagram.com/doubletroublestudio",
+        "https://www.linkedin.com/company/double-trouble-studio"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Gamdevi, Marol, Andheri East",
@@ -102,6 +111,7 @@ const guestmanagement=
       "@id": "https://www.dtsworld.in/#website",
       "url": "https://www.dtsworld.in/",
       "name": "Double Trouble Studio",
+      "inLanguage": "en",
       "publisher": { "@id": "https://www.dtsworld.in/#organization" }
     },
 
@@ -110,10 +120,15 @@ const guestmanagement=
       "@id": "https://www.dtsworld.in/services/guest-management/#webpage",
       "url": "https://www.dtsworld.in/services/guest-management",
       "name": "Guest Management | Double Trouble Studio",
-      "description": "We plan, segment, and control guest flow — from VIPs and media to partners and family — so your event begins calm, controlled, and premium.",
+      "description": "Premium guest management services including RSVP handling, VIP coordination, and event access control.",
+      "inLanguage": "en",
       "isPartOf": { "@id": "https://www.dtsworld.in/#website" },
       "about": { "@id": "https://www.dtsworld.in/services/guest-management/#service" },
-      "mainEntity": { "@id": "https://www.dtsworld.in/services/guest-management/#service" }
+      "mainEntity": { "@id": "https://www.dtsworld.in/services/guest-management/#service" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dtsworld.in/og-guest-mgmt.webp"
+      }
     },
 
     {
@@ -130,25 +145,27 @@ const guestmanagement=
       "@type": "Service",
       "@id": "https://www.dtsworld.in/services/guest-management/#service",
       "name": "Guest Management",
-      "serviceType": [
-        "Guestlist Planning & Segmentation",
-        "RSVP Handling & Confirmations",
-        "VIP Protocol & Tiered Access",
-        "On-Ground Check-In & Access Control",
-        "Event Entry Flow Design"
-      ],
-      "description": "A structured guest management system built for premium rooms — segmentation, access rules, RSVP tracking, on-ground coordination, and real-time issue handling to protect the first impression.",
+      "image": "https://www.dtsworld.in/og-guest-mgmt.webp",
+      "description": "Guest management services including RSVP handling, VIP guest coordination, access control, and event entry flow management.",
       "provider": { "@id": "https://www.dtsworld.in/#organization" },
-      "areaServed": { "@type": "Country", "name": "India" },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
       "mainEntityOfPage": { "@id": "https://www.dtsworld.in/services/guest-management/#webpage" },
 
+      "serviceType": [
+        "VIP Guest Management",
+        "RSVP Management",
+        "Event Entry Control",
+        "Celebrity Guest Handling",
+        "Luxury Event Coordination"
+      ],
+
       "audience": [
-        { "@type": "Audience", "name": "High-Profile Brands" },
-        { "@type": "Audience", "name": "Celebrity-Led Events" },
-        { "@type": "Audience", "name": "Corporate Events" },
-        { "@type": "Audience", "name": "Luxury Weddings" },
-        { "@type": "Audience", "name": "Founders & HNIs" },
-        { "@type": "Audience", "name": "Agencies & Production Teams" }
+        { "@type": "Audience", "name": "Luxury Event Clients" },
+        { "@type": "Audience", "name": "Corporate Brands" },
+        { "@type": "Audience", "name": "Wedding Planners" }
       ],
 
       "hasOfferCatalog": {
@@ -157,74 +174,23 @@ const guestmanagement=
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Understanding Your Objective",
             "itemOffered": {
               "@type": "Service",
-              "name": "Understanding Your Objective",
-              "description": "Event type, audience mix, VIP/media priority, venue flow, and what premium entry means for your room."
+              "name": "RSVP & Guestlist Management"
             }
           },
           {
             "@type": "Offer",
-            "name": "Planning & System Setup",
             "itemOffered": {
               "@type": "Service",
-              "name": "Planning & System Setup",
-              "description": "Guestlist structure, categories, access rules, entry logic, RSVP tracking, and escalation rules."
+              "name": "VIP & Celebrity Handling"
             }
           },
           {
             "@type": "Offer",
-            "name": "RSVP Handling & Confirmations",
             "itemOffered": {
               "@type": "Service",
-              "name": "RSVP Handling & Confirmations",
-              "description": "Invites, follow-ups, confirmations, reminders, and last-minute updates handled end-to-end."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Planning Documents / Run Sheets",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Planning Documents / Run Sheets",
-              "description": "Entry flow plan, desk routing, pass/wristband logic, and documented escalation rules."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "On-Ground Management",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "On-Ground Management",
-              "description": "Smooth check-ins, tiered access, desk routing, wristbands/passes, and controlled arrivals."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Venue + Security Coordination",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Venue + Security Coordination",
-              "description": "On-ground coordination with venue and security teams for access control and clean guest flow."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Real-Time Problem Handling",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Real-Time Problem Handling",
-              "description": "Immediate fixes for list issues, VIP changes, and on-the-spot flow adjustments."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Post-Event Wrap-Up",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Post-Event Wrap-Up",
-              "description": "Final counts, key learnings, and quick insights for tighter execution next time."
+              "name": "On-Ground Entry Control"
             }
           }
         ]
@@ -247,40 +213,24 @@ const guestmanagement=
           "position": 2,
           "name": "Events & Weddings",
           "url": "https://www.dtsworld.in/services/events-weddings"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "PR, Media & Digital Marketing",
-          "url": "https://www.dtsworld.in/services/pr-media-digital-marketing"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Web Development & Marketing",
-          "url": "https://www.dtsworld.in/services/web-development-marketing"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "AI Video & VFX",
-          "url": "https://www.dtsworld.in/services/ai-video-vfx"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Strategic Road Map",
-          "url": "https://www.dtsworld.in/services/strategic-road-map"
         }
       ]
     }
+
   ]
-}
-
-
+};
 
 export default function GuestManagementPage() {
   return (
+<>
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(guestmanagement),
+  }}
+/>
+
+
     <main className="min-h-screen bg-black text-white">
     <Hero/>
     <GuestManagementSolves/>
@@ -291,18 +241,8 @@ export default function GuestManagementPage() {
     <RelatedServices/>
     <GuestManagementFAQ/>
     <GuestManagementCTA/>
-
-  
-    
-    
-    
-   
-   
-    
-    
-
-
-
-    </main>
+  </main>
+   </>
   );
+ 
 }
