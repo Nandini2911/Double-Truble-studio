@@ -63,37 +63,36 @@ export const metadata: Metadata = {
   },
 };
 
-const strategicroadmap=
-{
+const strategicroadmap = {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "Organization",
       "@id": "https://www.dtsworld.in/#organization",
       "name": "Double Trouble Studio",
       "alternateName": "DTS",
       "url": "https://www.dtsworld.in/",
-      "description": "A digital, PR and creative studio building ecosystems across social media, web, media, events and celebrity collaborations. We help brands grow, glow & get noticed.",
+      "logo": "https://www.dtsworld.in/logo.png",
+      "description": "A digital, PR and creative studio building ecosystems across social media, web, media, events and celebrity collaborations.",
       "email": "hello@dtsworld.in",
       "telephone": "+91 80000 06021",
+      "sameAs": [
+        "https://www.instagram.com/doubletroublestudio",
+        "https://www.linkedin.com/company/double-trouble-studio"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Gamdevi, Marol, Andheri East",
+        "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Marol, Andheri East",
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
         "postalCode": "400059",
         "addressCountry": "IN"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "sales",
-          "telephone": "+91 80000 06021",
-          "email": "hello@dtsworld.in",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi"]
-        }
-      ]
+      }
     },
 
     {
@@ -101,6 +100,7 @@ const strategicroadmap=
       "@id": "https://www.dtsworld.in/#website",
       "url": "https://www.dtsworld.in/",
       "name": "Double Trouble Studio",
+      "inLanguage": "en",
       "publisher": { "@id": "https://www.dtsworld.in/#organization" }
     },
 
@@ -109,7 +109,8 @@ const strategicroadmap=
       "@id": "https://www.dtsworld.in/services/strategic-road-map/#webpage",
       "url": "https://www.dtsworld.in/services/strategic-road-map",
       "name": "Strategic Roadmap | Double Trouble Studio",
-      "description": "We define, align, and execute strategic roadmaps that guide your brand’s growth — turning insights into action and delivering results that matter.",
+      "description": "Strategic roadmap planning to align vision, define execution, and drive measurable growth.",
+      "inLanguage": "en",
       "isPartOf": { "@id": "https://www.dtsworld.in/#website" },
       "about": { "@id": "https://www.dtsworld.in/services/strategic-road-map/#service" },
       "mainEntity": { "@id": "https://www.dtsworld.in/services/strategic-road-map/#service" }
@@ -120,13 +121,8 @@ const strategicroadmap=
       "@id": "https://www.dtsworld.in/services/strategic-road-map/#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dtsworld.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dtsworld.in/#services" },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Strategic Roadmap",
-          "item": "https://www.dtsworld.in/services/strategic-road-map"
-        }
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dtsworld.in/services" },
+        { "@type": "ListItem", "position": 3, "name": "Strategic Roadmap", "item": "https://www.dtsworld.in/services/strategic-road-map" }
       ]
     },
 
@@ -134,156 +130,88 @@ const strategicroadmap=
       "@type": "Service",
       "@id": "https://www.dtsworld.in/services/strategic-road-map/#service",
       "name": "Strategic Roadmap",
+      "image": "https://www.dtsworld.in/og-strategic-roadmap.webp",
       "serviceType": [
         "Strategic Planning",
-        "Market & Competitive Analysis",
-        "Stakeholder Alignment",
-        "Execution Monitoring",
-        "Risk Management",
-        "KPI Review & Optimization"
+        "Market Analysis",
+        "Business Growth Strategy",
+        "Execution Planning",
+        "KPI Optimization"
       ],
-      "description": "A structured roadmap that turns vision into action — clarifying direction, aligning stakeholders, defining milestones and KPIs, and monitoring execution with continuous optimization.",
+      "description": "A structured strategic roadmap that aligns vision, defines execution, and delivers measurable business outcomes.",
       "provider": { "@id": "https://www.dtsworld.in/#organization" },
       "areaServed": { "@type": "Country", "name": "India" },
-      "mainEntityOfPage": { "@id": "https://www.dtsworld.in/services/strategic-road-map/#webpage" },
-
-      "audience": [
-        { "@type": "Audience", "name": "Executive Leadership (C-suite)" },
-        { "@type": "Audience", "name": "Strategic Planning Teams" },
-        { "@type": "Audience", "name": "Corporate Teams & Departments" },
-        { "@type": "Audience", "name": "Founders & Entrepreneurs" },
-        { "@type": "Audience", "name": "Investors & Stakeholders" },
-        { "@type": "Audience", "name": "Consultants & Advisors" }
-      ],
-
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Strategic Roadmap Deliverables",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Defining Your Vision",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Defining Your Vision",
-              "description": "Clarifying goals, purpose, and direction to establish a clear roadmap for success."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Market & Competitive Analysis",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Market & Competitive Analysis",
-              "description": "Analysis of market trends, audience segments, and competitors to identify opportunities and challenges."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Strategic Alignment",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Strategic Alignment",
-              "description": "Aligning internal teams and stakeholders so all efforts support common business goals."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Strategic Planning & Roadmap",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Strategic Planning & Roadmap",
-              "description": "An actionable plan outlining milestones, KPIs, and timelines aligned with business goals."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Stakeholder Coordination",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Stakeholder Coordination",
-              "description": "Coordination between internal teams and external partners to drive execution with clear communication."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Execution & Monitoring",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Execution & Monitoring",
-              "description": "Implementing the plan with continuous monitoring, course correction, and feedback loops."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Risk Management & Mitigation",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Risk Management & Mitigation",
-              "description": "Proactive risk assessment and contingency planning to ensure smooth execution and adaptability."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Post-Execution Review & Optimization",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Post-Execution Review & Optimization",
-              "description": "KPI tracking, performance analysis, and refinements to optimize future outcomes and strategies."
-            }
-          }
-        ]
-      }
+      "mainEntityOfPage": { "@id": "https://www.dtsworld.in/services/strategic-road-map/#webpage" }
     },
 
     {
-      "@type": "ItemList",
-      "@id": "https://www.dtsworld.in/services/strategic-road-map/#related-services",
-      "name": "Related services",
-      "itemListElement": [
+      "@type": "FAQPage",
+      "@id": "https://www.dtsworld.in/services/strategic-road-map/#faq",
+      "name": "Strategic Roadmap FAQs",
+      "mainEntity": [
+
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Guest Management",
-          "url": "https://www.dtsworld.in/services/guest-management"
+          "@type": "Question",
+          "name": "How is a strategic roadmap priced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing depends on business scope, complexity, and deliverables. Each roadmap is customised based on goals, stakeholders, and execution requirements."
+          }
         },
+
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Celebrity Management",
-          "url": "https://www.dtsworld.in/services/celebrity-management"
+          "@type": "Question",
+          "name": "When should we start working on our strategic roadmap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ideally before launching new initiatives, scaling operations, or entering new markets to ensure clarity and alignment from the start."
+          }
         },
+
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Events & Weddings",
-          "url": "https://www.dtsworld.in/services/events-weddings"
+          "@type": "Question",
+          "name": "What’s included in a strategic roadmap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It includes goal definition, market analysis, stakeholder alignment, execution planning, timelines, KPIs, and monitoring systems."
+          }
         },
+
         {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "PR, Media & Digital Marketing",
-          "url": "https://www.dtsworld.in/services/pr-media-digital-marketing"
+          "@type": "Question",
+          "name": "Can we customize the roadmap process?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every roadmap is tailored based on business needs, team structure, and long-term objectives."
+          }
         },
+
         {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Web Development & Marketing",
-          "url": "https://www.dtsworld.in/services/web-development-marketing"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "AI Video & VFX",
-          "url": "https://www.dtsworld.in/services/ai-video-vfx"
+          "@type": "Question",
+          "name": "How do you ensure the roadmap is executable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We break strategy into actionable steps, define clear responsibilities, set measurable KPIs, and monitor execution with continuous optimization."
+          }
         }
+
       ]
     }
+
   ]
-}
+};
 
 export default function StrategicRoadmap() {
   return (
+
+    <>
+      {/* ✅ CRITICAL: Schema injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(strategicroadmap ),
+        }}
+      />
     <main className="bg-dts-black text-white">
        
         <StrategicRoadmapHeader  />
@@ -297,5 +225,6 @@ export default function StrategicRoadmap() {
         <StrategicRoadmapCTA/>
       
     </main>
+       </>
   );
 }
