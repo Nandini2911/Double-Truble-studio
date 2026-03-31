@@ -295,12 +295,75 @@ const prmediadigitalmarketing=
           "url": "https://www.dtsworld.in/services/strategic-road-map"
         }
       ]
+    },
+
+    {
+  "@type": "FAQPage",
+  "@id": "https://www.dtsworld.in/services/events-weddings/#faq",
+  "name": "Events & Weddings FAQs",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "Do you handle small events as well?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Scale doesn’t matter — structure and execution do. Whether it’s an intimate event or a large-format production, we plan with the same clarity, control, and premium execution standards."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Can event management services be customised?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every event is fully customised based on your requirements, goals, and experience expectations. We do not use fixed packages or templated plans."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you work with existing vendors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we collaborate with your existing vendors while maintaining structure, coordination, and execution quality across the entire event."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How early should we get in touch for event planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ideally, 4 to 12 weeks before the event depending on scale, complexity, and vendor involvement. Earlier planning allows better control and smoother execution."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Is pricing fixed or flexible for event management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing is flexible and depends on event scale, requirements, and deliverables. Every project is customised to match the scope and expectations."
+      }
     }
+
   ]
 }
+  ]
+};
 
 export default function PRMediaDigital() {
   return (
+
+     <>
+      {/* ✅ CRITICAL: Schema injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(prmediadigitalmarketing),
+        }}
+      />
     <main className="bg-dts-black text-white">
         <PRMediaDigitalHero />
         <PRMediaDigitalIntro  />
@@ -314,5 +377,6 @@ export default function PRMediaDigital() {
         <PRMediaDigitalFinalCTA />
 
     </main>
+        </>
   );
 }
