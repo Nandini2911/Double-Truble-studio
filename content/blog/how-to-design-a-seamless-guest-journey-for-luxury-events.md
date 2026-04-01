@@ -6,7 +6,7 @@ category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/how-to-design-a-seamless-guest-journey-for-luxury-events.webp"
 
 ---
 

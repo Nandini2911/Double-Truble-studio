@@ -6,7 +6,7 @@ category: "Guest Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/contactless-check-in-systems-for-high-end-events.webp"
 
 ---
 

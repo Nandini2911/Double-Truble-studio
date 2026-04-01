@@ -6,7 +6,7 @@ category: "Celebrity Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/legal-pr-essentials-when-working-with-bollywood-influencer-celebrities.webp"
 
 ---
 
