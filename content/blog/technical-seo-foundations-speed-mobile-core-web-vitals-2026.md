@@ -6,7 +6,7 @@ category: "Web Development & Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/technical-seo-foundations-speed-mobile-core-web-vitals-2026.webp"
 
 ---
 

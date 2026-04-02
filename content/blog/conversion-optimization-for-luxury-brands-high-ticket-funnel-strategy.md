@@ -7,8 +7,7 @@ category: "Web Development & Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
-
+image: "/blog-images/conversion-optimization-for-luxury-brands-high-ticket-funnel-strategy.webp"
 ---
 
 # Conversion Optimization for Luxury Brands (High-Ticket Funnel Strategy)

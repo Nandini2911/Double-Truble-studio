@@ -7,7 +7,7 @@ category: "Web Development & Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/luxury-website-ux-principles-minimalism-speed-emotional-impact.webp"
 
 ---
 

@@ -6,7 +6,7 @@ category: "Web Development & Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/building-conversion-focused-marketing-funnels-on-your-site.webp"
 
 ---
 
