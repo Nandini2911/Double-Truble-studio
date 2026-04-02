@@ -6,8 +6,7 @@ category: "Events & Weddings"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
-
+image: "/blog-images/budgeting-cost-control-for-high-budget-weddings-corporate-galas.webp"
 ---
 
 # Budgeting & Cost Control for High-Budget Weddings & Corporate Galas

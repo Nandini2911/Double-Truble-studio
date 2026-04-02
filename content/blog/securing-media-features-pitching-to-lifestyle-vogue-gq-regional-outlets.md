@@ -6,7 +6,7 @@ category: "PR, Media & Digital Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/securing-media-features-pitching-to-lifestyle-vogue-gq-regional-outlets.webp"
 
 ---
 
