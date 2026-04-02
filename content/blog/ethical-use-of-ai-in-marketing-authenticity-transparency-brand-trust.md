@@ -7,7 +7,7 @@ category: "AI Video & VFX"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/ethical-use-of-ai-in-marketing-authenticity-transparency-brand-trust.webp"
 
 ---
 

@@ -6,7 +6,7 @@ category: "AI Video & VFX"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/ai-scriptwriting-storyboarding-speeding-up-pre-production.webp"
 
 ---
 
