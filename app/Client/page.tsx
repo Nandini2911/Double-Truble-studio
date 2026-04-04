@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ClientsPage from "./ClientsPage.client";
 import AIVideoVFXFAQs from "@/components/ai-video-vfx/AIVideoVFXFAQs";
 import ClientFAQ from "@/components/ClientFAQ";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Our Clients | Double Trouble Studio",
@@ -245,7 +246,20 @@ const Client =
 };
 
 
+
 export default function Page() {
-  
-  return <><ClientsPage /><ClientFAQ /></>;
+  return (
+    <>
+      {/* ✅ SCHEMA INJECTION */}
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(Client),
+        }}
+      />
+
+      <ClientsPage />
+      <ClientFAQ />
+    </>
+  );
 }
