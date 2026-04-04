@@ -98,6 +98,8 @@ const contactSchema = {
       about: {
         "@id": "https://www.dtsworld.in/#organization",
       },
+      "datePublished": "2025-01-01",
+      "dateModified": new Date().toISOString()
     },
 
     {
@@ -174,7 +176,72 @@ const contactSchema = {
         },
       ],
     },
-  ],
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dtsworld.in/contact/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I get started with DTS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can start by filling out the contact form with your requirements. Our team will review it and guide you on the next steps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How soon will I get a response?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically, you can expect a response within 24–48 working hours depending on the complexity of your request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with clients worldwide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we work with clients globally across different industries and markets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What information should I provide when contacting you?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Share your goals, requirements, timelines, and any relevant details to help us understand your needs clearly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there an initial consultation fee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Initial discussions are typically free to understand your requirements before defining the scope."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after I submit the form?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your enquiry is reviewed by our team, followed by a structured response outlining next steps, scope, and recommendations."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "SpeakableSpecification",
+      "@id": "https://www.dtsworld.in/contact/#speakable",
+      "cssSelector": [
+        "h1",
+        ".faq-question"
+      ]
+    }
+
+  ]
 };
 
 export default function Page() {

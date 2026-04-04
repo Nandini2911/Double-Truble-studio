@@ -76,7 +76,9 @@ const teamSchema = {
       "description": "Meet the leadership and creative team behind Double Trouble Studio — experts in branding, PR, digital marketing, and events.",
       "isPartOf": {
         "@id": "https://www.dtsworld.in/#website"
-      }
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": new Date().toISOString()
     },
 
     {
@@ -103,7 +105,6 @@ const teamSchema = {
       "@id": "https://www.dtsworld.in/team/#leadership",
       "name": "Leadership Team",
       "itemListElement": [
-
         {
           "@type": "ListItem",
           "position": 1,
@@ -117,7 +118,6 @@ const teamSchema = {
             "description": "Strategic leader with over 35 years of experience guiding long-term vision and growth."
           }
         },
-
         {
           "@type": "ListItem",
           "position": 2,
@@ -131,7 +131,6 @@ const teamSchema = {
             "description": "Leads branding, visibility, partnerships, and growth strategies."
           }
         },
-
         {
           "@type": "ListItem",
           "position": 3,
@@ -145,7 +144,6 @@ const teamSchema = {
             "description": "Oversees financial strategy, forecasting, and operational discipline."
           }
         }
-
       ]
     },
 
@@ -154,7 +152,6 @@ const teamSchema = {
       "@id": "https://www.dtsworld.in/team/#team-members",
       "name": "Team Members",
       "itemListElement": [
-
         {
           "@type": "ListItem",
           "position": 1,
@@ -185,7 +182,62 @@ const teamSchema = {
           "position": 6,
           "item": { "@type": "Person", "name": "Raj Umbarkar", "jobTitle": "Video Editor" }
         }
+      ]
+    },
 
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dtsworld.in/team/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who makes up the DTS team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Double Trouble Studio is built by strategists, marketers, creatives, and execution specialists focused on clarity, performance, and brand growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have in-house experts or outsource work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Core strategy and execution are handled in-house. External specialists are involved only when highly specific expertise is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who will I be working with directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You’ll work directly with senior team members who understand your goals and oversee execution end-to-end."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How experienced is your team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our team combines decades of experience across branding, PR, digital, and experiential execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does your team ensure quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every project follows structured planning, internal reviews, and senior-level oversight to maintain consistency and high standards."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "SpeakableSpecification",
+      "@id": "https://www.dtsworld.in/team/#speakable",
+      "cssSelector": [
+        "h1",
+        ".faq-question"
       ]
     }
 

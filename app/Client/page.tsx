@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ClientsPage from "./ClientsPage.client";
 import AIVideoVFXFAQs from "@/components/ai-video-vfx/AIVideoVFXFAQs";
 import ClientFAQ from "@/components/ClientFAQ";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Our Clients | Double Trouble Studio",
@@ -46,10 +47,11 @@ export const metadata: Metadata = {
     images: ["/twitter-client-page.webp"],
   },
 };
-const Client=
+const Client =
 {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "Organization",
       "@id": "https://www.dtsworld.in/#organization",
@@ -103,7 +105,10 @@ const Client=
       },
       "mainEntity": {
         "@id": "https://www.dtsworld.in/client/#client-list"
-      }
+      },
+
+      "datePublished": "2025-01-01",
+      "dateModified": new Date().toISOString()
     },
 
     {
@@ -163,12 +168,98 @@ const Client=
         { "@type": "ListItem", "position": 31, "name": "Client 31" },
         { "@type": "ListItem", "position": 32, "name": "Client 32" }
       ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dtsworld.in/client/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What kind of clients do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with founders, enterprises, luxury brands, public figures, and teams that value clarity, execution, and long-term brand building."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is it like working with DTS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Working with us is structured, transparent, and strategy-first. We focus on understanding your goals before executing with precision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you take on all projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We take on projects where we can create meaningful impact and maintain quality standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How involved do I need to be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You stay involved at key decision points while we handle execution, ensuring clarity without overwhelming your schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you ensure consistency and quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every project is guided by strategy, internal reviews, and senior-level oversight to maintain consistency and quality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What results can I expect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Results vary by scope, but typically include stronger brand positioning, improved visibility, and measurable growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we start working together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can start by reaching out through our contact page. We’ll review your requirement and guide you on the next steps."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "SpeakableSpecification",
+      "@id": "https://www.dtsworld.in/client/#speakable",
+      "cssSelector": [
+        "h1",
+        ".faq-question"
+      ]
     }
+
   ]
-}
+};
+
 
 
 export default function Page() {
-  
-  return <><ClientsPage /><ClientFAQ /></>;
+  return (
+    <>
+      {/* ✅ SCHEMA INJECTION */}
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(Client),
+        }}
+      />
+
+      <ClientsPage />
+      <ClientFAQ />
+    </>
+  );
 }
