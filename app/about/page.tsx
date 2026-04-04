@@ -215,16 +215,15 @@ export default function AboutPage() {
   ]
 };
   return (
-    <div className="text-dts-fog min-h-screen bg-dts-black">
-      
+    <><div className="text-dts-fog min-h-screen bg-dts-black">
+
       {/* ✅ CRITICAL: Schema injection */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(schemaData),
-        }}
-      />
-      
+        }} />
+
       <AboutHero />
       <OriginStory />
       <InsideStudio />
@@ -233,12 +232,11 @@ export default function AboutPage() {
       <BrandGrid />
       <AboutFAQ />
       <AboutCTA />
-    </div>
-    <>
-      
-      
+    </div><>
 
-      
-    </>
+
+
+
+      </></>
   );
 }
