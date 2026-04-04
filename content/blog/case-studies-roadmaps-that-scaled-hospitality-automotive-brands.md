@@ -7,8 +7,7 @@ category: "Strategic Road Map"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
-
+image: "/blog-images/case-studies-roadmaps-that-scaled-hospitality-automotive-brands.webp"
 ---
 
 # Case Studies: Roadmaps That Scaled Hospitality & Automotive Brands

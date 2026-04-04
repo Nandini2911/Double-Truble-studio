@@ -7,7 +7,7 @@ category: "Strategic Road Map"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/competitive-strategy-for-luxury-brands-differentiation-value-market-share.webp"
 
 ---
 

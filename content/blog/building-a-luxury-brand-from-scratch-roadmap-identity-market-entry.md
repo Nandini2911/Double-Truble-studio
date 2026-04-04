@@ -7,7 +7,7 @@ category: "Strategic Road Map"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/building-a-luxury-brand-from-scratch-roadmap-identity-market-entry.webp"
 
 ---
 

@@ -67,7 +67,9 @@ export default function WhyDTS() {
 
           <p className="max-w-md text-sm leading-relaxed text-neutral-300/90 md:text-[15px] 2xl:text-base 2xl:max-w-lg">
             Growth isn’t about volume. It’s about meaning. We merge digital,
-            PR, events, celebrity integrations and web experience into one
+            PR, events, celebrity integrations and <a href="https://www.dtsworld.in/services/web-development-marketing"
+            className="text-dts-gold hover:text-[#ff9a9e] underline">
+            web experience</a> into one
             clear brand language.
           </p>
         </div>
