@@ -6,7 +6,7 @@ category: "Celebrity Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/how-to-source-approach-celebrities-talent-agencies-vs-direct-contact-in-2026.webp"
 ---
 
 

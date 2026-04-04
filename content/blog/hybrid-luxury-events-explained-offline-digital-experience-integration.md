@@ -7,7 +7,7 @@ category: "Events & Weddings"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/hybrid-luxury-events-explained-offline-digital-experience-integration.webp"
 
 ---
 

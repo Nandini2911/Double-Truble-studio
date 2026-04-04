@@ -6,7 +6,7 @@ category: "Strategic Road Map"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/luxury-brand-positioning-strategy-perception-pricing-differentiation.webp"
 
 ---
 

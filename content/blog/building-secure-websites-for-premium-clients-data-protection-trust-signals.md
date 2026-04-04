@@ -7,7 +7,7 @@ category: "Web Development & Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/building-secure-websites-for-premium-clients-data-protection-trust-signals.webp"
 
 ---
 

@@ -7,7 +7,7 @@ category: "AI Video & VFX"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/using-ai-for-luxury-brand-storytelling-emotion-narrative-visual-impact.webp"
 
 ---
 

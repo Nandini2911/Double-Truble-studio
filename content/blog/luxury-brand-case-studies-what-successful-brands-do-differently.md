@@ -7,7 +7,7 @@ category: "Strategic Road Map"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/luxury-brand-case-studies-what-successful-brands-do-differently.webp"
 
 ---
 

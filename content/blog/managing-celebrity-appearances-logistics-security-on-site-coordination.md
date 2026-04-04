@@ -6,7 +6,7 @@ category: "Celebrity Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/managing-celebrity-appearances-logistics-security-on-site-coordination.webp"
 ---
 
 # Managing Celebrity Appearances: Logistics, Security & On-Site Coordination

@@ -6,7 +6,7 @@ category: "AI Video & VFX"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/integrating-ai-video-into-social-pr-campaigns-examples.webp"
 
 ---
 

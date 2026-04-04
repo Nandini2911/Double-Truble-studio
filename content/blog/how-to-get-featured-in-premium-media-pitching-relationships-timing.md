@@ -7,7 +7,7 @@ category: "PR, Media & Digital Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/how-to-get-featured-in-premium-media-pitching-relationships-timing.webp"
 
 ---
 

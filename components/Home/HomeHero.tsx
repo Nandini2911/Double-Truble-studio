@@ -81,7 +81,9 @@ export default function HomeHero() {
 
           {/* SHORT SUBTEXT */}
           <p className="text-sm md:text-[15px] text-neutral-300/90 leading-relaxed 2xl:text-base 2xl:max-w-xl">
-            Digital, PR, web and experiences for premium brands that want to
+       <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">
+        Digital, PR,
+</a> web and experiences for premium brands that want to
             look sharp, speak with personality and stay top-of-mind.
           </p>
 

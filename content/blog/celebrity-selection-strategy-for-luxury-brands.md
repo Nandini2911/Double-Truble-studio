@@ -6,7 +6,7 @@ category: "Celebrity Management"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/celebrity-selection-strategy-for-luxury-brands.webp"
 
 ---
 

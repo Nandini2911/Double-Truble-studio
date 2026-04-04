@@ -7,7 +7,7 @@ category: "Celebrity Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/case-studies-successful-celebrity-integrations-for-luxury-hospitality-brands.webp"
 
 ---
 

@@ -7,7 +7,7 @@ category: "Web Development & Marketing"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/case-studies-website-transformations-for-automotive-hospitality-clients.webp"
 
 ---
 

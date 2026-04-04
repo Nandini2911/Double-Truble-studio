@@ -6,7 +6,7 @@ category: "Events & Weddings"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/luxury-wedding-planning-guide.webp"
 
 ---
 

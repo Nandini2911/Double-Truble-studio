@@ -7,7 +7,7 @@ category: "Web Development & Marketing"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/designing-high-end-luxury-websites-ux-visual-identity-brand-experience.webp"
 
 ---
 
