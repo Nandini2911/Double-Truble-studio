@@ -63,37 +63,36 @@ export const metadata: Metadata = {
     images: ["/twitter-event-wedding-page.webp"],
   },
 };
-const eventweddings=
-{
+const eventweddings = {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "Organization",
       "@id": "https://www.dtsworld.in/#organization",
       "name": "Double Trouble Studio",
       "alternateName": "DTS",
       "url": "https://www.dtsworld.in/",
+      "logo": "https://www.dtsworld.in/logo.png",
       "description": "A digital, PR and creative studio building ecosystems across social media, web, media, events and celebrity collaborations. We help brands grow, glow & get noticed.",
       "email": "hello@dtsworld.in",
       "telephone": "+91 80000 06021",
+      "sameAs": [
+        "https://www.instagram.com/doubletroublestudio",
+        "https://www.linkedin.com/company/double-trouble-studio"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Gamdevi, Marol, Andheri East",
+        "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Marol, Andheri East",
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
         "postalCode": "400059",
         "addressCountry": "IN"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "sales",
-          "telephone": "+91 80000 06021",
-          "email": "hello@dtsworld.in",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi"]
-        }
-      ]
+      }
     },
 
     {
@@ -101,6 +100,7 @@ const eventweddings=
       "@id": "https://www.dtsworld.in/#website",
       "url": "https://www.dtsworld.in/",
       "name": "Double Trouble Studio",
+      "inLanguage": "en",
       "publisher": { "@id": "https://www.dtsworld.in/#organization" }
     },
 
@@ -109,10 +109,15 @@ const eventweddings=
       "@id": "https://www.dtsworld.in/services/events-weddings/#webpage",
       "url": "https://www.dtsworld.in/services/events-weddings",
       "name": "Events & Weddings | Double Trouble Studio",
-      "description": "Design-led planning and seamless on-ground execution for luxury weddings and high-impact brand events — thoughtfully designed, impeccably executed.",
+      "description": "Design-led planning and seamless on-ground execution for luxury weddings and high-impact brand events.",
+      "inLanguage": "en",
       "isPartOf": { "@id": "https://www.dtsworld.in/#website" },
       "about": { "@id": "https://www.dtsworld.in/services/events-weddings/#service" },
-      "mainEntity": { "@id": "https://www.dtsworld.in/services/events-weddings/#service" }
+      "mainEntity": { "@id": "https://www.dtsworld.in/services/events-weddings/#service" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dtsworld.in/og-event-weddding-page.webp"
+      }
     },
 
     {
@@ -129,86 +134,17 @@ const eventweddings=
       "@type": "Service",
       "@id": "https://www.dtsworld.in/services/events-weddings/#service",
       "name": "Events & Weddings",
+      "image": "https://www.dtsworld.in/og-event-weddding-page.webp",
       "serviceType": [
-        "Luxury Wedding Planning & Execution",
-        "Brand Events & Experiential Activations",
-        "Private Celebrations",
-        "On-Ground Event Management",
-        "Creative Direction & Brand Alignment"
+        "Luxury Wedding Planning",
+        "Brand Events",
+        "Event Production",
+        "Wedding Planning India"
       ],
-      "description": "From luxury weddings to high-impact brand events, we plan and execute experiences that feel effortless, immersive, and intentional — with design-led planning, discreet coordination, and seamless on-ground control.",
+      "description": "Luxury wedding planning and premium event management with seamless execution.",
       "provider": { "@id": "https://www.dtsworld.in/#organization" },
       "areaServed": { "@type": "Country", "name": "India" },
-      "mainEntityOfPage": { "@id": "https://www.dtsworld.in/services/events-weddings/#webpage" },
-
-      "audience": [
-        { "@type": "Audience", "name": "Luxury Wedding Clients" },
-        { "@type": "Audience", "name": "Brands & Marketers" },
-        { "@type": "Audience", "name": "Corporate Teams & Leadership" },
-        { "@type": "Audience", "name": "Founders & HNIs" },
-        { "@type": "Audience", "name": "Agencies & Production Partners" }
-      ],
-
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Events & Weddings — End-to-End Deliverables",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Planning & Strategy",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Planning & Strategy",
-              "description": "Event concept and experience mapping, timelines, budgets, execution plans, and guest journey & flow design."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Vendors & Production",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Vendors & Production",
-              "description": "Venue coordination, decor, lighting and production teams, technical planning, and on-ground execution."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Guest & On-Ground Management",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Guest & On-Ground Management",
-              "description": "Guest coordination and hospitality, on-site team supervision, and seamless flow from setup to wrap-up."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Creative & Brand Alignment",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Creative & Brand Alignment",
-              "description": "Visual direction and experience design, brand consistency across touchpoints, and media-ready execution."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Event Flow & Timing Control",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Event Flow & Timing Control",
-              "description": "Run-of-show pacing and moment-by-moment timing so the experience feels natural, seamless, and intentional."
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Discreet, Controlled Execution",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Discreet, Controlled Execution",
-              "description": "Quiet handling of complexity, controlled stakeholder coordination, and calm delivery under pressure."
-            }
-          }
-        ]
-      }
+      "mainEntityOfPage": { "@id": "https://www.dtsworld.in/services/events-weddings/#webpage" }
     },
 
     {
@@ -227,39 +163,74 @@ const eventweddings=
           "position": 2,
           "name": "Celebrity Management",
           "url": "https://www.dtsworld.in/services/celebrity-management"
+        }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dtsworld.in/services/events-weddings/#faq",
+      "name": "Events & Weddings FAQs",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you handle small events as well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we handle both intimate and large-scale events."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "PR, Media & Digital Marketing",
-          "url": "https://www.dtsworld.in/services/pr-media-digital-marketing"
+          "@type": "Question",
+          "name": "Can services be customised?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every event is fully customised."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Web Development & Marketing",
-          "url": "https://www.dtsworld.in/services/web-development-marketing"
+          "@type": "Question",
+          "name": "Do you work with existing vendors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we collaborate with your existing vendors."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "AI Video & VFX",
-          "url": "https://www.dtsworld.in/services/ai-video-vfx"
+          "@type": "Question",
+          "name": "How early should we get in touch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ideally 4–12 weeks before the event."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Strategic Road Map",
-          "url": "https://www.dtsworld.in/services/strategic-road-map"
+          "@type": "Question",
+          "name": "Is pricing fixed or flexible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing is flexible and customised."
+          }
         }
       ]
     }
+
   ]
-}
+};
 
 
 export default function EventManagementPage() {
   return (
+
+     <>
+      {/* ✅ CRITICAL: Schema injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventweddings),
+        }}
+      />
+
     <main className="bg-dts-black text-white">
       <EventManagementHero />
       <EventsWeddingsIntro />
@@ -273,5 +244,6 @@ export default function EventManagementPage() {
       <EventsWeddingsCTA />
        
     </main>
+    </>
   );
 }

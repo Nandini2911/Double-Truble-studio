@@ -64,10 +64,11 @@ export const metadata: Metadata = {
     images: ["/twitter-ai-vfx-page.webp"],
   },
 };
-const aivideovfx=
-{
+
+const aivideovfx = {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "Organization",
       "@id": "https://www.dtsworld.in/#organization",
@@ -77,141 +78,140 @@ const aivideovfx=
       "logo": "https://www.dtsworld.in/logo.png",
       "email": "hello@dtsworld.in",
       "telephone": "+918000006021",
-      "description": "Double Trouble Studio is a digital, PR, and creative agency specializing in brand growth across digital, PR, web, events, and celebrity collaborations.",
+      "description": "Double Trouble Studio is a digital, PR, and creative agency specializing in branding, digital marketing, events, web, and AI-powered content.",
+      "sameAs": [
+        "https://www.instagram.com/doubletroublestudio",
+        "https://www.linkedin.com/company/double-trouble-studio"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Gamdevi, Marol, Andheri East",
+        "streetAddress": "Unit 42, Apurva Industrial Estate, Makwana Rd, Marol, Andheri East",
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
         "postalCode": "400059",
         "addressCountry": "IN"
       }
     },
+
     {
       "@type": "WebSite",
       "@id": "https://www.dtsworld.in/#website",
       "url": "https://www.dtsworld.in/",
-      "name": "DTS World",
+      "name": "Double Trouble Studio",
+      "inLanguage": "en",
       "publisher": {
         "@id": "https://www.dtsworld.in/#organization"
       }
     },
+
     {
       "@type": "WebPage",
       "@id": "https://www.dtsworld.in/services/ai-video-vfx/#webpage",
       "url": "https://www.dtsworld.in/services/ai-video-vfx",
-      "name": "AI Video Ads & VFX Services - Innovation in Motion | Double Trouble Studio",
-      "description": "Premium AI-powered video ads and VFX services. We blend artificial intelligence with cinematic craft for high-impact, fast-moving, and brand-aligned visual storytelling.",
+      "name": "AI Video Ads & VFX Services | Double Trouble Studio",
+      "description": "AI-powered video production and cinematic VFX services for premium brands, campaigns, and digital storytelling.",
+      "inLanguage": "en",
       "isPartOf": {
         "@id": "https://www.dtsworld.in/#website"
       },
       "about": {
-        "@id": "https://www.dtsworld.in/#organization"
+        "@id": "https://www.dtsworld.in/services/ai-video-vfx/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dtsworld.in/og-ai-video-vfx.webp"
       }
     },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dtsworld.in/services/ai-video-vfx/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dtsworld.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.dtsworld.in/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Video & VFX",
+          "item": "https://www.dtsworld.in/services/ai-video-vfx"
+        }
+      ]
+    },
+
     {
       "@type": "Service",
       "@id": "https://www.dtsworld.in/services/ai-video-vfx/#service",
       "name": "AI Video Ads & VFX",
-      "description": "Cinematic AI video production and cutting-edge VFX for premium brands, celebrities, and corporate marketing. Features include AI-assisted editing, custom motion graphics, and post-production optimization.",
+      "image": "https://www.dtsworld.in/og-ai-video-vfx.webp",
+      "description": "AI-powered video production, cinematic VFX, and motion graphics designed for high-impact brand storytelling, campaigns, and digital content.",
       "provider": {
         "@id": "https://www.dtsworld.in/#organization"
       },
-      "serviceType": "AI Video Production",
+      "serviceType": [
+        "AI Video Production",
+        "VFX & Motion Graphics",
+        "Video Editing & Post Production",
+        "AI Content Creation",
+        "Ad Film Production"
+      ],
       "areaServed": {
         "@type": "Country",
         "name": "India"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://www.dtsworld.in/services/ai-video-vfx/#webpage"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "AI Video & VFX Deliverables",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Creative Strategy & Concept Development",
-              "description": "Brand alignment and AI-driven concepts for visual storytelling."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Video Editing & Automation",
-              "description": "Automated editing and real-time adjustments for trend-ready content."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "VFX Design & Motion Graphics",
-              "description": "Custom visual effects and photorealistic motion design."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Multilingual Support & Voiceovers",
-              "description": "Automated translations and global voiceover integration."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Post-Production Optimization",
-              "description": "AI upscaling, color grading, and immersive sound design."
-            }
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creative Strategy & Concept Development" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Video Editing & Automation" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VFX Design & Motion Graphics" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Multilingual Video Production" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Post-Production Optimization" }}
         ]
       }
     },
+
     {
       "@type": "HowTo",
       "@id": "https://www.dtsworld.in/services/ai-video-vfx/#howto",
-      "name": "How Our AI Video & VFX Process Works",
-      "description": "A structured, innovative approach to delivering high-quality AI-powered videos.",
+      "name": "AI Video & VFX Process",
       "step": [
-        {
-          "@type": "HowToStep",
-          "name": "Understanding Vision",
-          "text": "Identify brand goals and target audience for AI-powered content."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Scripting & Planning",
-          "text": "Develop a creative script leveraging AI's capabilities."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "AI-Assisted Editing",
-          "text": "Use advanced AI tools for polished, on-brand editing at speed."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "VFX Creation",
-          "text": "Incorporate cutting-edge visual effects and motion graphics."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Final Review",
-          "text": "Fine-tune details for maximum impact and flawless delivery."
-        }
+        { "@type": "HowToStep", "name": "Understanding Brand Vision" },
+        { "@type": "HowToStep", "name": "Creative Planning & Scripting" },
+        { "@type": "HowToStep", "name": "AI Editing & Production" },
+        { "@type": "HowToStep", "name": "VFX & Motion Design" },
+        { "@type": "HowToStep", "name": "Final Delivery & Optimization" }
       ]
     },
+
     {
       "@type": "FAQPage",
       "@id": "https://www.dtsworld.in/services/ai-video-vfx/#faq",
+      "name": "AI Video & VFX FAQs",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "How does AI-powered video editing work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We use advanced AI tools to automate repetitive editing tasks, enhance visual quality, and adapt content to the latest trends in real-time, ensuring faster turnarounds without sacrificing brand control."
+            "text": "AI-powered video editing uses automation and machine learning to enhance visuals, speed up editing, and optimize content for performance while maintaining brand consistency."
           }
         },
         {
@@ -219,25 +219,41 @@ const aivideovfx=
           "name": "What kind of VFX services do you offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our VFX services range from hyper-realistic compositing and photorealistic effects to surreal motion graphics and custom visual storytelling designed for premium brands."
+            "text": "We offer cinematic VFX, motion graphics, compositing, and custom visual effects tailored for advertising, branding, and digital campaigns."
           }
         },
         {
           "@type": "Question",
-          "name": "Can AI tools be customised to match my brand style?",
+          "name": "Can AI video content match my brand identity?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, our AI-driven workflows are fully customizable. We ensure that every AI enhancement and automated edit aligns perfectly with your brand's unique aesthetic and narrative."
+            "text": "Yes, all AI workflows are customised to align with your brand’s tone, visual style, and storytelling approach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI video production faster than traditional editing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, AI significantly reduces production time while maintaining high-quality output, making it ideal for fast-moving campaigns."
           }
         }
       ]
     }
+
   ]
-}
-
-
+};
 export default function AiVideandVFX() {
   return (
+
+    <>
+      {/* ✅ CRITICAL: Schema injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aivideovfx),
+        }}
+      />
     <main className="bg-dts-black text-white">
        
       <AIVideoAdsVFXHero />
@@ -251,5 +267,6 @@ export default function AiVideandVFX() {
       <AIVideoVFXCTA /> 
 
     </main>
+       </>
   );
 }

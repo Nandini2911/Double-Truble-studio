@@ -314,12 +314,84 @@ const webdevelopmentmarketing=
           "url": "https://www.dtsworld.in/services/strategic-road-map"
         }
       ]
+    },
+
+    {
+  "@type": "FAQPage",
+  "@id": "https://www.dtsworld.in/services/web-development-marketing/#faq",
+  "name": "Web Development FAQs",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "How do you price your web development services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing depends on the scope, features, design complexity, and performance requirements of the website. Every project is customised based on business goals and deliverables."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How long does it take to develop a website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Timelines typically range from 2 to 8 weeks depending on the size, functionality, and level of customisation required."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is included in a website development package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical package includes UI/UX design, development, testing, performance optimisation, SEO readiness, and launch support."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Can you help with website maintenance and updates after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide post-launch maintenance, updates, performance monitoring, and ongoing support to keep your website secure and up to date."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you offer SEO and digital marketing services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer SEO optimisation, digital marketing strategies, and performance campaigns to help your website grow traffic and conversions."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Can you create an e-commerce website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we build secure and scalable e-commerce websites with product catalogues, payment integrations, and performance optimisation."
+      }
     }
+
   ]
 }
+  ]
+};
 
 export default function WebDevelopmentandMarketing() {
   return (
+
+     <>
+      {/* ✅ CRITICAL: Schema injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webdevelopmentmarketing),
+        }}
+      />
     <main className="bg-dts-black text-white">
        
       <WebDevelopmentHero />
@@ -333,5 +405,6 @@ export default function WebDevelopmentandMarketing() {
       <WebDevelopmentCTA/>   
       
     </main>
+     </>
   );
 }
