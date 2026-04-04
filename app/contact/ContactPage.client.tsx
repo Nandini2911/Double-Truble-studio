@@ -1,5 +1,6 @@
 "use client";
 
+import ContactFAQ from "@/components/ContactFAQ";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { useId, useState } from "react";
@@ -323,6 +324,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </div>
+      <ContactFAQ />
 
       {/* FINAL CTA */}
       <div className="relative py-20 text-center border-t border-white/10">

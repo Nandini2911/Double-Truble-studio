@@ -56,7 +56,8 @@ export default function AboutStrip() {
               A new-age creative and digital studio for lifestyle, luxury,
               design, beauty, hospitality and automotive brands. We help you
               build reputation, scale communities and drive measurable growth
-              across digital, PR, web, events and celebrity collaborations.
+              across digital, PR, web, events and <a href="https://www.dtsworld.in/services/celebrity-management" 
+              className="text-dts-gold hover:text-[#ff9a9e] underline">celebrity collaborations</a>.
             </p>
             <div className="pt-4">
   <a

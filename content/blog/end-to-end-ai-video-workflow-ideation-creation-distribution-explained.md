@@ -7,7 +7,7 @@ category: "AI Video & VFX"
 featured: true
 caseStudy: false
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/end-to-end-ai-video-workflow-ideation-creation-distribution-explained.webp"
 
 ---
 

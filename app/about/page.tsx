@@ -1,6 +1,7 @@
 // app/about/page.tsx
 
 import AboutCTA from "@/components/About/AboutCTA";
+import AboutFAQ from "@/components/About/AboutFAQ";
 import AboutHero from "@/components/About/AboutHero";
 import BrandGrid from "@/components/About/BrandGrid";
 import InsideStudio from "@/components/About/InsideStudio";
@@ -214,7 +215,8 @@ export default function AboutPage() {
   ]
 };
   return (
-    <>
+    <div className="text-dts-fog min-h-screen bg-dts-black">
+      
       {/* ✅ CRITICAL: Schema injection */}
       <script
         type="application/ld+json"
@@ -222,16 +224,21 @@ export default function AboutPage() {
           __html: JSON.stringify(schemaData),
         }}
       />
+      
+      <AboutHero />
+      <OriginStory />
+      <InsideStudio />
+      <Leadership />
+      <StudioCultureAndFit />
+      <BrandGrid />
+      <AboutFAQ />
+      <AboutCTA />
+    </div>
+    <>
+      
+      
 
-      <div className="text-dts-fog min-h-screen bg-dts-black">
-        <AboutHero />
-        <OriginStory />
-        <InsideStudio />
-        <Leadership />
-        <StudioCultureAndFit />
-        <BrandGrid />
-        <AboutCTA />
-      </div>
+      
     </>
   );
 }

@@ -6,7 +6,7 @@ category: "Guest Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/common-guest-management-mistakes-luxury-brands-make.webp"
 
 
 ---

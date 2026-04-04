@@ -14,6 +14,7 @@ import BlogCTA from "./BlogCTA";
 import BlogExplore from "./BlogExplore";
 import type { PostMeta } from "@/lib/blog";
 import BlogSearchResults from "./BlogSearchResults";
+import BlogFAQ from "./BlogFAQ";
 
 type BlogClientProps = {
   posts: PostMeta[];
@@ -81,6 +82,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
 
         <BlogAbout />
         <BlogNewsletter />
+        <BlogFAQ />
         <BlogCTA />
 
       </div>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ClientsPage from "./ClientsPage.client";
+import AIVideoVFXFAQs from "@/components/ai-video-vfx/AIVideoVFXFAQs";
+import ClientFAQ from "@/components/ClientFAQ";
 
 export const metadata: Metadata = {
   title: "Our Clients | Double Trouble Studio",
@@ -167,5 +169,6 @@ const Client=
 
 
 export default function Page() {
-  return <ClientsPage />;
+  
+  return <><ClientsPage /><ClientFAQ /></>;
 }

@@ -6,7 +6,7 @@ category: "Celebrity Management"
 featured: true
 caseStudy: true
 author: "DTS Editorial Team"
-image: "/og-home-mgmt.webp"
+image: "/blog-images/celebrity-risk-&-crisis-management.webp"
 ---
 
 

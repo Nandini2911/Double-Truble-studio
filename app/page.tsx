@@ -1,5 +1,7 @@
 // app/page.tsx
 
+
+import AboutFAQ from "@/components/About/AboutFAQ";
 import AboutStrip from "@/components/Home/AboutStrip";
 import DNABlock from "@/components/Home/DNABlock";
 import FeaturedWork from "@/components/Home/FeaturedWork";
