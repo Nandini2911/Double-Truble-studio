@@ -54,27 +54,56 @@ export default async function BlogPost({ params }: Props) {
     const posts = getAllPosts();
 
     /* 🔥 FORMAT DATE (ISO) */
-    const publishedDate = new Date(frontmatter.date).toISOString();
+  const publishedDate = frontmatter.date
+  ? new Date(frontmatter.date).toISOString()
+  : new Date().toISOString();
 
     /* 🔥 DYNAMIC FAQ FROM CONTENT */
-    const faqs: any[] = [];
-    const lines = content.split("\n");
 
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].startsWith("###")) {
-        const question = lines[i].replace("###", "").trim();
-        const answer = lines[i + 1] || "";
+    
+const faqs = [];
 
-        faqs.push({
-          "@type": "Question",
-          name: question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: answer,
-          },
-        });
+const lines = content.split("\n");
+
+for (let i = 0; i < lines.length; i++) {
+  if (lines[i].startsWith("###")) {
+    const question = lines[i].replace("###", "").trim();
+
+    let answer = "";
+    let j = i + 1;
+
+    while (
+      j < lines.length &&
+      !lines[j].startsWith("###") &&
+      !lines[j].startsWith("##")
+    ) {
+      let line = lines[j].trim();
+
+      // ✅ REMOVE "Ans:" or "Answer:"
+      if (line.toLowerCase().startsWith("ans:")) {
+        line = line.replace(/ans:/i, "").trim();
       }
+      if (line.toLowerCase().startsWith("answer:")) {
+        line = line.replace(/answer:/i, "").trim();
+      }
+
+      answer += line + " ";
+      j++;
     }
+
+    if (question && answer.trim()) {
+      faqs.push({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer.trim(),
+        },
+      });
+    }
+  }
+}
+
 
     /* ✅ BLOG SCHEMA */
     const blogSchema = {
@@ -112,13 +141,14 @@ export default async function BlogPost({ params }: Props) {
 
     /* ✅ FAQ SCHEMA (ONLY IF FOUND) */
     const faqSchema =
-      faqs.length > 0
-        ? {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs,
-          }
-        : null;
+  faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `https://www.dtsworld.in/blog/${slug}#faq`,
+        mainEntity: faqs,
+      }
+    : null;
 
     /* ✅ BREADCRUMB */
     const breadcrumbSchema = {
