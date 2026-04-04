@@ -107,6 +107,46 @@ export default async function BlogPost({ params }: Props) {
         },
       ],
     };
+     /* ✅ FAQ SCHEMA */
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What qualifies as a crisis?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Any situation that threatens brand reputation or business continuity.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How fast do you respond?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We respond rapidly within hours depending on the situation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you offer 24/7 support?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, our crisis team is available 24/7.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you handle social media crises?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we manage social media crises and reputation control.",
+          },
+        },
+      ],
+    };
+
 
     /* ✅ MARKDOWN */
     const renderer = new marked.Renderer();
