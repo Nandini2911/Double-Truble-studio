@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useReducedMotion } from "framer-motion";
+import ClientFAQ from "@/components/ClientFAQ";
 
 const LOGOS = Array.from({ length: 32 }, (_, i) => {
   const n = i + 1;
@@ -17,7 +18,7 @@ export default function ClientPage() {
       className="
         relative w-full overflow-hidden
         bg-[radial-gradient(circle_at_top,rgba(70,243,216,0.18),transparent_55%),radial-gradient(circle_at_82%_20%,rgba(255,63,164,0.10),transparent_55%),linear-gradient(to_bottom,#050507,#050507)]
-        py-16 sm:py-20 md:py-24 lg:py-32 2xl:py-36
+        py-16 sm:py-20 md:py-24 lg:py-32 2xl:py-36 
       "
     >
       {/* BG system */}
@@ -99,55 +100,9 @@ export default function ClientPage() {
               </div>
             </div>
           ))}
+
         </div>
 
-        <div className="mt-12 sm:mt-14 lg:mt-16 text-center">
-          <p className="text-[13px] sm:text-[14px] leading-relaxed text-neutral-300/80">
-            Want to see how we can create impact for your brand?
-          </p>
-
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
-            <div
-              className={`w-full sm:w-auto ${reduceMotion ? "" : "transition-transform hover:scale-[1.02] active:scale-[0.98]"}`}
-            >
-              <Link
-                href="/contact"
-                className="dts-animated-border inline-flex w-full sm:w-auto justify-center"
-                aria-label="Work with Double Trouble Studio"
-              >
-                <span
-                  className="
-                    inline-flex items-center justify-center
-                    w-full sm:w-auto px-10 py-4 sm:px-14 sm:py-5
-                    text-[12px] sm:text-[14px]
-                    uppercase tracking-[0.22em] font-semibold text-dts-fog
-                  "
-                >
-                  Work With Us
-                </span>
-              </Link>
-            </div>
-
-            <div
-              className={`w-full sm:w-auto ${reduceMotion ? "" : "transition-transform hover:scale-[1.02] active:scale-[0.98]"}`}
-            >
-              <Link
-                href="/contact?service=collaboration"
-                className="
-                  inline-flex w-full sm:w-auto justify-center
-                  rounded-full border border-white/12 bg-white/5
-                  px-10 py-4 sm:px-14 sm:py-5
-                  text-[12px] sm:text-[14px]
-                  uppercase tracking-[0.22em] font-semibold text-neutral-200
-                  transition hover:bg-white/10 hover:border-white/18
-                "
-                aria-label="Start a collaboration"
-              >
-                Collaborate
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import CoreValuesSection from "@/components/Team/CoreValuesSection";
 import TeamBehindTheScenes from "@/components/Team/TeamBehindTheScenes";
 import TeamCTA from "@/components/Team/TeamCTA";
+import TeamFAQ from "@/components/Team/TeamFAQ";
 import TeamHero from "@/components/Team/TeamHero"; 
 import TeamMembers from "@/components/Team/TeamMembers";
 import TeamMembersAll from "@/components/Team/TeamMembersAll";
@@ -61,6 +62,7 @@ export default function TeamPage() {
       <TeamMembersAll/>
        <TeamBehindTheScenes/>
       <CoreValuesSection/>
+      <TeamFAQ />
       <TeamCTA/>
   
       

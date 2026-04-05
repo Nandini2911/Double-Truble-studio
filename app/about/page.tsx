@@ -1,4 +1,5 @@
 import AboutCTA from "@/components/About/AboutCTA";
+import AboutFAQ from "@/components/About/AboutFAQ";
 import AboutHero from "@/components/About/AboutHero";
 import BrandGrid from "@/components/About/BrandGrid";
 import InsideStudio from "@/components/About/InsideStudio";
@@ -166,6 +167,7 @@ export default function AboutPage() {
       <Leadership />
       <StudioCultureAndFit />
       <BrandGrid />
+      <AboutFAQ />
       <AboutCTA />
     </div>
   );
