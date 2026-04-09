@@ -378,3 +378,18 @@ body {
   background: #00ffcc;
   border-radius: 10px;
 }
+.blog-content a {
+  color: #09f4cd; /* ya tumhara neon color */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.blog-content a:hover {
+  opacity: 0.8;
+}
+.faq-question {
+  font-size: 1.25rem;   /* thoda bada */
+  font-weight: 700;     /* bold */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}

@@ -65,12 +65,13 @@ export default function Navbar() {
         {/* LOGO */}
         <Link href="/" className="flex items-center" onClick={() => { setOpen(false); setServicesOpen(false); }}>
           <Image
-            src="/Circle logo.png"
-            alt="Double Trouble Studio"
-            width={200}
-            height={50}
-            className="h-12 w-auto transition-all duration-300 hover:opacity-80"
-          />
+  src="/Circle logo.png"
+  alt="Double Trouble Studio"
+  width={200}
+  height={50}
+  priority
+  className="h-12 w-auto transition-all duration-300 hover:opacity-80"
+/>
         </Link>
 
         {/* DESKTOP NAV */}

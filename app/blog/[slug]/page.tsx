@@ -177,17 +177,24 @@ for (let i = 0; i < lines.length; i++) {
     };
 
     /* ✅ MARKDOWN */
-    const renderer = new marked.Renderer();
+const renderer = new marked.Renderer();
 
-    renderer.heading = ({ tokens, depth }) => {
-      const text = tokens.map((t: any) => t.text || "").join("");
-      const id = text.toLowerCase().replace(/[^\w]+/g, "-");
-      const level = depth === 1 ? 2 : depth;
+renderer.heading = ({ tokens, depth }) => {
+  const text = tokens.map((t: any) => t.text || "").join("");
+  const id = text.toLowerCase().replace(/[^\w]+/g, "-");
+  const level = depth === 1 ? 2 : depth;
 
-      return `<h${level} id="${id}">${text}</h${level}>`;
-    };
+  return `<h${level} id="${id}">${text}</h${level}>`;
+};
 
-    marked.setOptions({ renderer });
+// ✅ YE YAHA ADD KARNA HAI
+renderer.link = ({ href, tokens }) => {
+  const text = tokens.map((t: any) => t.text || "").join("");
+
+  return `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+};
+
+marked.setOptions({ renderer });
 
     const html = marked.parse(content);
 
@@ -265,10 +272,10 @@ for (let i = 0; i < lines.length; i++) {
                 <span>{frontmatter.date}</span>
               </div>
 
-              <div
-                className="blog-content"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
+             <div
+  className="blog-content prose prose-invert max-w-none"
+  dangerouslySetInnerHTML={{ __html: html }}
+/>
 
               {/* CTA */}
               <div className="mt-20 p-10 border border-white/10 rounded-xl text-center">
