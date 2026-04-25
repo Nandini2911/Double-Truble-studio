@@ -1,9 +1,10 @@
-// app/page.tsx
+
 
 
 import AboutFAQ from "@/components/About/AboutFAQ";
 import AboutStrip from "@/components/Home/AboutStrip";
 import DNABlock from "@/components/Home/DNABlock";
+import FAQBlock from "@/components/Home/FAQBlock";
 import FeaturedWork from "@/components/Home/FeaturedWork";
 import FinalCTA from "@/components/Home/FinalCTA";
 import HomeHero from "@/components/Home/HomeHero";
@@ -188,7 +189,8 @@ export default function Home() {
         <ImpactStats />
         <DNABlock />
         <PromiseBlock />
-        <LogoStrip />
+      
+        <FAQBlock/>
         <FinalCTA />
       </main>
     </>

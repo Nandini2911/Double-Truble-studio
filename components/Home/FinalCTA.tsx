@@ -28,9 +28,9 @@ export default function FinalCTA() {
         </p>
 
         <h2 className="mt-4 font-heading text-[1.45rem] sm:text-[1.7rem] md:text-[2.1rem] text-dts-fog leading-[1.15]">
-          Ready to make your brand{" "}
+         Start a Project with a {" "}
           <span className="bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(70,243,216,0.18)]">
-            impossible to ignore?
+        Branding Agency in Mumbai
           </span>
         </h2>
 

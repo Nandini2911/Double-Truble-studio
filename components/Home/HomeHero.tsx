@@ -1,133 +1,139 @@
-// components/home/HomeHero.tsx
 "use client";
-
-import { motion } from "framer-motion";
-import Link from "next/link";
+import React, { useState } from "react";
 
 export default function HomeHero() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [brand, setBrand] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = {
+      type: "hero",
+      name,
+      email,
+      company: brand,
+      service: "Hero Inquiry",
+      message,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        alert("🚀 Sent successfully");
+        setName("");
+        setEmail("");
+        setBrand("");
+        setMessage("");
+      } else {
+        alert("❌ Failed");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server error");
+    }
+
+    setLoading(false);
+  };
+
+  const isDesktop = typeof window !== "undefined" && window.innerWidth > 768;
+
   return (
-    <section className="relative flex min-h-[80vh] items-center overflow-hidden 2xl:min-h-[86vh]">
-      {/* SOFT BG GLOWS */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="
-            absolute -left-40 top-0 
-            h-72 w-72 rounded-full blur-2xl
-            bg-[radial-gradient(circle,rgba(70,243,216,0.2),transparent_60%)]
-            2xl:h-88 2xl:w-88
-          "
-        />
-        <div
-          className="
-            absolute -right-28 -bottom-10 
-            h-80 w-80 rounded-full blur-3xl
-            bg-[radial-gradient(circle,rgba(255,63,164,0.25),transparent_60%)]
-            2xl:h-100 2xl:w-100
-          "
-        />
-      </div>
+    <section className="relative w-full min-h-[90vh] flex items-center bg-black text-white overflow-hidden px-6 md:px-16">
 
-      {/* MAIN WRAPPER */}
-      <div
-        className="
-          relative mx-auto flex w-full flex-col
-          gap-14 px-6 py-16
-          md:flex-row md:items-center md:justify-between
-          max-w-7xl
+      {/* BACKGROUND GLOW */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-transparent blur-xl"></div>
 
-          /* 4K behaviour – go full width, only keep padding */
-          2xl:max-w-none
-          2xl:px-32       /* left/right padding on 2560px */
-          2xl:py-24
-          2xl:gap-32
-        "
-      >
-        {/* LEFT :: TEXT BLOCK */}
-        <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-xl space-y-7 2xl:max-w-2xl 2xl:space-y-9"
-        >
-          {/* TAGLINE LINE */}
-          <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-neutral-400 2xl:text-[12px]">
-            <span className="inline-flex h-px w-10 bg-neutral-500 2xl:w-12" />
-            <span>Double Trouble Studio</span>
+      <div className="relative grid md:grid-cols-2 gap-12 w-full max-w-7xl mx-auto items-center">
+
+        {/* ================= LEFT SIDE (UNCHANGED) ================= */}
+        <div>
+          
+
+         
+
+          <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-neutral-100">
+            <span className="inline-flex h-px w-10 bg-neutral-100" />
+            <span>Branding, PR & Digital Marketing Agency in Mumbai</span>
           </div>
 
-          {/* HEADING */}
-          <h1
-            className="
-              font-heading leading-tight tracking-tight
-              text-3xl md:text-4xl lg:text-[2.8rem]
-              2xl:text-[3.8rem] 2xl:leading-[1.05]
-            "
-          >
-            <span className="block text-dts-fog">DOUBLE THE IDEAS.</span>
-            <span
-              className="
-                mt-1 inline-block
-                bg-linear-to-r
-                from-[#46F3D8]
-                via-[#FF3FA4]
-                to-[#C9A96A]
-                bg-clip-text text-transparent
-              "
-            >
-              DOUBLE THE IMPACT.
-            </span>
-          </h1>
 
-          {/* SHORT SUBTEXT */}
-          <p className="text-sm md:text-[15px] text-neutral-300/90 leading-relaxed 2xl:text-base 2xl:max-w-xl">
-       <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">
-        Digital, PR,
-</a> web and experiences for premium brands that want to
-            look sharp, speak with personality and stay top-of-mind.
+
+          <p className="mt-6 text-gray-100 max-w-lg">
+          Double Trouble Studio is a Mumbai-based creative agency helping brands across India build visibility, trust and premium positioning through PR, digital marketing, web and events.
+
           </p>
 
-          {/* CTAS */}
-          <div className="flex flex-wrap items-center gap-5 pt-1 2xl:gap-7">
-            <Link href="/contact" className="dts-animated-border 2xl:text-sm">
-              <span>START A PROJECT</span>
-            </Link>
+          <button className="mt-10 text-xs tracking-[0.3em] border-b border-[#46f3d8] pb-1 hover:text-[#46f3d8] transition">
+            START A PROJECT
+          </button>
+        </div>
 
-            
+        {/* ================= RIGHT SIDE (COMPACT FORM) ================= */}
+        <div className="dts-card-3d p-6 md:p-7 max-w-md ml-auto backdrop-blur-xl bg-white/5">
+
+          {/* HEADER SAME */}
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-sm tracking-[0.3em] text-[#46f3d8]">
+            Start Your Project with Double Trouble Studio
+            </h3>
+
+            <span className="text-[10px] border px-3 py-1 rounded-full border-white/20">
+              STRATEGY-FIRST
+            </span>
           </div>
-        </motion.div>
 
-        {/* RIGHT :: “DTS STACK” CARD */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.08 }}
-          className="w-full max-w-sm md:max-w-md 2xl:max-w-xl"
-        >
-          <div className="relative">
-            {/* Gradient frame */}
-            <div
-              className="
-                absolute -inset-[1.5px] rounded-4xl
-                bg-linear-to-br
-                from-dts-neon/70 via-dts-neon-pink/50 to-dts-gold/70
-                opacity-90
-                2xl:-inset-0.5
-              "
+          <form onSubmit={handleSubmit} className="space-y-3">
+
+            <input
+              type="text"
+              placeholder="Your Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-lg bg-black/40 border border-white/10 focus:border-[#46f3d8] outline-none text-sm"
             />
 
-            {/* Inner card */}
-            <div
-              className="
-                relative flex flex-col gap-6
-                rounded-[1.9rem]
-                border border-white/10
-                bg-dts-black/95
-                px-6 py-7
-                shadow-[0_18px_45px_rgba(0,0,0,0.7)]
-                2xl:gap-8 2xl:rounded-[2.2rem] 2xl:px-9 2xl:py-10
-              "
+            <input
+              type="email"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-lg bg-black/40 border border-white/10 focus:border-[#46f3d8] outline-none text-sm"
+            />
+
+            <input
+              type="text"
+              placeholder="Brand / Business Name"
+              value={brand}
+              onChange={(e) => setBrand(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-lg bg-black/40 border border-white/10 focus:border-[#46f3d8] outline-none text-sm"
+            />
+
+            <textarea
+              placeholder="Tell us about your project"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              rows={3}
+              className="w-full px-4 py-2.5 rounded-lg bg-black/40 border border-white/10 focus:border-[#46f3d8] outline-none resize-none text-sm"
+            />
+
+            <button
+              type="submit"
+              className="dts-btn-primary w-full py-2.5 text-xs tracking-[0.25em]"
+              disabled={loading}
             >
               {/* Top label + pill */}
               <div className="flex items-center justify-between gap-3">
