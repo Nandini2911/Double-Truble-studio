@@ -7,11 +7,16 @@ import { useId, useState } from "react";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
+
+
+
+
 export default function ContactPage() {
   const reduceMotion = useReducedMotion();
 
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState<null | "ok" | "err">(null);
+  
 
   const [form, setForm] = useState({
     name: "",
@@ -81,56 +86,6 @@ export default function ContactPage() {
         <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
       </div>
 
-      {/* HERO */}
-      <div className="relative min-h-[85vh] grid place-items-center px-4">
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 28 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="max-w-4xl text-center space-y-6"
-        >
-          <p className="text-[11px] uppercase tracking-[0.32em] text-neutral-400">
-            Contact • Double Trouble Studio
-          </p>
-
-          <h1 className="font-heading text-white text-[2rem] sm:text-[2.6rem] md:text-[3.2rem] leading-tight">
-            Let’s discuss{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold">
-              clarity, execution,
-            </span>
-            <br />
-            and real momentum.
-          </h1>
-
-          <div className="mx-auto h-px w-32 bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold shadow-[0_0_20px_rgba(70,243,216,0.55)]" />
-
-          <p className="mx-auto max-w-2xl text-[15px] sm:text-[16px] text-neutral-300/90 leading-relaxed">
-            Whether you’re planning a launch, restructuring visibility, or need a
-            partner who can{" "}
-            <span className="text-dts-neon/90 font-medium">think + execute</span>{" "}
-            — we’ll help you approach it the right way.
-          </p>
-        </motion.div>
-      </div>
-
-      {/* VALUE STRIP */}
-      <div className="relative border-y border-white/10 py-12">
-        <div className="mx-auto max-w-6xl px-4 grid gap-6 sm:grid-cols-3 text-center">
-          {[
-            ["Strategy-first", "No guesswork or random execution"],
-            ["Senior-led", "Handled by decision-makers, not juniors"],
-            ["Discreet & precise", "Especially for public figures & brands"],
-          ].map(([title, desc]) => (
-            <div key={title}>
-              <p className="text-[13px] uppercase tracking-[0.24em] text-dts-neon/80">
-                {title}
-              </p>
-              <p className="mt-2 text-[14px] text-neutral-300/80">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* CONTACT GRID */}
       <div className="relative mx-auto max-w-6xl px-4 py-24">
         <div className="grid gap-14 lg:grid-cols-2 items-start">
@@ -159,7 +114,9 @@ export default function ContactPage() {
               <li>• Zero pressure, zero overpromising</li>
             </ul>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="rounded-2
+            
+            l border border-white/10 bg-white/5 p-6">
               <p className="text-[13px] uppercase tracking-[0.26em] text-neutral-300/85">
                 Ideal for
               </p>
@@ -324,6 +281,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </div>
+     
       <ContactFAQ />
 
       {/* FINAL CTA */}
