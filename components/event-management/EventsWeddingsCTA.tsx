@@ -58,9 +58,8 @@ export default function EventsWeddingsCTA() {
 
         {/* Subtext */}
         <p className="mx-auto mt-6 max-w-2xl text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed text-neutral-300/85">
-          Tell us what you’re planning — we’ll handle the details, the pressure,
-          and the execution. From planning and partner alignment to on-ground
-          control, we make the complexity invisible.
+         Tell us what you’re <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">planning</a> — we’ll handle the details, the <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/"
+          className="text-dts-gold hover:text-[#ff9a9e] underline">pressure</a>, and the <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a>. From planning and partner <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">alignment</a> to <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">on-ground</a> control, we make the complexity invisible.
         </p>
 
         {/* Reassurance */}

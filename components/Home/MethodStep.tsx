@@ -41,7 +41,8 @@ export default function MethodSteps() {
           </p>
 
           <h2 className="font-heading text-xl md:text-2xl text-dts-fog leading-snug">
-            A method built for brands that value clarity, consistency and growth.
+            A method built for brands that value <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">clarity</a> , consistency and <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">growth</a>.
           </h2>
         </div>
 

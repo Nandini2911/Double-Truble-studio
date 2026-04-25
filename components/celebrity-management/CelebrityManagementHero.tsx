@@ -122,9 +122,8 @@ export default function CelebrityManagementHero() {
               text-neutral-200/80 leading-relaxed
             "
           >
-            We manage celebrity associations end-to-end — shortlisting, fees, availability,
-            contracts, and on-ground coordination — so every appearance feels premium, aligned, and
-            effortless.
+           We manage <a href="https://www.dtsworld.in/services/celebrity-management" className="text-dts-gold hover:text-[#ff9a9e] underline">celebrity associations</a> end-to-end — shortlisting, fees, availability, contracts, and <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">on-ground coordination</a> — so every appearance feels <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">premium</a>, <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/"
+            className="text-dts-gold hover:text-[#ff9a9e] underline">aligned</a>, and effortless.
           </p>
 
           {/* CTA */}

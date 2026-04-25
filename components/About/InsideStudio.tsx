@@ -89,8 +89,8 @@ export default function InsideStudio() {
             Inside the Studio
           </h2>
           <p className="text-[13px] sm:text-[14px] text-neutral-300/90 leading-relaxed">
-            Think of it as a control room—each pod has its role, but everything
-            feeds one brand story.
+            Think of it as a control room—each pod has its role, but everything feeds one <a href="https://www.dtsworld.in/blog/building-a-brand-narrative-story-led-pr-that-resonates/" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">brand story</a>.
           </p>
         </motion.div>
 

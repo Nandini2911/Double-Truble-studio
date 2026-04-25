@@ -35,8 +35,8 @@ export default function FinalCTA() {
         </h2>
 
         <p className="mt-5 text-sm sm:text-[15px] md:text-base text-neutral-300/90 leading-relaxed max-w-2xl mx-auto">
-          Tell us where you are, what you’re building, and what’s slowing you down.
-          We’ll come back with clarity, structure, and a plan — not a recycled pitch.
+       We’ll come back with <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+       className="text-dts-gold hover:text-[#ff9a9e] underline">clarity</a>, <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">structure</a>, and a plan — not a recycled pitch.
         </p>
 
         {/* HERO / NAVBAR STYLE CTA */}

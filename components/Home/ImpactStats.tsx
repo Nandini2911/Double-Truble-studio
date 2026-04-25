@@ -22,7 +22,8 @@ export default function ImpactStats() {
           </p>
 
           <h2 className="font-heading text-lg sm:text-xl md:text-2xl text-dts-fog leading-snug">
-            Numbers that sit behind the aesthetics.
+            Numbers that sit behind the <a href="https://www.dtsworld.in/blog/designing-high-end-luxury-websites-ux-visual-identity-brand-experience/"
+             className="text-dts-gold hover:text-[#ff9a9e] underline">aesthetics</a>.
           </h2>
         </div>
 

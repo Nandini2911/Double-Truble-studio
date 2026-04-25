@@ -173,7 +173,8 @@ export default function WebDevelopmentHowItWorks() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-relaxed text-neutral-300/80">
-            A structured process built for clarity, speed, and premium execution — from first call to post-launch.
+           A <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">structured</a> process built for clarity, speed, and <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] 
+           underline">premium execution</a> — from first call to post-launch.
           </p>
         </motion.div>
 

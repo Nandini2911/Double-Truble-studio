@@ -61,8 +61,8 @@ export default function Leadership() {
               Strategy, Finance & Direction
             </h2>
             <p className="text-neutral-400 text-[13px] leading-relaxed">
-              Three minds balancing vision, clarity and discipline behind every
-              DTS decision.
+              Three minds balancing vision, <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+              className="text-dts-gold hover:text-[#ff9a9e] underline">clarity</a> and discipline behind every DTS decision.
             </p>
           </motion.div>
 
@@ -158,14 +158,14 @@ export default function Leadership() {
             </h2>
 
             <p className="text-neutral-300 text-[15px] 2xl:text-[17px] leading-relaxed">
-              Every project, campaign and client journey is backed by these
-              three minds — a balance of vision, discipline and precision.
-              From high-level moves to last-mile execution, this leadership
-              team keeps DTS sharp, relevant and unmistakably itself.
+              Every project, <a href="https://www.dtsworld.in/blog/content-strategy-for-brand-websites-blogs-galleries-lead-magnets/"
+              className="text-dts-gold hover:text-[#ff9a9e] underline">campaign</a> and client journey is backed by these three minds — a balance of vision, discipline and precision.
+              From high-level moves to last-mile <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a>,
+              this leadership team keeps DTS sharp, relevant and unmistakably itself.
             </p>
 
             <p className="text-neutral-400 text-[14px] leading-relaxed">
-              The studio moves fast, but the principles come from here.
+              The studio moves fast, but the <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">principles</a> come from here.
             </p>
           </motion.div>
 

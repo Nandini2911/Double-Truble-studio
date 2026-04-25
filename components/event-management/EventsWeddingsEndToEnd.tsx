@@ -193,8 +193,7 @@ export default function EventsWeddingsEndToEnd() {
             transition={{ duration: 0.85, ease: EASE, delay: 0.06 }}
             className="max-w-xl text-sm text-neutral-400"
           >
-            Clear planning. Coordinated partners. Seamless on-ground execution —
-            under one accountable team.
+            Clear <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">planning</a>. Coordinated partners. Seamless <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">on-ground execution</a> — under one accountable team.
           </motion.p>
         </div>
 

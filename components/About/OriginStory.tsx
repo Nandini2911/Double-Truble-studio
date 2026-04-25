@@ -147,8 +147,8 @@ export default function OriginStory() {
                   How the “Trouble” Began
                 </h2>
 <p className="max-w-xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-neutral-300/95">
-  Double Trouble was built on the idea that strong brands need alignment, not
-  fragmentation. Rather than treating digital, PR, web, events or celebrity
+  Double Trouble was built on the idea that strong <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brands</a> need <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/"
+  className="text-dts-gold hover:text-[#ff9a9e] underline">alignment</a>, not fragmentation. Rather than treating digital, PR, web, events or celebrity
   work as separate functions, we operate as one team — moving with a shared
   taste level and a unified brand story.
 </p>
@@ -221,8 +221,8 @@ export default function OriginStory() {
                     Studio Shape
                   </p>
                   <p className="text-[12px] sm:text-[13px] text-neutral-100/95">
-                    One studio, multiple disciplines—digital, PR, web, events
-                    and talent under one roof.
+                    One studio, multiple disciplines—<a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">digital</a>, <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">PR</a>, <a href="https://www.dtsworld.in/services/web-development-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">web</a>, <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">events</a> and <a href="https://www.dtsworld.in/services/celebrity-management"
+                     className="text-dts-gold hover:text-[#ff9a9e] underline">talent</a> under one roof.
                   </p>
                 </div>
               </motion.div>
@@ -251,8 +251,8 @@ export default function OriginStory() {
                     Core Belief
                   </p>
                   <p className="text-[12px] sm:text-[13px] text-neutral-100/95">
-                    Brand-building shouldn’t be fragmented. Everything should
-                    feel like one clear, deliberate voice.
+                    <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">Brand-building</a> 
+                    shouldn’t be fragmented. Everything should feel like one clear, deliberate voice.
                   </p>
                 </div>
               </motion.div>

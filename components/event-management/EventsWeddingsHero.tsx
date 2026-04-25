@@ -135,9 +135,8 @@ export default function EventsWeddingsHero() {
                 transition={{ duration: 0.8, ease: EASE, delay: 0.08 }}
                 className="mt-6 max-w-2xl text-base md:text-lg text-neutral-300 leading-relaxed"
               >
-                From luxury weddings to high-impact brand events, we plan and
-                execute experiences that feel effortless, immersive, and
-                intentional.
+                From <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">luxury weddings</a> to high-impact <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">brand events</a>, we plan and <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] 
+                underline">execute</a> experiences that feel effortless, immersive, and intentional.
               </motion.p>
 
               {/* Mini trust line */}

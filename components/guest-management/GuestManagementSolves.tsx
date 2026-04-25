@@ -200,7 +200,8 @@ export default function GuestManagementSolves() {
           <p className="text-[14px] leading-relaxed text-neutral-200/80">
             Guest management isn’t about managing people.
             <br />
-            It’s about managing pressure — calmly and professionally.
+          It’s about managing <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" 
+          className="text-dts-gold hover:text-[#ff9a9e] underline">pressure</a> — calmly and professionally.
           </p>
         </motion.div>
       </div>
