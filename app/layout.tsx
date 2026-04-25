@@ -3,11 +3,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 import "./globals.css";
 import Script from "next/script";
+import { Inter } from "next/font/google";
+
+// ✅ FONT OPTIMIZATION
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL("https://dtsworld.in"),
 };
-
 
 export default function RootLayout({
   children,
@@ -17,10 +23,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
+        {/* ✅ PRECONNECT (FASTER SCRIPT LOAD) */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+      </head>
+
+      <body className={`${inter.className} bg-dts-black text-dts-fog`} suppressHydrationWarning>
+
+        {/* ✅ GTM (DELAYED FOR PERFORMANCE) */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload" // 🔥 changed from afterInteractive
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,11 +43,8 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
 
-      <body className="bg-dts-black text-dts-fog" suppressHydrationWarning>
-        
-        {/* GTM noscript */}
+        {/* ✅ NOSCRIPT (KEEP SAME) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5J6M99HD"
@@ -52,7 +61,7 @@ export default function RootLayout({
           <Footer />
         </main>
 
-        {/* ✅ WhatsApp Floating Button */}
+        {/* ✅ WhatsApp Button (UNCHANGED) */}
         <a
           href="https://wa.me/918000006021?text=Hi%20I%20want%20to%20start%20a%20project"
           target="_blank"

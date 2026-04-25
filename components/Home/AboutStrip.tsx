@@ -19,6 +19,7 @@ export default function AboutStrip() {
     x.set(posX);
     y.set(posY);
   }
+  const isDesktop = typeof window !== "undefined" && window.innerWidth > 768;
 
   return (
     // 🔴 changed here: added px on small/tablet so corners are visible

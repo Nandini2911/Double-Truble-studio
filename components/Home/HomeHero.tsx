@@ -49,11 +49,13 @@ export default function HomeHero() {
     setLoading(false);
   };
 
+  const isDesktop = typeof window !== "undefined" && window.innerWidth > 768;
+
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-black text-white overflow-hidden px-6 md:px-16">
+    <section className="relative w-full min-h-[90vh] flex items-center bg-black text-white overflow-hidden px-6 md:px-16">
 
       {/* BACKGROUND GLOW */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-transparent blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-transparent blur-xl"></div>
 
       <div className="relative grid md:grid-cols-2 gap-12 w-full max-w-7xl mx-auto items-center">
 

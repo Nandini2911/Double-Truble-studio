@@ -1,4 +1,4 @@
-// app/page.tsx
+
 
 
 import AboutFAQ from "@/components/About/AboutFAQ";
@@ -189,7 +189,7 @@ export default function Home() {
         <ImpactStats />
         <DNABlock />
         <PromiseBlock />
-        <LogoStrip />
+      
         <FAQBlock/>
         <FinalCTA />
       </main>
