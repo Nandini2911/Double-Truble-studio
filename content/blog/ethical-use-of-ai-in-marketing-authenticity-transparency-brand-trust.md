@@ -9,7 +9,7 @@ caseStudy: false
 author: "DTS Editorial Team"
 image: "/blog-images/ethical-use-of-ai-in-marketing-authenticity-transparency-brand-trust.webp"
 
--Understood — **no removal, no change, full blog exactly same, only interlink added inside your text**. 
+
 
 ---
 
