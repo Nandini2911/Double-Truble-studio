@@ -51,6 +51,9 @@ export default function Footer() {
           </div>
 
           <p className="text-[14px] leading-relaxed text-neutral-400 max-w-xs">
+            <p>
+Double Trouble Studio — Branding, PR & Digital Marketing Agency in Mumbai, India.
+</p>
             A digital, PR and creative studio building ecosystems across social
             media, web, media, events and celebrity collaborations. We help
             brands grow, glow &amp; get noticed.
