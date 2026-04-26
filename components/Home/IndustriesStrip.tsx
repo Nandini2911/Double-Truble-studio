@@ -61,13 +61,13 @@ export default function IndustriesStrip() {
               <h2 className="mt-4 font-heading text-[1.55rem] sm:text-[1.75rem] md:text-[1.95rem] 2xl:text-[2.15rem] text-dts-fog leading-[1.15]">
                 Brands that play in the{" "}
                 <span className="bg-linear-to-r from-dts-neon via-dts-neon-pink to-dts-gold bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(70,243,216,0.18)]">
-                  premium lane.
+                  <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="underline">premium lane.</a>
                 </span>
               </h2>
 
               <p className="mt-4 text-sm sm:text-[15px] 2xl:text-base text-neutral-300/90 leading-relaxed max-w-md">
-                We partner with teams that value refinement, trust the process,
-                and build presence with consistency—not noise.
+                We partner with teams that value refinement, trust the process, and build <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">presence</a> with <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" 
+                className="text-dts-gold hover:text-[#ff9a9e] underline">consistency</a>—not noise.
               </p>
 
               {/* Micro stats */}

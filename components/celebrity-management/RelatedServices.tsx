@@ -123,8 +123,8 @@ export default function RelatedServices() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-relaxed text-neutral-200/80">
-            Celebrity management often works best when aligned with these
-            services.
+           <a href="https://www.dtsworld.in/services/celebrity-management" className="text-dts-gold hover:text-[#ff9a9e] underline">Celebrity management</a> often works best when aligned with these <a href="https://www.dtsworld.in/services/strategic-roadmap" 
+           className="text-dts-gold hover:text-[#ff9a9e] underline">services</a>.
           </p>
         </motion.div>
 

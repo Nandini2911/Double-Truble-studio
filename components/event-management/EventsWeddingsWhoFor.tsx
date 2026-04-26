@@ -69,8 +69,8 @@ export default function CelebrityManagementWhoFor() {
             </h2>
 
             <p className="mt-6 text-sm md:text-[15px] text-neutral-400 leading-relaxed max-w-md">
-              If a celebrity association impacts reputation, visibility, or brand
-              equity — you need structure, clarity, and discreet execution.
+              If a <a href="https://www.dtsworld.in/services/celebrity-management" className="text-dts-gold hover:text-[#ff9a9e] underline">celebrity</a> association impacts <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">reputation</a>, visibility, or <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brand equity</a> — you need <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">structure</a>, clarity, and discreet <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" 
+              className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a>.
             </p>
 
             {/* Signature strip (with DTS color combo) */}
@@ -89,8 +89,8 @@ export default function CelebrityManagementWhoFor() {
                   Our approach
                 </p>
                 <p className="mt-3 text-sm text-neutral-300 leading-relaxed">
-                  We shortlist with intent, lock commercials cleanly, and manage
-                  talent + brand teams without noise.
+                  We shortlist with intent, lock <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">commercials</a> cleanly, and manage talent + <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/"
+                   className="text-dts-gold hover:text-[#ff9a9e] underline">brand</a> teams without noise.
                 </p>
 
                 <div className="mt-5 h-px w-full bg-white/10 transition-all duration-500 hover:bg-[linear-gradient(to_right,transparent,#46F3D8,#FF3FA4,#FFC85C,transparent)]" />

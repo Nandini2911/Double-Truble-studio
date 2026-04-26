@@ -121,8 +121,8 @@ export default function WebDevelopmentHero() {
               text-neutral-200/85 leading-relaxed
             "
           >
-            We design and develop fast, scalable, premium websites that look sharp,
-            load faster, and convert better — without compromising your brand’s stature.
+            We design and develop fast, scalable, <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">premium</a> <a href="https://www.dtsworld.in/services/web-development-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">websites</a> that look sharp, load faster, and <a href="https://www.dtsworld.in/blog/creating-a-luxury-brand-funnel-awareness-to-conversion-strategy/" className="text-dts-gold hover:text-[#ff9a9e] underline">convert better</a> — without compromising your <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">brand’s stature</a>.
           </p>
 
           {/* CTA */}

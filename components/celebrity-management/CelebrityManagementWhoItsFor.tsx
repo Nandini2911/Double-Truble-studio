@@ -123,8 +123,8 @@ export default function CelebrityManagementWhoItsFor() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-relaxed text-neutral-200/80">
-            If celebrity association affects reputation, visibility, or brand equity — this is where
-            structured management makes the difference.
+            If <a href="https://www.dtsworld.in/services/celebrity-management" className="text-dts-gold hover:text-[#ff9a9e] underline">celebrity</a> association affects <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">reputation</a>, visibility, or <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brand equity</a> — this is where structured <a href="https://www.dtsworld.in/services/celebrity-management" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">management</a> makes the difference.
           </p>
         </motion.div>
 

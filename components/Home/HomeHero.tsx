@@ -162,7 +162,8 @@ export default function HomeHero() {
                   <div>
                     <p className="font-semibold text-dts-gold">PR &amp; Media</p>
                     <p className="leading-snug text-neutral-300/90">
-                      Features, interviews &amp; strong brand narratives.
+                      <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" 
+                      className="text-dts-gold hover:text-[#ff9a9e] underline">Features</a>, interviews &amp; strong brand narratives.
                     </p>
                   </div>
                 </div>

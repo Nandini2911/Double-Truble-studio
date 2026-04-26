@@ -17,7 +17,7 @@ import {
 const SERVICES = [
   {
     title: "Guest Management",
-    desc: "Guest entry, RSVP tracking, and VIP flow built like a system—smooth, controlled, premium.",
+    desc: "Guest entry, RSVP tracking , and VIP flow built like a system—smooth, controlled, premium.",
     badge: "Popular",
     icon: ShieldAlert,
     features: ["RSVP System", "VIP Segmentation", "Entry Coordination", "On-Ground Team"],

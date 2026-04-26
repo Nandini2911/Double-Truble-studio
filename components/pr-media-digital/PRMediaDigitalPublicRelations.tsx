@@ -99,8 +99,8 @@ export default function PRMediaDigitalPublicRelations() {
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-neutral-300">
-              Strategic storytelling designed to earn credibility—built for
-              premium brands that want authority, not noise.
+            Strategic storytelling designed to earn <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">credibility</a>—built for <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">premium brands</a> that want <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">authority</a>, not noise.
             </p>
 
             {/* chips */}

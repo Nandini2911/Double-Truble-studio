@@ -52,12 +52,13 @@ export default function FeaturedWork() {
             </p>
 
             <h2 className="font-heading text-xl md:text-2xl text-dts-fog leading-snug">
-              Work that glows on the grid and grows in the boardroom.
+              Work that glows on the grid and <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" 
+              className="text-dts-gold hover:text-[#ff9a9e] underline">grows</a> in the boardroom.
             </h2>
 
             <p className="text-sm md:text-[15px] text-neutral-300/90">
               A curated look at brands, creators and businesses we&apos;ve helped
-              grow across digital, PR, web and experiential—where aesthetics,
+              grow across <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">digital</a>, PR, web and experiential—where aesthetics,
               systems and outcomes work together.
             </p>
 

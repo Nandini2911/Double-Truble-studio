@@ -48,12 +48,15 @@ export default function AboutStrip() {
             </p>
 
             <h2 className="font-heading text-[1.35rem] md:text-[1.5rem] leading-snug text-dts-fog">
-              We sit at the intersection of strategy,
+             We sit at the intersection of <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+             className="text-dts-gold hover:text-[#ff9a9e] underline">strategy</a>,
               design and culture.
             </h2>
 
             <p className="text-sm md:text-[15px] text-neutral-200/95">
-              A new-age creative and digital studio for lifestyle, luxury,
+               studio for lifestyle, <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/"
+               className="text-dts-gold hover:text-[#ff9a9e] underline">luxury</a>, <a href="https://www.dtsworld.in/blog/designing-high-end-luxury-websites-ux-visual-identity-brand-experience/"
+              className="text-dts-gold hover:text-[#ff9a9e] underline">design</a> luxury,
               design, beauty, hospitality and automotive brands. We help you
               build reputation, scale communities and drive measurable growth
               across digital, PR, web, events and <a href="https://www.dtsworld.in/services/celebrity-management" 

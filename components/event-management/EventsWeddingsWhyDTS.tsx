@@ -98,8 +98,8 @@ export default function CelebrityManagementWhyDTS() {
             </div>
 
             <p className="mt-6 text-sm text-neutral-400 leading-relaxed max-w-sm">
-              Celebrity management isn’t about access. It’s about judgment,
-              structure, and clean execution that protects brand value.
+           <a href="https://www.dtsworld.in/services/celebrity-management" className="text-dts-gold hover:text-[#ff9a9e] underline">Celebrity management</a> isn’t about access. It’s about judgment, <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">structure</a>, and clean <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a> that protects <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+           className="text-dts-gold hover:text-[#ff9a9e] underline">brand value</a>.
             </p>
           </motion.div>
 

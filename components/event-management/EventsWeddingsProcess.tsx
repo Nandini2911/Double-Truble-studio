@@ -115,7 +115,7 @@ export default function TeamMembers() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-relaxed text-neutral-200/80">
-            Three accountable leads. Clear roles. Strong systems — so strategy,
+            TThree accountable leads. Clear roles. Strong <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">systems</a> — so <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">strategy</a>, 
             growth, and finances stay aligned as we scale.
           </p>
         </motion.div>

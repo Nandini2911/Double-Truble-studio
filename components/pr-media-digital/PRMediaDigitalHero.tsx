@@ -214,9 +214,8 @@ export default function PRMediaDigitalHero() {
             variants={item}
             className="mx-auto mt-8 max-w-3xl text-[16px] leading-relaxed text-neutral-300 sm:text-[17px] md:text-[18px]"
           >
-            Strategic PR, media positioning, and digital storytelling for brands,
-            founders, and public figures who need visibility with structure, credibility,
-            and control — not short-lived attention.
+            Strategic <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">PR</a>, media <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">positioning</a>, and <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">digital</a> 
+            storytelling for <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brands</a>, founders, and public figures who need visibility with <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">structure</a>, <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">credibility</a>, and control — not short-lived attention.
           </motion.p>
 
           <motion.p
