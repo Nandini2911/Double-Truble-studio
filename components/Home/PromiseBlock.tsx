@@ -39,7 +39,7 @@ export default function PromiseBlock() {
             </h2>
 
             <p className="text-sm sm:text-[15px] text-neutral-300/90 leading-relaxed">
-              Premium work needs premium process. Here’s what we protect: your time, your brand
+              Premium work needs <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">premium process</a>. Here’s what we protect: your time, your brand
               standards, and your outcome.
             </p>
           </div>

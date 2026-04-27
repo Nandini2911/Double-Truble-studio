@@ -64,8 +64,8 @@ export default function PRMediaDigitalFinalCTA() {
 
           {/* Subtext */}
           <p className="mx-auto mt-6 max-w-2xl text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed text-neutral-300/85">
-            Thoughtful. Strategic. Premium. We build visibility that compounds —
-            across PR, media, and digital — without chasing noise.
+            Thoughtful. <a href="https://www.dtsworld.in/services/strategic-roadmap" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">Strategic</a>. <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">Premium</a>. We build visibility that compounds — across <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">PR</a>, media, and <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">digital</a> — without chasing noise.
           </p>
 
           {/* Reassurance */}

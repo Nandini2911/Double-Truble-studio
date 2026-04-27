@@ -220,18 +220,6 @@ export default function GuestManagementFAQs() {
           custom={0.35}
           className="mx-auto mt-20 max-w-2xl text-center"
         >
-          <p className="text-[14px] leading-relaxed text-neutral-200/80">
-            Still unsure? Let’s walk through your event and map the right setup.
-          </p>
-
-          <div className="mt-8 flex justify-center">
-            <Link
-              href="/contact?service=guest-management"
-              className="inline-flex scale-y-125 dts-animated-border"
-            >
-              <span>Get a Quote</span>
-            </Link>
-          </div>
         </motion.div>
       </div>
     </section>

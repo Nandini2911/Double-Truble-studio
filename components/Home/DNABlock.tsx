@@ -70,7 +70,8 @@ export default function DNABlock() {
               </h2>
 
               <p className="text-sm sm:text-[15px] md:text-base text-neutral-300/90 leading-relaxed">
-                We build brands with intention—where creativity comes with structure.
+                We build <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brands</a> with intention—where creativity comes with <a href="https://www.dtsworld.in/services/strategic-roadmap" 
+                className="text-dts-gold hover:text-[#ff9a9e] underline">structure</a>.
                 Research, cultural context, sharp aesthetics, and performance thinking
                 come together to create work that looks premium and holds up in the market.
               </p>

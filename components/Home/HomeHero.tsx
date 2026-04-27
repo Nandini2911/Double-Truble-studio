@@ -135,17 +135,65 @@ export default function HomeHero() {
               className="dts-btn-primary w-full py-2.5 text-xs tracking-[0.25em]"
               disabled={loading}
             >
-              {loading ? "Sending..." : "START PROJECT"}
-            </button>
+              {/* Top label + pill */}
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-dts-neon 2xl:text-[12px]">
+                  The DTS stack
+                </p>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-neutral-300 2xl:px-4 2xl:text-[11px]">
+                  Strategy-first
+                </span>
+              </div>
 
-          </form>
+              {/* One clean sentence */}
+              <p className="text-sm leading-relaxed text-neutral-200/92 2xl:text-[15px]">
+                One partner for everything your brand needs to be seen, heard
+                and remembered.
+              </p>
 
-          <p className="text-[10px] text-gray-500 mt-3">
-            We respond within 24 hours. Serious inquiries only.
-          </p>
+              {/* Simple vertical list */}
+              <div className="space-y-3 text-[11px] md:text-[12px] 2xl:space-y-5 2xl:text-[13px]">
+                <div className="flex items-start gap-3">
+                  <span className="mt-[3px] h-2 w-2 rounded-full bg-dts-neon shadow-[0_0_10px_rgba(70,243,216,0.9)] 2xl:h-3 2xl:w-3" />
+                  <div>
+                    <p className="font-semibold text-dts-neon">Digital &amp; Web</p>
+                    <p className="leading-snug text-neutral-300/90">
+                      Social, websites, content systems &amp; launches.
+                    </p>
+                  </div>
+                </div>
 
-        </div>
+                <div className="flex items-start gap-3">
+                  <span className="mt-[3px] h-2 w-2 rounded-full bg-dts-gold 2xl:h-3 2xl:w-3" />
+                  <div>
+                    <p className="font-semibold text-dts-gold">PR &amp; Media</p>
+                    <p className="leading-snug text-neutral-300/90">
+                      <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" 
+                      className="text-dts-gold hover:text-[#ff9a9e] underline">Features</a>, interviews &amp; strong brand narratives.
+                    </p>
+                  </div>
+                </div>
 
+                <div className="flex items-start gap-3">
+                  <span className="mt-[3px] h-2 w-2 rounded-full bg-dts-neon-pink 2xl:h-3 2xl:w-3" />
+                  <div>
+                    <p className="font-semibold text-dts-neon-pink">
+                      Events &amp; Celebs
+                    </p>
+                    <p className="leading-snug text-neutral-300/90">
+                      Launches, IPs, celebrity collaborations &amp; AI video.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom strip */}
+              <div className="mt-2 flex items-center justify-between border-t border-white/10 pt-3 text-[10px] uppercase tracking-[0.18em] text-neutral-400 2xl:mt-3 2xl:pt-4 2xl:text-[11px]">
+                <span className="text-dts-neon">Grow • Glow • Get noticed</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

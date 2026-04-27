@@ -33,10 +33,12 @@ export default function BrandGrid() {
             Our Clients
           </p>
           <h2 className="font-heading text-lg sm:text-xl md:text-2xl text-dts-fog">
-            Brands That Trust Us
+           <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">Brands</a> That <a href="https://www.dtsworld.in/blog/building-secure-websites-for-premium-clients-data-protection-trust-signals/" 
+           className="text-dts-gold hover:text-[#ff9a9e] underline">Trust</a> Us
           </h2>
           <p className="text-neutral-400 text-xs sm:text-sm max-w-xl mx-auto">
-            A few of the names we&apos;ve been proud to build with—online, on-ground,
+            A few of the names we&apos;ve been proud to build <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">online</a>, on-ground,
             and everywhere in between.
           </p>
         </div>

@@ -105,8 +105,8 @@ export default function CelebrityManagementHowItWorks() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-relaxed text-neutral-200/80">
-            A structured process that protects timelines, reputation, and brand alignment — while
-            keeping execution clean and professional.
+           A structured <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">process</a> that protects timelines, <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">reputation</a>, and <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brand alignment</a> — while keeping <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" 
+           className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a> clean and professional.
           </p>
         </motion.div>
 

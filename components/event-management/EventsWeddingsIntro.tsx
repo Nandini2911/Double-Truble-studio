@@ -80,8 +80,8 @@ export default function EventsWeddingsIntro() {
             </div>
 
             <p className="mt-6 text-sm text-neutral-400 leading-relaxed max-w-sm">
-              A design-led approach where structure, emotion, and execution work
-              quietly together.
+              A design-led approach where <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">structure</a>, emotion, and 
+              <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a> work quietly together.
             </p>
           </motion.div>
 
@@ -118,9 +118,8 @@ export default function EventsWeddingsIntro() {
                   <span className="text-white">why the event exists</span>,{" "}
                   <span className="text-white">who it is for</span>, and{" "}
                   <span className="text-white">how it should be remembered</span>.
-                  We focus on structure, guest experience, aesthetics, and seamless
-                  coordination — ensuring everything feels intentional, not
-                  overwhelming.
+                  We focus on <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">structure</a>, <a href="https://www.dtsworld.in/services/guest-management" className="text-dts-gold hover:text-[#ff9a9e] underline">guest experience</a>, aesthetics, and seamless <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">coordination</a>
+                   — ensuring everything feels intentional, not overwhelming.
                 </p>
 
                 <p className="text-sm md:text-[15px]">

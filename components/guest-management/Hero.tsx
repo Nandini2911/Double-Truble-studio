@@ -120,8 +120,8 @@ export default function GuestManagementHero() {
               text-neutral-200/85 leading-relaxed
             "
           >
-            We plan, segment, and control guest flow — from VIPs and media to partners and family —
-            so your event begins calm, controlled, and premium.
+           We plan, segment, and control guest flow — from VIPs and <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">media</a> to partners and family — so your <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">event</a> begins calm, controlled, and <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+           className="text-dts-gold hover:text-[#ff9a9e] underline">premium</a>.
           </p>
 
           {/* CTA */}

@@ -96,8 +96,8 @@ export default function PRMediaDigitalHowItWorks() {
             variants={item}
             className="mt-4 max-w-2xl text-base md:text-lg leading-relaxed text-neutral-300/85"
           >
-            Structured from strategy to execution—so your visibility looks effortless,
-            but is built with precision.
+          Structured from <a href="https://www.dtsworld.in/services/strategic-roadmap" className="text-dts-gold hover:text-[#ff9a9e] underline">strategy</a> to <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] 
+          underline">execution</a>—so your visibility looks effortless, but is built with precision.
           </motion.p>
         </motion.div>
 

@@ -72,9 +72,8 @@ export default function PRMediaDigitalIntro() {
             </h2>
 
             <p className="mt-6 max-w-xl text-[14px] md:text-[15px] leading-relaxed text-neutral-300/80">
-              PR, media, and digital should not compete for attention. They should
-              reinforce each other—so your presence compounds with credibility and
-              control.
+          <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">PR</a>, media, and <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">digital</a> should not compete for attention. They should reinforce each other—so your presence compounds with <a href="https://www.dtsworld.in/services/pr-media-digital-marketing"
+           className="text-dts-gold hover:text-[#ff9a9e] underline">credibility</a> and control.
             </p>
 
             <div className="mt-8 flex items-center gap-3">

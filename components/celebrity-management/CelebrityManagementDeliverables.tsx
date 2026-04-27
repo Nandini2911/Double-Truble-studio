@@ -147,8 +147,8 @@ export default function CelebrityManagementDeliverables() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-relaxed text-neutral-200/80">
-            Tangible outputs, clear commercials, and end-to-end coordination — designed to protect
-            timelines, image, and brand alignment.
+            Tangible outputs, clear <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">commercials</a>, and end-to-end <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">coordination</a> — designed to protect timelines, image, and <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" 
+            className="text-dts-gold hover:text-[#ff9a9e] underline">brand alignment</a>.
           </p>
         </motion.div>
 

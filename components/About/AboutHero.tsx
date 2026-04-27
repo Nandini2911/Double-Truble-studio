@@ -86,7 +86,9 @@ export default function AboutCTA() {
             max-w-4xl mx-auto
           "
         >
-          Let’s Build Something Worth Talking About
+        
+
+Let’s Build Something Worth Talking About
         </h1>
 
         {/* Subcopy */}
@@ -98,9 +100,9 @@ export default function AboutCTA() {
             text-neutral-300/90 leading-relaxed
           "
         >
-          We help brands grow sharper, louder and more intentional—across
-          digital, PR, web, events and celebrity collaborations. If it carries
-          your name, it should carry a story people remember.
+         We help <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brands</a> 
+         grow sharper, louder and more intentional—across <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">digital</a>, <a href="https://www.dtsworld.in/services/pr-media-digital-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">PR</a>, <a href="https://www.dtsworld.in/services/web-development-marketing" className="text-dts-gold hover:text-[#ff9a9e] underline">web</a>, <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">events</a> and <a href="https://www.dtsworld.in/services/celebrity-management" 
+         className="text-dts-gold hover:text-[#ff9a9e] underline">celebrity collaborations</a>. If it carries your name, it should carry a <a href="https://www.dtsworld.in/blog/building-a-brand-narrative-story-led-pr-that-resonates/" className="text-dts-gold hover:text-[#ff9a9e] underline">story</a> people remember.
         </p>
 
         {/* CTA – using dts-animated-border style */}

@@ -102,7 +102,8 @@ export default function GuestManagementHowItWorks() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] text-neutral-200/80">
-            A simple, structured process that keeps entry calm and the room controlled — even when pressure is high.
+           A simple, structured <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">process</a> that keeps <a href="https://www.dtsworld.in/services/guest-management" className="text-dts-gold hover:text-[#ff9a9e] underline">entry</a> calm and the room controlled — even when <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" 
+           className="text-dts-gold hover:text-[#ff9a9e] underline">pressure</a> is high.
           </p>
         </motion.div>
 

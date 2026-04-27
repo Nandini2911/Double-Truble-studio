@@ -91,8 +91,8 @@ export default function CelebrityManagementCTA() {
 
         {/* Subtext */}
         <p className="mx-auto mt-6 max-w-2xl text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed text-neutral-200/80">
-          Celebrity management isn’t about chasing names. It’s about fit, clarity, and clean
-          execution — from shortlisting and commercials to delivery and closure.
+          <a href="https://www.dtsworld.in/services/celebrity-management" className="text-dts-gold hover:text-[#ff9a9e] underline">Celebrity management</a> isn’t about chasing names. It’s about fit, clarity, and clean <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a> — from shortlisting and <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" className="text-dts-gold hover:text-[#ff9a9e] underline">commercials</a> to delivery and <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/" 
+          className="text-dts-gold hover:text-[#ff9a9e] underline">closure</a>.
         </p>
 
         {/* Reassurance */}

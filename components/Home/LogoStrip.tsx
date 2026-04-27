@@ -34,7 +34,8 @@ export default function LogoStrip() {
         {/* Header */}
         <div className="flex flex-col items-center gap-3">
           <p className="text-[11px] uppercase tracking-[0.28em] text-neutral-400 text-center">
-            Trusted by brands that care about taste.
+           Trusted by <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">brands</a> that care about <a href="https://www.dtsworld.in/blog/designing-high-end-luxury-websites-ux-visual-identity-brand-experience/" 
+           className="text-dts-gold hover:text-[#ff9a9e] underline">taste</a>.
           </p>
 
           {/* tiny glow divider */}

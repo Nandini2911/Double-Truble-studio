@@ -145,8 +145,8 @@ export default function GuestManagementDeliverables() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-relaxed text-neutral-200/80">
-            Tangible outputs, systems, and on-ground support — built to keep your event calm from the
-            first arrival to the last exit.
+           Tangible outputs, <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">systems</a>, and <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">on-ground</a> support — built to keep your <a href="https://www.dtsworld.in/services/events-weddings" className="text-dts-gold hover:text-[#ff9a9e] underline">event</a>
+            calm from the first arrival to the last exit.
           </p>
         </motion.div>
 
@@ -286,7 +286,8 @@ export default function GuestManagementDeliverables() {
           <p className="text-[14px] leading-relaxed text-neutral-200/80">
             You don’t just get “support.”
             <br />
-            You get a system that protects the room and your reputation.
+          You get a <a href="https://www.dtsworld.in/blog/integrating-pr-digital-full-funnel-strategies-for-brand-growth/" className="text-dts-gold hover:text-[#ff9a9e] underline">system</a> that protects the room and your <a href="https://www.dtsworld.in/services/pr-media-digital-marketing"
+           className="text-dts-gold hover:text-[#ff9a9e] underline">reputation</a>.
           </p>
         </motion.div>
 

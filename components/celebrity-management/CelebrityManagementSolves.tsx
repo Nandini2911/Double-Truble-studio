@@ -196,7 +196,8 @@ export default function CelebrityManagementSolves() {
           <p className="text-[14px] leading-relaxed text-neutral-200/80">
             Celebrity management isn’t about glamour.
             <br />
-            It’s about alignment, discretion, and clean execution.
+           It’s about <a href="https://www.dtsworld.in/blog/luxury-brand-positioning-strategy-perception-pricing-differentiation/" className="text-dts-gold hover:text-[#ff9a9e] underline">alignment</a>, discretion, and clean <a href="https://www.dtsworld.in/blog/measuring-adjusting-tools-metrics-for-roadmap-success/"
+            className="text-dts-gold hover:text-[#ff9a9e] underline">execution</a>.
           </p>
         </motion.div>
       </div>
