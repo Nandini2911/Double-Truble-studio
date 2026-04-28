@@ -13,7 +13,7 @@ const sites = [
     image: "/work/web2.png",
   },
   {
-    name: "Shritu Chadha",
+    name: "Shruti Chadha",
     url: "https://shrituchadha.com",
     image: "/work/web3.png",
   },
