@@ -7,6 +7,7 @@ import CelebrityManagementHero from "@/components/celebrity-management/Celebrity
 import CelebrityManagementHowItWorks from "@/components/celebrity-management/CelebrityManagementHowItWorks";
 import CelebrityManagementSolves from "@/components/celebrity-management/CelebrityManagementSolves";
 import CelebrityManagementWhoItsFor from "@/components/celebrity-management/CelebrityManagementWhoItsFor";
+import CelebrityManagementWork from "@/components/celebrity-management/CelebrityManagementWork";
 import RelatedServices from "@/components/celebrity-management/RelatedServices";
 import { Metadata } from "next";
 
@@ -243,6 +244,7 @@ export default function CelebrityManagementPage() {
 
       <main className="min-h-screen">
         <CelebrityManagementHero />
+        <CelebrityManagementWork/>
         <CelebrityManagementSolves />
         <CelebrityManagementHowItWorks />  
         <CelebrityManagementDeliverables />

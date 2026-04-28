@@ -10,6 +10,7 @@ import WebDevelopmentRelatedServices from "@/components/web-development-marketin
 import WebDevelopmentSolves from "@/components/web-development-marketing/WebDevelopmentSolves";
 import WebDevelopmentWhoItsFor from "@/components/web-development-marketing/WebDevelopmentWhoItsFor";
 import WebDevelopmentWhyDTS from "@/components/web-development-marketing/WebDevelopmentWhyDTS";
+import WebDevelopmentWork from "@/components/web-development-marketing/WebDevelopmentWork";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -395,6 +396,7 @@ export default function WebDevelopmentandMarketing() {
     <main className="bg-dts-black text-white">
        
       <WebDevelopmentHero />
+      <WebDevelopmentWork/>
       <WebDevelopmentSolves />
       <WebDevelopmentHowItWorks />
       <WebDevelopmentDeliverables />

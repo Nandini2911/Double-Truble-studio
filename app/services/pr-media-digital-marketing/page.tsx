@@ -2,6 +2,7 @@
 
 import PRMediaDigitalFAQs from "@/components/pr-media-digital/PRMediaDigitalFAQs";
 import PRMediaDigitalFinalCTA from "@/components/pr-media-digital/PRMediaDigitalFinalCTA";
+import PRMediaDigitalFinalwork from "@/components/pr-media-digital/PRMediaDigitalFinalwork";
 import PRMediaDigitalHero from "@/components/pr-media-digital/PRMediaDigitalHero";
 import PRMediaDigitalHowItWorks from "@/components/pr-media-digital/PRMediaDigitalHowItWorks";
 import PRMediaDigitalIntro from "@/components/pr-media-digital/PRMediaDigitalIntro";
@@ -366,6 +367,7 @@ export default function PRMediaDigital() {
       />
     <main className="bg-dts-black text-white">
         <PRMediaDigitalHero />
+        <PRMediaDigitalFinalwork/>
         <PRMediaDigitalIntro  />
         <PRMediaDigitalPublicRelations /> 
         <PRMediaDigitalMediaAndDigital />

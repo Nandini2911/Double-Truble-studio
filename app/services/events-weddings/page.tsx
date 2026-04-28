@@ -11,6 +11,8 @@ import EventsWeddingsTypes from "@/components/event-management/EventsWeddingsTyp
 import EventsWeddingsWhoFor from "@/components/event-management/EventsWeddingsWhoFor";
 import EventsWeddingsWhyDTS from "@/components/event-management/EventsWeddingsWhyDTS";
 import RelatedServices from "@/components/event-management/RelatedServices";
+import GuestManagementCTA from "@/components/guest-management/GuestManagementCTA";
+import GuestmanagementWork from "@/components/guest-management/GuestmanagementWork";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -233,6 +235,7 @@ export default function EventManagementPage() {
 
     <main className="bg-dts-black text-white">
       <EventManagementHero />
+      <GuestmanagementWork/>
       <EventsWeddingsIntro />
       <EventsWeddingsTypes />  
       <EventsWeddingsEndToEnd />
