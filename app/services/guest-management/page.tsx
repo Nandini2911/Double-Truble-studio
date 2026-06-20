@@ -7,6 +7,7 @@ import GuestManagementHowItWorks from "@/components/guest-management/GuestManage
 import GuestManagementSolves from "@/components/guest-management/GuestManagementSolves";
 import GuestManagementWhoItsFor from "@/components/guest-management/GuestManagementWhoItsFor";
 import GuestManagementWhyDTS from "@/components/guest-management/GuestManagementWhyDTS";
+import GuestmanagementWork from "@/components/guest-management/GuestmanagementWork";
 import Hero from "@/components/guest-management/Hero";
 import RelatedServices from "@/components/guest-management/RelatedServices";
 
@@ -233,7 +234,9 @@ export default function GuestManagementPage() {
 
     <main className="min-h-screen bg-black text-white">
     <Hero/>
+     <GuestmanagementWork/>
     <GuestManagementSolves/>
+   
     <GuestManagementHowItWorks/>
     <GuestManagementDeliverables/>
     <GuestManagementWhoItsFor />
